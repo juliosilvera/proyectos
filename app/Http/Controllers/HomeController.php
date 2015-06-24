@@ -1,0 +1,109 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\EncuestasGrupoKFC;
+use App\homeModel;
+use App\User;
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
+
+class HomeController extends Controller
+{
+
+    public function __construct()
+        {
+            $this->middleware('auth');
+        }
+    /**
+     * Display a listing of the resource.
+     *
+     * @return Response
+     */
+    public function index(homeModel $homeModel)
+    {
+
+        $datos = $homeModel->getDatos();
+        return view('/'.$datos['path'].'.'.$datos['type'], compact('datos'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @return Response
+     */
+    public function store(Request $request)
+    {
+        $model = "App\EncuestasGrupoKFC";
+        $encuestas = new $model($request->all());
+        $encuestas->save();
+        return redirect('home');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id, homeModel $homeModel)
+    {
+        $datos = $homeModel->getDatos();
+        return view('/'.$datos['path'].'.'.$id, compact('datos'));
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function edit($id)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function update($id)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function destroy($id)
+    {
+        //
+    }
+
+    public function save_user(Request $request)
+        {
+            $datos = $request->all();
+            $datos['password'] = bcrypt($datos['password']);
+            $user = new User($datos);
+            $user->save();
+                return redirect('home');
+        }
+}
