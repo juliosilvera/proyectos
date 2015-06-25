@@ -66,7 +66,8 @@
                 $datos['proyecto'] = "Administración";
                 $datos['logo'] = "logo_orange.png";
                 $datos['menu'] = [
-                    'Clientes' => '',
+                    'Escritorio' => '/home',
+                    'Clientes' => '/home/clientes',
                     'Encuestas' => '',
                     'Cuentas' => '/home/new_user',
                     'Salir'  => '/auth/logout'

@@ -148,5 +148,8 @@ code {
   display: inline-block;
   border-radius: 50%;
 }
+.dashImages {
+  height: 80px;
+}
 
 /*# sourceMappingURL=app.css.map */

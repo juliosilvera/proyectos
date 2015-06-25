@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cliente;
 use App\EncuestasGrupoKFC;
 use App\homeModel;
 use App\User;
@@ -105,5 +106,21 @@ class HomeController extends Controller
             $user = new User($datos);
             $user->save();
                 return redirect('home');
+        }
+
+    public function save_cliente(Request $request)
+        {
+            $datos = $request->all();
+            if ($request->hasFile('logo'))
+            {
+                $path = "img/";
+                $datos['logo'] = $request->file('logo')->getClientOriginalName();
+                $request->file('logo')->move($path, $datos['logo']);
+            }
+            $datos['alias'] = strtolower(str_replace(" ", "-", $datos['nombre']));
+
+            $cliente = new Cliente($datos);
+            $cliente->save();
+            return redirect('/home');
         }
 }
