@@ -15,7 +15,6 @@ elixir(function(mix) {
     mix.less('app.less', 'resources/css/libs/app.css');
 
     mix.styles([
-        'bootstrap.css',
         'app.css',
         'select2.css',
         'jquery-ui.css',
@@ -24,7 +23,6 @@ elixir(function(mix) {
     ], null, 'resources/css/libs');
 
     mix.scripts([
-        'bootstrap.min.js',
         'select2.min.js',
         'jquery-ui.js',
     ], null, 'resources/js/libs');
