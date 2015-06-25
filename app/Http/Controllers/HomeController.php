@@ -123,4 +123,11 @@ class HomeController extends Controller
             $cliente->save();
             return redirect('/home');
         }
+
+    public function delete_cliente(Request $request)
+        {
+            $id = $request->all();
+            Cliente::destroy($id);
+            return redirect('/home');
+        }
 }

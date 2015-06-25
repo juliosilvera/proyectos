@@ -68,6 +68,7 @@
                 $datos['menu'] = [
                     'Escritorio' => '/home',
                     'Clientes' => '/home/clientes',
+                    'Borrar Cliente' => '/home/borrarCliente',
                     'Encuestas' => '',
                     'Cuentas' => '/home/new_user',
                     'Salir'  => '/auth/logout'

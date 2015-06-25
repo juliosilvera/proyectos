@@ -10,30 +10,26 @@
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
 			<div class="panel panel-default">
-				<div class="panel-heading">Crear Nuevo Cliente</div>
+				<div class="panel-heading">Borrar Cliente</div>
 				<div class="panel-body">
-					<form class="form-horizontal" role="form" method="POST" action="{{ url('/home/save_cliente') }}" enctype="multipart/form-data">
+					<form class="form-horizontal" role="form" method="POST" action="{{ url('/home/delete_cliente') }}" enctype="multipart/form-data">
 						<input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 						<div class="form-group">
-							<label class="col-md-4 control-label">Nombre</label>
+							<label class="col-md-4 control-label">Clientes</label>
 							<div class="col-md-6">
-								<input type="text" class="form-control" name="nombre" value="{{ old('username') }}">
+								<select name="id" class="form-control">
+								@foreach($datos['clientes'] as $cli)
+								<option value="{{ $cli->id }}">{{ $cli->nombre }}</option>
+								@endforeach
+								</select>
 							</div>
 						</div>
-
-                        <div class="form-group">
-                            <label class="col-md-4 control-label">Logo</label>
-                            <div class="col-md-6">
-                                <input type="file" name="logo" class="form-control">
-                            </div>
-                        </div>
-
 
 						<div class="form-group">
 							<div class="col-md-6 col-md-offset-4">
 								<button type="submit" class="btn btn-primary form-control">
-									Crear Cliente
+									Borrar Cliente
 								</button>
 							</div>
 						</div>
