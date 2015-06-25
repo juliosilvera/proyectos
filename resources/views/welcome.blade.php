@@ -4,7 +4,7 @@
         <title>Laravel</title>
 
         <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
-
+        <link rel="stylesheet" href="/css/all.css">
         <style>
             html, body {
                 height: 100%;
@@ -45,9 +45,10 @@
         <div class="container">
             <div class="content">
             <a href="home">
-                <img src="/img/logo_orange.png">
+                <img src="/img/logo_orange.png" class="img-responsive">
                 </a>
             </div>
         </div>
+        <script src="/js/all.js"></script>
     </body>
 </html>
