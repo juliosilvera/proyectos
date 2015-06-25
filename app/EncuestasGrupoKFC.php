@@ -6,13 +6,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class EncuestasGrupoKFC extends Model
 {
-    //
+    //$table->string('nombre_gafete');
+//    $table->string('referencia');
+//    $table->string('local');
 
     protected $table = 'encuestas_grupo_kfc';
 
     protected $fillable = [
         'user',
         'fecha',
+        'nombre_gafete',
+        'referencia',
+        'local',
         'general',
         'higiene',
         'amabilidad',

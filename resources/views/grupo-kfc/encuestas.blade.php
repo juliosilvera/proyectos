@@ -11,6 +11,32 @@
 <div class="well margin-top">
 <div class="row">
         <div class="col-md-3">
+            <!-- Nombre_gafete Form Input -->
+            <div class="form-group">
+                 {!! Form::label('nombre_gafete', 'Nombre en Gafete:') !!}
+                 {!! Form::text('nombre_gafete', null, ['class' => 'form-control']) !!}
+            </div>
+        </div>
+        <div class="col-md-3">
+          <!-- Referencia Textarea Field -->
+          <div class="form-group">
+               {!! Form::label('referencia', 'Datos referenciales del cajero:') !!}
+               {!! Form::textarea('referencia', null, ['class' => 'form-control']) !!}
+          </div>
+        </div>
+        <div class="col-md-3">
+            <!-- Local Form Input -->
+            <div class="form-group">
+                 {!! Form::label('local', 'Local:') !!}
+                 {!! Form::text('local', null, ['class' => 'form-control']) !!}
+            </div>
+        </div>
+        <div class="col-md-3">
+
+        </div>
+      </div>
+<div class="row">
+        <div class="col-md-3">
             <div class="form-group">
                  {!! Form::label('general', 'Por favor califique su satisfaccion general respecto a su esperiencia en Menestras del Negro:') !!}
                  {!! Form::select('general', $datos['respuestas2'], null, ['id' => 'general', 'class' => 'form-control']) !!}
