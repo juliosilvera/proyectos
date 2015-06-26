@@ -193,4 +193,44 @@
                 return $tablas;
             }
 
+        public function carga_manual($alias, $user)
+            {
+                $proyecto = Cliente::where('alias', $alias)->first();
+                $datos['old_nombre'] = $this->getOldNombres();
+                $datos['scripts'] = $this->getScriptOld();
+                $datos['dist'] = $this->getOldDistri();
+                $model = "App\\" . $proyecto->model;
+                $datos['cargadas'] = $model::where(['user' => $user, 'fecha' => Carbon::now()->format('Y-m-d')])->count();
+                $datos['proyecto'] = $proyecto->nombre;
+                $datos['logo'] = $proyecto->logo;
+                $datos['model'] = $proyecto->model;
+                $datos['menu'] = [
+                    'Volver' => '/home',
+                    'Salir'  => '/auth/logout'
+                ];
+
+                $datos['respuestas'] = [
+                    5 => 'Excelente',
+                    4 => 'Bueno',
+                    3 => 'Regular',
+                    2 => 'Malo',
+                    1 => 'Muy Malo'
+                ];
+                $datos['respuestas2'] = [
+                    5 => 'Excelente',
+                    4 => 'Bueno',
+                    3 => 'Regular',
+                    2 => 'Malo',
+                    1 => 'Muy Malo',
+                    0 => 'N/A'
+                ];
+
+                $datos['porcentaje'] = ['0' => '0', '10' => '10', '20' => '20', '30' => '30', '40' => '40', '50' => '50', '60' => '60', '70' => '70', '80' => '80', '90' => '90', '100' => '100'];
+
+                return $datos;
+
+            }
+
+
+
     }
