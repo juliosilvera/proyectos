@@ -24,12 +24,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
+      <file leaf-file-name="encuestas.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38748336" vertical-offset="3067" max-vertical-offset="4738">
-              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.4701897" vertical-offset="10785" max-vertical-offset="14789">
+              <caret line="484" column="20" selection-start-line="484" selection-start-column="20" selection-end-line="484" selection-end-column="20" />
+              <folding>
+                <marker date="1435286174000" expanded="true" signature="24652:24845" placeholder="..." />
+                <marker date="1435286174000" expanded="true" signature="25165:25355" placeholder="..." />
+                <marker date="1435286174000" expanded="true" signature="25648:25838" placeholder="..." />
+                <marker date="1435286174000" expanded="true" signature="26131:26321" placeholder="..." />
+                <marker date="1435286174000" expanded="true" signature="26631:26842" placeholder="..." />
+                <marker date="1435286174000" expanded="true" signature="27133:27355" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,7 +84,6 @@
         <option value="$PROJECT_DIR$/resources/views/headers/user.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/user.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/grupo-kfc/user.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_06_25_212129_encuestas_ideal_alambrec.php" />
         <option value="$PROJECT_DIR$/app/EncuestasIdealAlambrec.php" />
         <option value="$PROJECT_DIR$/app/Cliente.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_06_24_001624_create_clientes_table.php" />
@@ -85,11 +91,12 @@
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/new_user.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php" />
         <option value="$PROJECT_DIR$/app/homeModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_06_25_212129_encuestas_ideal_alambrec.php" />
+        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php" />
       </list>
     </option>
   </component>
@@ -230,7 +237,7 @@
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -540,14 +547,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_06_25_212129_encuestas_ideal_alambrec.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42876166" vertical-offset="1702" max-vertical-offset="2507">
-          <caret line="89" column="35" selection-start-line="14" selection-start-column="11" selection-end-line="88" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Cliente.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4900133" vertical-offset="0" max-vertical-offset="751">
@@ -625,21 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.3346884" vertical-offset="0" max-vertical-offset="14651">
-          <caret line="107" column="65" selection-start-line="107" selection-start-column="65" selection-end-line="107" selection-end-column="65" />
-          <folding>
-            <marker date="1435280510000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435280510000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435280510000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435280510000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435280510000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435280510000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.08122503" vertical-offset="1342" max-vertical-offset="3542">
@@ -661,6 +645,29 @@
         <state vertical-scroll-proportion="0.38748336" vertical-offset="3067" max-vertical-offset="4738">
           <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_06_25_212129_encuestas_ideal_alambrec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45938748" vertical-offset="1702" max-vertical-offset="2530">
+          <caret line="90" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4701897" vertical-offset="10785" max-vertical-offset="14789">
+          <caret line="484" column="20" selection-start-line="484" selection-start-column="20" selection-end-line="484" selection-end-column="20" />
+          <folding>
+            <marker date="1435286174000" expanded="true" signature="24652:24845" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="25165:25355" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="25648:25838" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="26131:26321" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="26631:26842" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="27133:27355" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>

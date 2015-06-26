@@ -88,6 +88,7 @@ class EncuestasIdealAlambrec extends Migration
             $table->string('lat');
             $table->string('lng');
             $table->string('foto');
+            $table->string('vendido');
             $table->timestamps();
         });
     }

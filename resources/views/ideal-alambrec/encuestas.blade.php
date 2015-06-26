@@ -479,6 +479,12 @@
             </div>
           </div>
           <div class="col-md-4">
+              <div class="form-group">
+                   {!! Form::label('vendido', 'Vendio en este local?:') !!}
+                   {!! Form::select('vendido', ['' => '', 'NO' => 'NO', 'SI' => 'SI'], null, ['class' => 'form-control', 'required']) !!}
+              </div>
+          </div>
+          <div class="col-md-4">
               <!-- Lat Form Input -->
               <div class="form-group">
                    {!! Form::label('lat', 'Latitud:') !!}
