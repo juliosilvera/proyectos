@@ -85,7 +85,7 @@
             </div>
         </div>
       </div>
-      <h3><label class="label label-default">Distribuidores</label> </h3>
+      <h3><label class="label label-default">Distribuidores </label> </h3>
       <div class="row">
 
         <div class="col-md-4">
