@@ -84,6 +84,7 @@ class EncuestasIdealAlambrec extends Model
         'xq_premio',
         'lat',
         'lng',
-        'foto'
+        'foto',
+        'vendido'
     ];
 }
