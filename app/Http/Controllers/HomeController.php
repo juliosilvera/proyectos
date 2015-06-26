@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Cliente;
 use App\EncuestasGrupoKFC;
+use App\EncuestasIdealAlambrec;
 use App\homeModel;
 use App\User;
 use Illuminate\Http\Request;
@@ -46,10 +47,23 @@ class HomeController extends Controller
      *
      * @return Response
      */
-    public function store(Request $request)
+    public function store(homeModel $homeModel, Request $request)
     {
-        $model = "App\EncuestasGrupoKFC";
-        $encuestas = new $model($request->all());
+        $datos = $homeModel->getDatos();
+        $data = $request->all();
+
+
+        if ($request->hasFile('foto'))
+        {
+            $count = EncuestasIdealAlambrec::all()->count();
+            $count++;
+            $path = "img/";
+            $name = "Foto_Ideal_" . $count;
+            $data['foto'] = $name;
+            $request->file('foto')->move($path, $name);
+        }
+        $model = "App\\" . $homeModel->getUserModel($datos['path']);
+        $encuestas = new $model($data);
         $encuestas->save();
         return redirect('home');
     }
@@ -118,6 +132,7 @@ class HomeController extends Controller
                 $request->file('logo')->move($path, $datos['logo']);
             }
             $datos['alias'] = strtolower(str_replace(" ", "-", $datos['nombre']));
+            $datos['model'] = "Encuestas". str_replace(" ", "", $datos['nombre']);
 
             $cliente = new Cliente($datos);
             $cliente->save();

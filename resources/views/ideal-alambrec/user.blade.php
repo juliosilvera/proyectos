@@ -6,6 +6,7 @@
 
 @section('content')
 <div class="well">
+
     <div class="row">
                     <div class="col-md-3">
                     <h2>{{ $datos['proyecto'] }}</h2>
@@ -30,6 +31,7 @@
                 </center></div>
                 <div class="col-md-3"></div>
         </div>
+
 </div>
 @stop
 

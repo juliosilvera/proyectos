@@ -4,7 +4,7 @@
                 <h3>{{ $datos['proyecto'] }}</h3>
         </div>
         <div class="divLogoHeader">
-                <img src="/img/logo_white.png" class="logo_header">
+                <img src="/img/{{ $datos['logo'] }}" class="logo_header">
         </div>
       </div>
     </div>

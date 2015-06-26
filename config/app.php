@@ -144,6 +144,7 @@
             App\Providers\EventServiceProvider::class,
             App\Providers\RouteServiceProvider::class,
             Illuminate\Html\HtmlServiceProvider::class,
+            Toin0u\Geotools\GeotoolsServiceProvider::class,
 
         ],
 
@@ -194,6 +195,7 @@
             'View'      => Illuminate\Support\Facades\View::class,
             'Form'      => Illuminate\Html\FormFacade::class,
             'HTML'      => Illuminate\Html\HtmlFacade::class,
+            'Geotools'  => Toin0u\Geotools\Facade\Geotools::class,
 
         ],
 

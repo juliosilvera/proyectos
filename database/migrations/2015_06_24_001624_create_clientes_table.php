@@ -18,6 +18,7 @@ class CreateClientesTable extends Migration
             $table->string('nombre');
             $table->string('alias');
             $table->string('logo');
+            $table->string('model');
             $table->timestamps();
         });
     }

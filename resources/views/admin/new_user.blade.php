@@ -57,7 +57,8 @@
 						<div class="form-group">
 						    <label class="col-md-4 control-label">Tipo de Usuario</label>
 						    <div class="col-md-6">
-						        <select name="type" class="form-control">
+						        <select name="type" class="form-control" id="type">
+						            <option value=""></option>
                                     <option value="user">Mercaderista</option>
                                     <option value="cliente">Cliente</option>
                                     <option value="supervisor">Supervisor</option>
@@ -65,6 +66,8 @@
 						        </select>
 						    </div>
 						</div>
+
+						<div id="extras"></div>
 
 						<div class="form-group">
                             <label class="col-md-4 control-label">Proyecto</label>
@@ -93,5 +96,30 @@
 @stop
 
 @section('footer')
+<script>
+$("#type").change(function(){
+$("#type option:selected").each(function(){
+var type = $(this).val();
 
+if (type == "user")
+{
+    $("#extras").append('\
+     <div class="form-group">\
+            <label class="col-md-4 control-label">Provincia</label>\
+            <div class="col-md-6">\
+                <input type="text" class="form-control" name="provincia">\
+            </div>\
+        </div>\
+     <div class="form-group">\
+            <label class="col-md-4 control-label">Ciudad</label>\
+            <div class="col-md-6">\
+                <input type="text" class="form-control" name="ciudad">\
+            </div>\
+        </div>\
+      ');
+}
+
+});
+});
+</script>
 @stop
