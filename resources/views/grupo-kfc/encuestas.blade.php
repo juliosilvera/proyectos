@@ -8,6 +8,8 @@
 {!! Form::open(['url' => 'home']) !!}
 {!! Form::hidden('user', $datos['user']) !!}
 {!! Form::hidden('fecha', $datos['fecha']) !!}
+{!! Form::hidden('provincia', $datos['provincia']) !!}
+{!! Form::hidden('ciudad', $datos['ciudad']) !!}
 <div class="well margin-top">
 <div class="row">
         <div class="col-md-3">
