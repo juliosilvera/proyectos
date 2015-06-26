@@ -145,4 +145,10 @@ class HomeController extends Controller
             Cliente::destroy($id);
             return redirect('/home');
         }
+
+    public function delete_user(Request $request)
+        {
+            User::destroy($request->id);
+            return redirect('/home');
+        }
 }

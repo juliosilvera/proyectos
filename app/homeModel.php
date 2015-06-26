@@ -75,6 +75,8 @@
         public function admin()
             {
                 $datos['clientes'] = Cliente::all();
+                $datos['users'] = User::all();
+                $datos['display'] = $this->countCiudades();
                 $datos['proyecto'] = "Administración";
                 $datos['logo'] = "logo_orange.png";
                 $datos['menu'] = [
@@ -168,4 +170,27 @@
 
                 return $datos;
             }
+
+        public function countCiudades()
+            {
+                $tablas = "";
+                $clientes = Cliente::all();
+                foreach($clientes as $cli)
+                {
+                    if($cli->alias != "admin")
+                    {
+                        $model = "App\\" . $cli->model;
+                        $ciudades = $model::where('id', '!=', 0)->groupBy('ciudad')->orderBy('ciudad', 'asc')->get();
+                        foreach($ciudades as $city)
+                        {
+                            $num = $model::where('ciudad', $city->ciudad)->count();
+                            $tablas .= "['" . $num . "', '" . $city->provincia . "', '" . $city->ciudad . "', '" . $cli->nombre . "' ],";
+
+                        }
+                    }
+                }
+                //dd($tablas);
+                return $tablas;
+            }
+
     }

@@ -15,6 +15,8 @@ class EncuestasGrupoKFC extends Model
     protected $fillable = [
         'user',
         'fecha',
+        'provincia',
+        'ciudad',
         'nombre_gafete',
         'referencia',
         'local',

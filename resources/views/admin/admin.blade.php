@@ -36,7 +36,10 @@ google.setOnLoadCallback(drawTable);
         data.addColumn('string', 'Ciudad');
         data.addColumn('string', 'Proyecto');
         data.addRows([
-          ['1', 'Pichincha', 'Quito', 'Admin']
+        <?php
+        echo $datos['display'];
+        ?>
+        
         ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));

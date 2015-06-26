@@ -17,6 +17,8 @@ class EncuestasGrupoKfc extends Migration
             $table->increments('id');
             $table->string('user');
             $table->string('fecha');
+            $table->string('provincia');
+            $table->string('ciudad');
             $table->string('nombre_gafete');
             $table->string('referencia');
             $table->string('local');

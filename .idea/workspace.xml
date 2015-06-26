@@ -24,19 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="encuestas.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php">
+      <file leaf-file-name="admin.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/admin.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4701897" vertical-offset="10785" max-vertical-offset="14789">
-              <caret line="484" column="20" selection-start-line="484" selection-start-column="20" selection-end-line="484" selection-end-column="20" />
-              <folding>
-                <marker date="1435286174000" expanded="true" signature="24652:24845" placeholder="..." />
-                <marker date="1435286174000" expanded="true" signature="25165:25355" placeholder="..." />
-                <marker date="1435286174000" expanded="true" signature="25648:25838" placeholder="..." />
-                <marker date="1435286174000" expanded="true" signature="26131:26321" placeholder="..." />
-                <marker date="1435286174000" expanded="true" signature="26631:26842" placeholder="..." />
-                <marker date="1435286174000" expanded="true" signature="27133:27355" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.68834686" vertical-offset="435" max-vertical-offset="1265">
+              <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -70,16 +63,12 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/config/database.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/clientes.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/borrarCliente.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/gulpfile.js" />
         <option value="$PROJECT_DIR$/resources/views/grupo-kfc/encuestas.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2015_06_23_200153_encuestas_grupo_kfc.php" />
-        <option value="$PROJECT_DIR$/app/EncuestasGrupoKFC.php" />
         <option value="$PROJECT_DIR$/resources/assets/less/app.less" />
         <option value="$PROJECT_DIR$/resources/views/headers/user.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/user.blade.php" />
@@ -90,13 +79,17 @@
         <option value="$PROJECT_DIR$/app/GetOldData.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/new_user.blade.php" />
-        <option value="$PROJECT_DIR$/app/homeModel.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_06_25_212129_encuestas_ideal_alambrec.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/new_user.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2015_06_23_200153_encuestas_grupo_kfc.php" />
+        <option value="$PROJECT_DIR$/app/EncuestasGrupoKFC.php" />
+        <option value="$PROJECT_DIR$/app/homeModel.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/admin.blade.php" />
       </list>
     </option>
   </component>
@@ -169,7 +162,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -275,13 +308,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.183755" vertical-offset="0" max-vertical-offset="751">
-          <caret line="8" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/AuthenticatesAndRegistersUsers.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.122503325" vertical-offset="0" max-vertical-offset="751">
@@ -422,13 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/admin.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43631437" vertical-offset="92" max-vertical-offset="1196">
-          <caret line="18" column="23" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/clientes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17310253" vertical-offset="146" max-vertical-offset="1265">
@@ -440,14 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18699187" vertical-offset="184" max-vertical-offset="1173">
           <caret line="14" column="112" selection-start-line="14" selection-start-column="112" selection-end-line="14" selection-end-column="112" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33688414" vertical-offset="0" max-vertical-offset="751">
-          <caret line="12" column="36" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="36" />
-          <caret line="12" column="69" selection-start-line="11" selection-start-column="69" selection-end-line="11" selection-end-column="69" />
         </state>
       </provider>
     </entry>
@@ -539,30 +550,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2015_06_23_200153_encuestas_grupo_kfc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5525965" vertical-offset="45" max-vertical-offset="1863">
-          <caret line="21" column="36" selection-start-line="17" selection-start-column="12" selection-end-line="19" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Cliente.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4900133" vertical-offset="0" max-vertical-offset="751">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/EncuestasGrupoKFC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64314246" vertical-offset="0" max-vertical-offset="1541">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2015_06_24_001624_create_clientes_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5818908" vertical-offset="0" max-vertical-offset="943">
@@ -603,35 +590,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/new_user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5406125" vertical-offset="2239" max-vertical-offset="2990">
-          <caret line="115" column="68" selection-start-line="115" selection-start-column="68" selection-end-line="115" selection-end-column="68" />
-          <folding>
-            <marker date="1435278599000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435278599000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435278599000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435278599000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8699186" vertical-offset="1654" max-vertical-offset="3979">
-          <caret line="168" column="30" selection-start-line="164" selection-start-column="30" selection-end-line="164" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08122503" vertical-offset="1342" max-vertical-offset="3542">
-          <caret line="61" column="33" selection-start-line="61" selection-start-column="33" selection-end-line="61" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64314246" vertical-offset="0" max-vertical-offset="1334">
@@ -661,13 +619,90 @@
         <state vertical-scroll-proportion="0.4701897" vertical-offset="10785" max-vertical-offset="14789">
           <caret line="484" column="20" selection-start-line="484" selection-start-column="20" selection-end-line="484" selection-end-column="20" />
           <folding>
-            <marker date="1435286174000" expanded="true" signature="24652:24845" placeholder="..." />
-            <marker date="1435286174000" expanded="true" signature="25165:25355" placeholder="..." />
-            <marker date="1435286174000" expanded="true" signature="25648:25838" placeholder="..." />
-            <marker date="1435286174000" expanded="true" signature="26131:26321" placeholder="..." />
-            <marker date="1435286174000" expanded="true" signature="26631:26842" placeholder="..." />
-            <marker date="1435286174000" expanded="true" signature="27133:27355" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435286174000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30625832" vertical-offset="0" max-vertical-offset="751">
+          <caret line="11" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/new_user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5189702" vertical-offset="2147" max-vertical-offset="3749">
+          <caret line="110" column="106" selection-start-line="110" selection-start-column="106" selection-end-line="110" selection-end-column="106" />
+          <folding>
+            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84687084" vertical-offset="2630" max-vertical-offset="3473">
+          <caret line="151" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42876166" vertical-offset="0" max-vertical-offset="77487">
+          <caret line="40" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cliente.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.183755" vertical-offset="0" max-vertical-offset="751">
+          <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2015_06_23_200153_encuestas_grupo_kfc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5219707" vertical-offset="45" max-vertical-offset="1909">
+          <caret line="20" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EncuestasGrupoKFC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.551265" vertical-offset="0" max-vertical-offset="1587">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15853658" vertical-offset="1585" max-vertical-offset="4554">
+          <caret line="78" column="31" selection-start-line="74" selection-start-column="24" selection-end-line="74" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/admin.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68834686" vertical-offset="435" max-vertical-offset="1265">
+          <caret line="41" column="8" selection-start-line="41" selection-start-column="8" selection-end-line="41" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>
