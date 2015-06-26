@@ -19,7 +19,7 @@
             @endforeach
 
           </div>
-          <h2 class="sub-header">Section title</h2>
+          <h2 class="sub-header">Información Subida</h2>
           <div id="table_div"></div>
 </div>
 @stop
@@ -39,7 +39,7 @@ google.setOnLoadCallback(drawTable);
         <?php
         echo $datos['display'];
         ?>
-        
+
         ]);
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
