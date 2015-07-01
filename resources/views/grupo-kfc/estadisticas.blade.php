@@ -129,7 +129,6 @@ $total = $divicion / $divisor;
 $calificacion = calificacion($total);
 return $calificacion;
 }
-dd($excelente);
 ?>
 {!! Form::open(['method' => 'POST', 'action' => ['HomeController@estadisticas']]) !!}
 
