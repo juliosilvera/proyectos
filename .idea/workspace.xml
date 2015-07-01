@@ -24,12 +24,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="EncuestasIdealAlambrec.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/EncuestasIdealAlambrec.php">
+      <file leaf-file-name="estadisticas.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/estadisticas.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78479534" vertical-offset="1330" max-vertical-offset="2208">
-              <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
-              <folding />
+            <state vertical-scroll-proportion="0.7959427" vertical-offset="2231" max-vertical-offset="6072">
+              <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+              <folding>
+                <element signature="e#4025#4077#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,7 +59,6 @@
         <option value="$PROJECT_DIR$/resources/css/libs/app.css" />
         <option value="$PROJECT_DIR$/resources/views/nav/cliente.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/nav/admin.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/grupo-kfc/cliente.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/nav/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
@@ -77,14 +78,9 @@
         <option value="$PROJECT_DIR$/app/GetOldData.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_06_25_212129_encuestas_ideal_alambrec.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/new_user.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2015_06_23_200153_encuestas_grupo_kfc.php" />
-        <option value="$PROJECT_DIR$/app/EncuestasGrupoKFC.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/grupo-kfc/encuestas.blade.php" />
@@ -92,6 +88,14 @@
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/carga_manual.blade.php" />
         <option value="$PROJECT_DIR$/app/homeModel.php" />
         <option value="$PROJECT_DIR$/app/EncuestasIdealAlambrec.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/resources/views/tigre/user.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/grupo-kfc/cliente.blade.php" />
+        <option value="$PROJECT_DIR$/app/EncuestasGrupoKFC.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/grupo-kfc/estadisticas.blade.php" />
       </list>
     </option>
   </component>
@@ -108,7 +112,7 @@
     <option name="x" value="-1600" />
     <option name="y" value="-23" />
     <option name="width" value="1600" />
-    <option name="height" value="877" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -186,28 +190,6 @@
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="admin" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proyectos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proyectos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -263,7 +245,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1600" y="-23" width="1600" height="877" extended-state="6" />
+    <frame x="-1600" y="-23" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -311,20 +293,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.19440746" vertical-offset="146" max-vertical-offset="897">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="851">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/headers/cliente.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24324325" vertical-offset="0" max-vertical-offset="851">
@@ -364,13 +332,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5609756" vertical-offset="0" max-vertical-offset="738">
           <caret line="18" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/cliente.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33688414" vertical-offset="0" max-vertical-offset="751">
-          <caret line="11" column="93" selection-start-line="11" selection-start-column="36" selection-end-line="11" selection-end-column="93" />
         </state>
       </provider>
     </entry>
@@ -455,7 +416,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4900133" vertical-offset="0" max-vertical-offset="751">
           <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -463,7 +423,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.122503325" vertical-offset="0" max-vertical-offset="751">
           <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -471,7 +430,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.122503325" vertical-offset="0" max-vertical-offset="1380">
           <caret line="4" column="76" selection-start-line="4" selection-start-column="76" selection-end-line="4" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -479,7 +437,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5099867" vertical-offset="100" max-vertical-offset="851">
           <caret line="21" column="34" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -495,7 +452,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2756325" vertical-offset="0" max-vertical-offset="751">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -503,7 +459,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1610">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -511,7 +466,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41810918" vertical-offset="146" max-vertical-offset="989">
           <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -519,7 +473,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5778961" vertical-offset="6880" max-vertical-offset="22494">
           <caret line="320" column="20" selection-start-line="318" selection-start-column="20" selection-end-line="318" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -527,7 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5818908" vertical-offset="0" max-vertical-offset="943">
           <caret line="20" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -535,7 +487,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.64314246" vertical-offset="0" max-vertical-offset="989">
           <caret line="22" column="37" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -551,23 +502,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2756325" vertical-offset="0" max-vertical-offset="751">
           <caret line="9" column="33" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64314246" vertical-offset="0" max-vertical-offset="1334">
-          <caret line="21" column="18" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38748336" vertical-offset="3067" max-vertical-offset="4738">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -575,15 +509,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45938748" vertical-offset="1702" max-vertical-offset="2530">
           <caret line="90" column="38" selection-start-line="89" selection-start-column="38" selection-end-line="89" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30625832" vertical-offset="0" max-vertical-offset="751">
-          <caret line="11" column="63" selection-start-line="10" selection-start-column="63" selection-end-line="10" selection-end-column="63" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -591,28 +516,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5189702" vertical-offset="2147" max-vertical-offset="3749">
           <caret line="110" column="106" selection-start-line="110" selection-start-column="106" selection-end-line="110" selection-end-column="106" />
-          <folding>
-            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435301923000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84687084" vertical-offset="2630" max-vertical-offset="3473">
-          <caret line="151" column="37" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42876166" vertical-offset="0" max-vertical-offset="77487">
-          <caret line="40" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -628,15 +531,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5219707" vertical-offset="45" max-vertical-offset="1909">
           <caret line="20" column="37" selection-start-line="19" selection-start-column="37" selection-end-line="19" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/EncuestasGrupoKFC.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.551265" vertical-offset="0" max-vertical-offset="1587">
-          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -644,7 +538,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31436315" vertical-offset="251" max-vertical-offset="1265">
           <caret line="21" column="51" selection-start-line="21" selection-start-column="51" selection-end-line="21" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -652,88 +545,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5736342" vertical-offset="0" max-vertical-offset="10442">
           <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-          <folding>
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -741,7 +552,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3551069" vertical-offset="0" max-vertical-offset="14789">
           <caret line="13" column="56" selection-start-line="0" selection-start-column="0" selection-end-line="637" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -749,15 +559,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.152019" vertical-offset="13924" max-vertical-offset="14766">
           <caret line="490" column="88" selection-start-line="0" selection-start-column="0" selection-end-line="636" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/user.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51578945" vertical-offset="180" max-vertical-offset="1035">
-          <caret line="27" column="46" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,23 +566,99 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53801167" vertical-offset="0" max-vertical-offset="1035">
           <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37173396" vertical-offset="4080" max-vertical-offset="5474">
-          <caret line="195" column="50" selection-start-line="191" selection-start-column="50" selection-end-line="191" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/EncuestasIdealAlambrec.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78479534" vertical-offset="1330" max-vertical-offset="2208">
-          <caret line="87" column="16" selection-start-line="87" selection-start-column="16" selection-end-line="87" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.322807" vertical-offset="0" max-vertical-offset="2208">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73099416" vertical-offset="3883" max-vertical-offset="4738">
+          <caret line="196" column="0" selection-start-line="196" selection-start-column="0" selection-end-line="196" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.53801167" vertical-offset="0" max-vertical-offset="1334">
+          <caret line="20" column="10" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4619883" vertical-offset="180" max-vertical-offset="1035">
+          <caret line="25" column="25" selection-start-line="0" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/tigre/user.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40350878" vertical-offset="69" max-vertical-offset="1035">
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/cliente.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48421052" vertical-offset="115" max-vertical-offset="1150">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43705463" vertical-offset="0" max-vertical-offset="5474">
+          <caret line="20" column="52" selection-start-line="16" selection-start-column="52" selection-end-line="16" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EncuestasGrupoKFC.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1614035" vertical-offset="0" max-vertical-offset="1541">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7918129" vertical-offset="14780" max-vertical-offset="77487">
+          <caret line="602" column="27" selection-start-line="576" selection-start-column="27" selection-end-line="576" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5135135" vertical-offset="0" max-vertical-offset="851">
+          <caret line="20" column="7" selection-start-line="19" selection-start-column="7" selection-end-line="19" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8108108" vertical-offset="805" max-vertical-offset="3611">
+          <caret line="74" column="23" selection-start-line="65" selection-start-column="23" selection-end-line="65" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/estadisticas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7959427" vertical-offset="2231" max-vertical-offset="6072">
+          <caret line="126" column="0" selection-start-line="126" selection-start-column="0" selection-end-line="126" selection-end-column="0" />
+          <folding>
+            <element signature="e#4025#4077#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

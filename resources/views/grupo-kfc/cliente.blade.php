@@ -13,9 +13,30 @@
             </div>
     </div><center>
     <div class="row">
-       <div class="col-md-4">REPORTES</div>
-       <div class="col-md-4">REPORTES</div>
-       <div class="col-md-4">REPORTES</div>
+       <div class="col-md-4">
+       Reportes Exportables
+       <br>
+       <br>
+       <a href="">
+       <img src="/img/excel.png" style="width: 70px">
+       </a>
+       </div>
+       <div class="col-md-4">
+       Reportes Estadísticos
+       <br>
+       <br>
+       <a href="/home/estadisticas">
+       <img src="/img/estadisticas.png" style="width: 70px">
+       </a>
+       </div>
+       <div class="col-md-4">
+       Mapas
+       <br>
+       <br>
+       <a href="">
+       <img src="/img/mapa.png" style="width: 70px">
+       </a>
+       </div>
     </div></center>
 @stop
 

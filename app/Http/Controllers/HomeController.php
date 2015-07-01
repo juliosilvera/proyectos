@@ -151,4 +151,10 @@ class HomeController extends Controller
             User::destroy($request->id);
             return redirect('/home');
         }
+
+    public function estadisticas(homeModel $homeModel)
+    {
+        $datos = $homeModel->getDatos();
+        return view('/'.$datos['path'].'.estadisticas', compact('datos'));
+    }
 }
