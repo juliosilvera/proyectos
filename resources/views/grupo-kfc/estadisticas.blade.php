@@ -200,6 +200,7 @@ function drawChart() {
 
 function drawTable() {
         var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Calificación Total');
         data.addColumn('string', 'Provincia');
         data.addColumn('string', 'Ciudad');
         data.addColumn('string', 'Nombre en Gafete');
@@ -242,12 +243,12 @@ function drawTable() {
         data.addColumn('string', 'Experimentó algun problema durante su visita?');
         data.addColumn('string', 'Grado de Satisfacción');
         data.addColumn('string', 'Tenia Banderin?');
-        data.addColumn('string', 'Calificación Total');
+        data.addColumn('string', 'Detalles');
 
 
         data.addRows([
           @foreach($todas as $t)
-            ['{{ $t->provincia }}', '{{ $t->ciudad }}', '{{ $t->nombre_gafete }}', '{{ cambioComas($t->referencia) }}', '{{ $t->local }}', '{{ calificacion($t->general) }}', '{{ calificacion($t->higiene) }}', '{{ calificacion($t->malo_mesas) }}', '{{ calificacion($t->malo_roto) }}', '{{ calificacion($t->malo_aspecto) }}', '{{ calificacion($t->malo_contenedores) }}', '{{ calificacion($t->malo_pisos) }}', '{{ $t->limpieza_otro }}', '{{ calificacion($t->amabilidad) }}', '{{ calificacion($t->malo_saludo) }}', '{{ calificacion($t->malo_sonrisa) }}', '{{ calificacion($t->malo_grosero) }}', '{{ calificacion($t->malo_gracias) }}', '{{ calificacion($t->malo_atentos) }}', '{{ calificacion($t->malo_entender) }}', '{{ $t->amabilidad_otro }}', '{{ calificacion($t->rapidez) }}', '{{ calificacion($t->malo_ordenar) }}', '{{ calificacion($t->malo_reciban) }}', '{{ calificacion($t->malo_apuro) }}', '{{ calificacion($t->malo_recibir) }}', '{{ calificacion($t->malo_urgencia) }}', '{{ $t->rapidez_otro }}', '{{ calificacion($t->precision) }}', '{{ calificacion($t->malo_equivocado) }}', '{{ calificacion($t->malo_falta) }}', '{{ calificacion($t->malo_tamano) }}', '{{ calificacion($t->malo_cantidad) }}', '{{ calificacion($t->malo_disponible) }}', '{{ calificacion($t->malo_cambio) }}', '{{ $t->precision_otro }}', '{{ calificacion($t->sabor) }}', '{{ $t->malo_sabor }}', '{{ calificacion($t->valor_general) }}', '{{ $t->malo_problema }}', '{{ calificacion($t->malo_eficacia) }}', '{{ $t->banderin }}', '{{ calificacionTotal($t) }}'],
+            ['{{ calificacionTotal($t) }}', '{{ $t->provincia }}', '{{ $t->ciudad }}', '{{ $t->nombre_gafete }}', '{{ cambioComas($t->referencia) }}', '{{ $t->local }}', '{{ calificacion($t->general) }}', '{{ calificacion($t->higiene) }}', '{{ calificacion($t->malo_mesas) }}', '{{ calificacion($t->malo_roto) }}', '{{ calificacion($t->malo_aspecto) }}', '{{ calificacion($t->malo_contenedores) }}', '{{ calificacion($t->malo_pisos) }}', '{{ $t->limpieza_otro }}', '{{ calificacion($t->amabilidad) }}', '{{ calificacion($t->malo_saludo) }}', '{{ calificacion($t->malo_sonrisa) }}', '{{ calificacion($t->malo_grosero) }}', '{{ calificacion($t->malo_gracias) }}', '{{ calificacion($t->malo_atentos) }}', '{{ calificacion($t->malo_entender) }}', '{{ $t->amabilidad_otro }}', '{{ calificacion($t->rapidez) }}', '{{ calificacion($t->malo_ordenar) }}', '{{ calificacion($t->malo_reciban) }}', '{{ calificacion($t->malo_apuro) }}', '{{ calificacion($t->malo_recibir) }}', '{{ calificacion($t->malo_urgencia) }}', '{{ $t->rapidez_otro }}', '{{ calificacion($t->precision) }}', '{{ calificacion($t->malo_equivocado) }}', '{{ calificacion($t->malo_falta) }}', '{{ calificacion($t->malo_tamano) }}', '{{ calificacion($t->malo_cantidad) }}', '{{ calificacion($t->malo_disponible) }}', '{{ calificacion($t->malo_cambio) }}', '{{ $t->precision_otro }}', '{{ calificacion($t->sabor) }}', '{{ $t->malo_sabor }}', '{{ calificacion($t->valor_general) }}', '{{ $t->malo_problema }}', '{{ calificacion($t->malo_eficacia) }}', '{{ $t->banderin }}', '{{ $t->detalles }}'],
           @endforeach
         ]);
 
