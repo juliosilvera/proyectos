@@ -243,7 +243,7 @@ function drawTable() {
         data.addColumn('string', 'Experimentó algun problema durante su visita?');
         data.addColumn('string', 'Grado de Satisfacción');
         data.addColumn('string', 'Tenia Banderin?');
-        data.addColumn('string', 'Detalles');
+        data.addColumn('string', 'Por favor explique porque no estuvo satisfecho con su experiencia en este local');
 
 
         data.addRows([
