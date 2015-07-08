@@ -61,6 +61,11 @@ class EncuestasGrupoKfc extends Migration
             $table->integer('malo_eficacia');
             $table->string('banderin');
             $table->text('detalles');
+            $table->text('testimonial_personal');
+            $table->text('testimonial_banos');
+            $table->text('testimonial_parqueadero');
+            $table->text('testimonial_mesas');
+            $table->text('testimonial_comida');
             $table->timestamps();
         });
     }

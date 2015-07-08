@@ -129,6 +129,22 @@ $total = $divicion / $divisor;
 $calificacion = calificacion($total);
 return $calificacion;
 }
+$valores = array(0 => '', 1 => '', 2 => '', 3 => '', 4 => '', 5 => '');
+function valores($valor){
+for ($i = 1; $i < 6; $i++)
+{
+$valores[$i] = App\EncuestasGrupoKFC::where($valor, $i)->count();
+
+}
+return $valores;
+}
+$higiene = valores('higiene');
+$general = valores('general');
+$amabilidad = valores('amabilidad');
+$rapidez = valores('rapidez');
+$precision = valores('precision');
+$sabor = valores('sabor');
+
 ?>
 {!! Form::open(['method' => 'POST', 'action' => ['HomeController@estadisticas']]) !!}
 
@@ -161,13 +177,70 @@ return $calificacion;
                  </div>
             </div>
         </div>
-        <div class="col-md-10" style="height: 500px">
+        <div class="col-md-10" style="height: 500px; margin-bottom: 100px">
             <div id="chart_div" style="width: 100%; height: 100%"></div>
         </div>
         <div class="col-md-12">
-            <div id="table_div" style="width: 100%; height: 450px; overflow: scroll"></div>
+            <div id="table_div"></div>
         </div>
-    </div>
+        <div class="col-md-12" style="height: 700px">
+            <h3>Estadisticas</h3>
+            <div id="table_div1"></div>
+            <div id="piechart" style="width: 500px; height: 500px"></div>
+        </div>
+</div>
+
+    <h3>Testimoniales</h3>
+    @foreach($todas as $t)
+    @if($t->testimonial_personal != "" | $t->testimonial_banos != "" | $t->testimonial_parqueaderos != "" | $t->testimonial_mesas != "" | $t->testimonial_comida != "" )
+    <div class="row">
+    <h4>{{ $t->local }}</h4>
+    @if($t->testimonial_personal != "")
+      <div class="col-xs-6 col-md-3">
+       <h4>Personal</h4>
+        <a href="#" class="thumbnail">
+          <img src="/fotos/{{ $t->testimonial_personal }}" alt="...">
+        </a>
+      </div>
+      @endif
+      @if($t->testimonial_banos != "")
+      <div class="col-xs-6 col-md-3">
+         <h4>Baños</h4>
+          <a href="#" class="thumbnail">
+            <img src="/fotos/{{ $t->testimonial_banos }}" alt="...">
+          </a>
+      </div>
+      @endif
+      @if($t->testimonial_parqueaderos != "")
+      <div class="col-xs-6 col-md-3">
+         <h4>Parqueaderos</h4>
+          <a href="#" class="thumbnail">
+            <img src="/fotos/{{ $t->testimonial_parqueaderos }}" alt="...">
+          </a>
+      </div>
+      @endif
+      @if($t->testimonial_mesas != "")
+      <div class="col-xs-6 col-md-3">
+         <h4>Mesas</h4>
+          <a href="#" class="thumbnail">
+            <img src="/fotos/{{ $t->testimonial_mesas }}" alt="...">
+          </a>
+      </div>
+      @endif
+      @if($t->testimonial_comida != "" )
+      <div class="col-xs-6 col-md-3">
+         <h4>Presentación Comida</h4>
+          <a href="#" class="thumbnail">
+            <img src="/fotos/{{ $t->testimonial_comida }}" alt="...">
+          </a>
+      </div>
+      @endif
+
+      </div>
+      @endif
+    @endforeach
+
+
 </div>
 {!! Form::close() !!}
 @stop
@@ -177,6 +250,8 @@ return $calificacion;
 <script>
 google.setOnLoadCallback(drawChart);
 google.setOnLoadCallback(drawTable);
+google.setOnLoadCallback(drawTable1);
+google.setOnLoadCallback(drawChart1);
 
 function drawChart() {
 
@@ -254,7 +329,52 @@ function drawTable() {
 
         var table = new google.visualization.Table(document.getElementById('table_div'));
 
-        table.draw(data, {showRowNumber: true});
+        table.draw(data, {showRowNumber: true, width: '100%', height: '450'});
       }
+
+      function drawTable1() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'Calificación');
+              data.addColumn('string', 'General');
+              data.addColumn('string', 'Higiene');
+              data.addColumn('string', 'Amabilidad');
+              data.addColumn('string', 'Rapidez');
+              data.addColumn('string', 'Precisión');
+              data.addColumn('string', 'Sabor');
+              data.addColumn('string', 'Total');
+              data.addRows([
+                    ['Excelente', '{{ $general[5] }}', '{{ $higiene[5] }}', '{{ $amabilidad[5] }}', '{{ $rapidez[5] }}', '{{ $precision[5] }}', '{{ $sabor[5] }}', '{{ $general[5] + $higiene[5] + $amabilidad[5] + $rapidez[5] + $precision[5] + $sabor[5] }}'],
+                    ['Bueno', '{{ $general[4] }}', '{{ $higiene[4] }}', '{{ $amabilidad[4] }}', '{{ $rapidez[4] }}', '{{ $precision[4] }}', '{{ $sabor[4] }}', '{{ $general[4] + $higiene[4] + $amabilidad[4] + $rapidez[4] + $precision[4] + $sabor[4] }}'],
+                    ['Regular', '{{ $general[3] }}', '{{ $higiene[3] }}', '{{ $amabilidad[3] }}', '{{ $rapidez[3] }}', '{{ $precision[3] }}', '{{ $sabor[3] }}', '{{ $general[3] + $higiene[3] + $amabilidad[3] + $rapidez[3] + $precision[3] + $sabor[3] }}'],
+                    ['Malo', '{{ $general[2] }}', '{{ $higiene[2] }}', '{{ $amabilidad[2] }}', '{{ $rapidez[2] }}', '{{ $precision[2] }}', '{{ $sabor[2] }}', '{{ $general[2] + $higiene[2] + $amabilidad[2] + $rapidez[2] + $precision[2] + $sabor[2] }}'],
+                    ['Muy Malo', '{{ $general[1] }}', '{{ $higiene[1] }}', '{{ $amabilidad[1] }}', '{{ $rapidez[1] }}', '{{ $precision[1] }}', '{{ $sabor[1] }}', '{{ $general[1] + $higiene[1] + $amabilidad[1] + $rapidez[1] + $precision[1] + $sabor[1] }}'],
+              ]);
+
+              var table = new google.visualization.Table(document.getElementById('table_div1'));
+
+              table.draw(data, {showRowNumber: false, width: '100%', height: '100%'});
+            }
+
+
+            function drawChart1() {
+
+              var data = google.visualization.arrayToDataTable([
+                ['Calificacion', 'Total'],
+                ['Excelente',     {{ $general[5] + $higiene[5] + $amabilidad[5] + $rapidez[5] + $precision[5] + $sabor[5] }}],
+                ['Bueno',      {{ $general[4] + $higiene[4] + $amabilidad[4] + $rapidez[4] + $precision[4] + $sabor[4] }}],
+                ['Regular',  {{ $general[3] + $higiene[3] + $amabilidad[3] + $rapidez[3] + $precision[3] + $sabor[3] }}],
+                ['Malo', {{ $general[2] + $higiene[2] + $amabilidad[2] + $rapidez[2] + $precision[2] + $sabor[2] }}],
+                ['Muy Malo',    {{ $general[1] + $higiene[1] + $amabilidad[1] + $rapidez[1] + $precision[1] + $sabor[1] }}]
+              ]);
+
+              var options = {
+                title: '',
+                is3D: true,
+              };
+
+              var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+              chart.draw(data, options);
+            }
 </script>
 @stop

@@ -56,6 +56,11 @@ class EncuestasGrupoKFC extends Model
         'malo_problema',
         'malo_eficacia',
         'banderin',
-        'detalles'
+        'detalles',
+        'testimonial_personal',
+        'testimonial_banos',
+        'testimonial_parqueadero',
+        'testimonial_mesas',
+        'testimonial_comida'
     ];
 }
