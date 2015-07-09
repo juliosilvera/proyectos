@@ -77,7 +77,8 @@ class HomeController extends Controller
     public function show($id, homeModel $homeModel)
     {
         $datos = $homeModel->getDatos();
-        return view('/'.$datos['path'].'.'.$id, compact('datos'));
+        $mapa = $homeModel->mapa($datos['path']);
+        return view('/'.$datos['path'].'.'.$id, compact('datos', 'mapa'));
     }
 
     /**

@@ -33,7 +33,7 @@
        Mapas
        <br>
        <br>
-       <a href="">
+       <a href="/home/mapa">
        <img src="/img/mapa.png" style="width: 70px">
        </a>
        </div>

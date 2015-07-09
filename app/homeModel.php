@@ -231,6 +231,48 @@
 
             }
 
+        public function mapa($alias)
+            {
+                $proyecto = Cliente::where('alias', $alias)->first();
+                $model = "App\\" . $proyecto->model;
+                $data = $model::all();
+                return $data;
+            }
+
+        function calificacion($valor){
+            switch ($valor)
+            {
+                case 0:
+                    $calificacion = "---";
+                    break;
+
+                case $valor >= 1 && $valor < 2:
+                    $calificacion = "Muy Malo";
+                    break;
+
+                case $valor >= 2 && $valor < 3:
+                    $calificacion = "Malo";
+                    break;
+
+                case $valor >= 3 && $valor < 4:
+                    $calificacion = "Regular";
+                    break;
+
+                case $valor >= 4 && $valor < 5:
+                    $calificacion = "Bueno";
+                    break;
+
+                case $valor >= 5:
+                    $calificacion = "Excelente";
+                    break;
+
+                default:
+                    $calificacion = "---";
+                    break;
+            }
+            return $calificacion;
+        }
+
 
 
     }
