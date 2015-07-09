@@ -27,9 +27,11 @@
       <file leaf-file-name="mapa.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/mapa.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7529833" vertical-offset="4015" max-vertical-offset="5037">
-              <caret line="202" column="12" selection-start-line="202" selection-start-column="12" selection-end-line="202" selection-end-column="12" />
-              <folding />
+            <state vertical-scroll-proportion="0.7804296" vertical-offset="2566" max-vertical-offset="5037">
+              <caret line="140" column="293" selection-start-line="140" selection-start-column="293" selection-end-line="140" selection-end-column="293" />
+              <folding>
+                <marker date="1436477186000" expanded="true" signature="4351:4363" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -595,9 +597,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/mapa.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7529833" vertical-offset="4015" max-vertical-offset="5037">
-          <caret line="202" column="12" selection-start-line="202" selection-start-column="12" selection-end-line="202" selection-end-column="12" />
-          <folding />
+        <state vertical-scroll-proportion="0.7804296" vertical-offset="2566" max-vertical-offset="5037">
+          <caret line="140" column="293" selection-start-line="140" selection-start-column="293" selection-end-line="140" selection-end-column="293" />
+          <folding>
+            <marker date="1436477186000" expanded="true" signature="4351:4363" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
