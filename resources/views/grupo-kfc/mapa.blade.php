@@ -119,7 +119,7 @@ switch ($valor)
                     break;
             }
 ?>
-['{{ strtoupper($data->local) }}', {{ $data->lat }}, {{ $data->lng }}, '{{ $calificacion }}', '{{ $pin }}', '{{ $data->direccion }}'],
+['{{ strtoupper($data->local) }}', {{ $data->lat }}, {{ $data->lng }}, '{{ $calificacion }}', '{{ $pin }}', '{{ $data->direccion }}', '{{ $data->foto }}'],
 @endforeach
 ];
         
@@ -134,11 +134,11 @@ function setMarkers(map, locations) {
         title: data[0],
         icon: image
     });
-     setText(marker,data[0], data[3], data[5]);
+     setText(marker,data[0], data[3], data[5], data[6]);
   }
 }
-function setText(marker, nombre, calificacion, direccion){
-   var message = "<table><tr><td><img src='http://acidcow.com/pics/20110426/other/5/lars_van_de_goor_nature_22.jpg' style='width: 300px'></td><td><p><b>Calificación:</b> "+calificacion+"</p><p><b>Nombre del Local:</b> Menestras del Negro -  "+nombre+"</p><p><b>Dirección:</b> "+direccion+"</p></td></tr></table>";
+function setText(marker, nombre, calificacion, direccion, foto){
+   var message = "<table><tr><td><img src='/fotos/"+foto+"' style='width: 300px'></td><td><p><b>Calificación:</b> "+calificacion+"</p><p><b>Nombre del Local:</b> Menestras del Negro -  "+nombre+"</p><p><b>Dirección:</b> "+direccion+"</p></td></tr></table>";
   var infowindow = new google.maps.InfoWindow({
     content: message
   });
