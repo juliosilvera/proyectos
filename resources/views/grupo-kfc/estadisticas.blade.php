@@ -82,6 +82,40 @@ break;
 return $calificacion;
 }
 
+function colores($valor){
+switch ($valor)
+{
+case 0:
+$calificacion = "---";
+break;
+
+case $valor >= 1 && $valor < 2:
+$calificacion = 'color: #ff0000';
+break;
+
+case $valor >= 2 && $valor < 3:
+$calificacion = 'color: #ffaa00';
+break;
+
+case $valor >= 3 && $valor < 4:
+$calificacion = 'color: #ffff00';
+break;
+
+case $valor >= 4 && $valor < 5:
+$calificacion = 'color: #cfff91';
+break;
+
+case $valor >= 5:
+$calificacion = 'color: #00ff22';
+break;
+
+default:
+$calificacion = "---";
+break;
+}
+return $calificacion;
+}
+
 function calificacion($valor){
 switch ($valor)
 {
@@ -421,9 +455,9 @@ function drawTable() {
             function drawBasic1() {
 
                   var data = google.visualization.arrayToDataTable([
-                    ['Local', 'Calificación',],
+                    ['Local', 'Calificación', { role: 'style'}],
                     @foreach($todas as $t)
-                    ['{{ strtoupper($t->local) }}', {{ calificacion2(($t->general + $t->higiene + $t->amabilidad + $t->rapidez + $t->precision + $t->sabor)/6) }}],
+                    ['{{ strtoupper($t->local) }}', {{ calificacion2(($t->general + $t->higiene + $t->amabilidad + $t->rapidez + $t->precision + $t->sabor)/6) }}, '{{ colores(($t->general + $t->higiene + $t->amabilidad + $t->rapidez + $t->precision + $t->sabor)/6) }}'],
                     @endforeach
                   ]);
 
