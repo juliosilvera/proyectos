@@ -1,10 +1,6 @@
 @extends('app')
 
 @section('header')
-@include('nav.cliente')
-@stop
-
-@section('content')
 <?php
 $filtros = [];
 $provincia = "";
@@ -52,6 +48,40 @@ foreach ($todas as $t)
     $excelente++;
     }
 }
+function calificacion2($valor){
+switch ($valor)
+{
+case 0:
+$calificacion = "---";
+break;
+
+case $valor >= 1 && $valor < 2:
+$calificacion = 1;
+break;
+
+case $valor >= 2 && $valor < 3:
+$calificacion = 2;
+break;
+
+case $valor >= 3 && $valor < 4:
+$calificacion = 3;
+break;
+
+case $valor >= 4 && $valor < 5:
+$calificacion = 4;
+break;
+
+case $valor >= 5:
+$calificacion = 5;
+break;
+
+default:
+$calificacion = "---";
+break;
+}
+return $calificacion;
+}
+
 function calificacion($valor){
 switch ($valor)
 {
@@ -146,11 +176,17 @@ $precision = valores('precision');
 $sabor = valores('sabor');
 
 ?>
-{!! Form::open(['method' => 'POST', 'action' => ['HomeController@estadisticas']]) !!}
+@include('nav.cliente')
+@stop
+
+@section('content')
+
 
 <div class="container">
     <div class="row">
         <div class="col-md-2">
+        {!! Form::open(['method' => 'POST', 'action' => ['HomeController@estadisticas']]) !!}
+
             <h3>Filtros</h3>
             <div class="form-group">
                  {!! Form::label('provincia', 'Provincias:') !!}
@@ -176,9 +212,13 @@ $sabor = valores('sabor');
                      {!! Form::submit('Filtrar', ['class' => 'btn-primary form-control']) !!}
                  </div>
             </div>
+            {!! Form::close() !!}
         </div>
         <div class="col-md-10" style="height: 500px; margin-bottom: 100px">
             <div id="chart_div" style="width: 100%; height: 100%"></div>
+        </div>
+        <div class="col-md-12" style="margin-bottom: 50px">
+            <div id="chart_div1"></div>
         </div>
         <div class="col-md-12">
             <div id="table_div"></div>
@@ -194,7 +234,7 @@ $sabor = valores('sabor');
     @foreach($todas as $t)
     @if($t->testimonial_personal != "" | $t->testimonial_banos != "" | $t->testimonial_parqueaderos != "" | $t->testimonial_mesas != "" | $t->testimonial_comida != "" )
     <div class="row">
-    <h4>{{ $t->local }}</h4>
+    <h4>{{ strtoupper($t->local) }}</h4>
     @if($t->testimonial_personal != "")
       <div class="col-xs-6 col-md-3">
        <h4>Personal</h4>
@@ -242,7 +282,7 @@ $sabor = valores('sabor');
 
 
 </div>
-{!! Form::close() !!}
+
 @stop
 
 @section('footer')
@@ -252,6 +292,7 @@ google.setOnLoadCallback(drawChart);
 google.setOnLoadCallback(drawTable);
 google.setOnLoadCallback(drawTable1);
 google.setOnLoadCallback(drawChart1);
+google.setOnLoadCallback(drawBasic1);
 
 function drawChart() {
 
@@ -323,7 +364,7 @@ function drawTable() {
 
         data.addRows([
           @foreach($todas as $t)
-            ['{{ calificacionTotal($t) }}', '{{ $t->provincia }}', '{{ $t->ciudad }}', '{{ $t->nombre_gafete }}', '{{ cambioComas($t->referencia) }}', '{{ $t->local }}', '{{ calificacion($t->general) }}', '{{ calificacion($t->higiene) }}', '{{ calificacion($t->malo_mesas) }}', '{{ calificacion($t->malo_roto) }}', '{{ calificacion($t->malo_aspecto) }}', '{{ calificacion($t->malo_contenedores) }}', '{{ calificacion($t->malo_pisos) }}', '{{ $t->limpieza_otro }}', '{{ calificacion($t->amabilidad) }}', '{{ calificacion($t->malo_saludo) }}', '{{ calificacion($t->malo_sonrisa) }}', '{{ calificacion($t->malo_grosero) }}', '{{ calificacion($t->malo_gracias) }}', '{{ calificacion($t->malo_atentos) }}', '{{ calificacion($t->malo_entender) }}', '{{ $t->amabilidad_otro }}', '{{ calificacion($t->rapidez) }}', '{{ calificacion($t->malo_ordenar) }}', '{{ calificacion($t->malo_reciban) }}', '{{ calificacion($t->malo_apuro) }}', '{{ calificacion($t->malo_recibir) }}', '{{ calificacion($t->malo_urgencia) }}', '{{ $t->rapidez_otro }}', '{{ calificacion($t->precision) }}', '{{ calificacion($t->malo_equivocado) }}', '{{ calificacion($t->malo_falta) }}', '{{ calificacion($t->malo_tamano) }}', '{{ calificacion($t->malo_cantidad) }}', '{{ calificacion($t->malo_disponible) }}', '{{ calificacion($t->malo_cambio) }}', '{{ $t->precision_otro }}', '{{ calificacion($t->sabor) }}', '{{ $t->malo_sabor }}', '{{ calificacion($t->valor_general) }}', '{{ $t->malo_problema }}', '{{ calificacion($t->malo_eficacia) }}', '{{ $t->banderin }}', '{{ $t->detalles }}'],
+            ['{{ calificacionTotal($t) }}', '{{ $t->provincia }}', '{{ $t->ciudad }}', '{{ $t->nombre_gafete }}', '{{ cambioComas($t->referencia) }}', '{{ strtoupper($t->local) }}', '{{ calificacion($t->general) }}', '{{ calificacion($t->higiene) }}', '{{ calificacion($t->malo_mesas) }}', '{{ calificacion($t->malo_roto) }}', '{{ calificacion($t->malo_aspecto) }}', '{{ calificacion($t->malo_contenedores) }}', '{{ calificacion($t->malo_pisos) }}', '{{ $t->limpieza_otro }}', '{{ calificacion($t->amabilidad) }}', '{{ calificacion($t->malo_saludo) }}', '{{ calificacion($t->malo_sonrisa) }}', '{{ calificacion($t->malo_grosero) }}', '{{ calificacion($t->malo_gracias) }}', '{{ calificacion($t->malo_atentos) }}', '{{ calificacion($t->malo_entender) }}', '{{ $t->amabilidad_otro }}', '{{ calificacion($t->rapidez) }}', '{{ calificacion($t->malo_ordenar) }}', '{{ calificacion($t->malo_reciban) }}', '{{ calificacion($t->malo_apuro) }}', '{{ calificacion($t->malo_recibir) }}', '{{ calificacion($t->malo_urgencia) }}', '{{ $t->rapidez_otro }}', '{{ calificacion($t->precision) }}', '{{ calificacion($t->malo_equivocado) }}', '{{ calificacion($t->malo_falta) }}', '{{ calificacion($t->malo_tamano) }}', '{{ calificacion($t->malo_cantidad) }}', '{{ calificacion($t->malo_disponible) }}', '{{ calificacion($t->malo_cambio) }}', '{{ $t->precision_otro }}', '{{ calificacion($t->sabor) }}', '{{ $t->malo_sabor }}', '{{ calificacion($t->valor_general) }}', '{{ $t->malo_problema }}', '{{ calificacion($t->malo_eficacia) }}', '{{ $t->banderin }}', '{{ $t->detalles }}'],
           @endforeach
         ]);
 
@@ -376,5 +417,31 @@ function drawTable() {
 
               chart.draw(data, options);
             }
+
+            function drawBasic1() {
+
+                  var data = google.visualization.arrayToDataTable([
+                    ['Local', 'Calificación',],
+                    @foreach($todas as $t)
+                    ['{{ strtoupper($t->local) }}', {{ calificacion2(($t->general + $t->higiene + $t->amabilidad + $t->rapidez + $t->precision + $t->sabor)/6) }}],
+                    @endforeach
+                  ]);
+
+                  var options = {
+                    title: 'Reporte por local',
+                    chartArea: {width: '50%'},
+                    hAxis: {
+                      title: 'Calificación Total',
+                      minValue: 0
+                    },
+                    vAxis: {
+                      title: 'Local'
+                    }
+                  };
+
+                  var chart = new google.visualization.BarChart(document.getElementById('chart_div1'));
+
+                  chart.draw(data, options);
+                }
 </script>
 @stop
