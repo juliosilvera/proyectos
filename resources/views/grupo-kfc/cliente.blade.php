@@ -17,7 +17,7 @@
        Reportes Exportables
        <br>
        <br>
-       <a href="">
+       <a href="/home/exportExcel">
        <img src="/img/excel.png" style="width: 70px">
        </a>
        </div>

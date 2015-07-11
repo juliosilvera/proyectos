@@ -7,6 +7,7 @@
     use Illuminate\Support\Facades\Auth;
     use Illuminate\Support\Facades\DB;
     use League\Geotools\Coordinate\Coordinate;
+    use Maatwebsite\Excel\Facades\Excel;
 
     class homeModel extends Model {
 
@@ -272,6 +273,87 @@
             }
             return $calificacion;
         }
+
+
+        public function excel()
+            {
+                $datos = $this->selByType(Auth::user()->type, Auth::user()->proyecto, Auth::user()->name);
+                Excel::create($datos['proyecto'], function($excel) {
+
+
+                    // Our first sheet
+                    $excel->sheet('Encuestas', function($sheet) {
+                        $count = 2;
+                        $sheet->row(1, array(
+                            'Calificación Total', 'Provincia', 'Ciudad', 'Nombre en Gafete', 'Referencia', 'Local', 'Satisfacción General', 'Higiene', 'Mesas o Sillas', 'Algo Roto o Rasgado',
+                            'Aspecto del Empleado', 'Contenedores de Basura', 'Pisos', 'Otro', 'Amabilidad', 'No me Saludaron', 'No me Sonrieron', 'Fueron Groseros o Descorteses', 'No me Dieron las Gracias',
+                            'No Fueron Atentos', 'No Pude Entender al Empleado', 'Otro', 'Rapidez', 'El tiempo que Espere para Ordenar mis Alimentos', 'El Tiempo que Tomo que Recibieran mi Orden',
+                            'Senti que me Apuraban', 'El Tiempo que Paso para Recibir mis Alimentos', 'La Sensación de Urgencia del Empleado', 'Otro', 'Precisión', 'Me Dieron un Producto Equivocado',
+                            'Fatla de un Alimento o Producto', 'Me dieron un Tamaño Equivocado', 'Me Cobraron una Cantidad Incorrecta', 'El Alimento o Producto no Estaba Disponible', 'Me Dieron un Cambio Incorrecto',
+                            'Otro', 'Sabor', 'Que Plato del Menu Tuvo el Mayor Impacto en su Calificación Sobre el Sabor de la Comida', 'Valor General po Precio', 'Experimento Algun Problema Durante su Visita?',
+                            'Grado de Satisfacción', 'Tenia Banderin?', 'Por Favor Explique Porque no Estuvo Satisfecho con su Experiencia en Este Local:'
+                        ));
+                        $todas = EncuestasGrupoKFC::all();
+                        foreach($todas as $t)
+                        {
+                            $count++;
+                            $sheet->row($count, array(
+                                $this->calificacionTotal($t), $t->provincia, $t->ciudad, $t->nombre_gafete, $this->cambioComas($t->referencia), strtoupper($t->local), $this->calificacion($t->general), $this->calificacion($t->higiene), $this->calificacion($t->malo_mesas), $this->calificacion($t->malo_roto), $this->calificacion($t->malo_aspecto), $this->calificacion($t->malo_contenedores), $this->calificacion($t->malo_pisos), $t->limpieza_otro, $this->calificacion($t->amabilidad), $this->calificacion($t->malo_saludo), $this->calificacion($t->malo_sonrisa), $this->calificacion($t->malo_grosero), $this->calificacion($t->malo_gracias), $this->calificacion($t->malo_atentos), $this->calificacion($t->malo_entender), $t->amabilidad_otro, $this->calificacion($t->rapidez), $this->calificacion($t->malo_ordenar), $this->calificacion($t->malo_reciban), $this->calificacion($t->malo_apuro), $this->calificacion($t->malo_recibir), $this->calificacion($t->malo_urgencia), $t->rapidez_otro, $this->calificacion($t->precision), $this->calificacion($t->malo_equivocado), $this->calificacion($t->malo_falta), $this->calificacion($t->malo_tamano), $this->calificacion($t->malo_cantidad), $this->calificacion($t->malo_disponible), $this->calificacion($t->malo_cambio), $t->precision_otro, $this->calificacion($t->sabor), $t->malo_sabor, $this->calificacion($t->valor_general), $t->malo_problema, $this->calificacion($t->malo_eficacia), $t->banderin, $t->detalles
+                            ));
+
+                        }
+
+                    });
+
+
+                })->export('xls');
+            }
+
+        public function calificacionTotal($t){
+            $divicion = 0;
+            $divisor = 0;
+
+            if($t->general > 0){
+                $divisor++;
+                $divicion += $t->general;
+            }
+            if($t->higiene > 0){
+                $divisor++;
+                $divicion += $t->higiene;
+            }
+            if($t->amabilidad > 0){
+                $divisor++;
+                $divicion += $t->amabilidad;
+            }
+            if($t->rapidez > 0){
+                $divisor++;
+                $divicion += $t->rapidez;
+            }
+            if($t->precision > 0){
+                $divisor++;
+                $divicion += $t->precision;
+            }
+            if($t->sabor > 0){
+                $divisor++;
+                $divicion += $t->sabor;
+            }
+            if($t->valor_general > 0){
+                $divisor++;
+                $divicion += $t->valor_general;
+            }
+            $total = $divicion / $divisor;
+
+            $calificacion = $this->calificacion($total);
+            return $calificacion;
+        }
+
+        function cambioComas($cambio){
+
+            $v = str_replace(",", "/", $cambio);
+            return $v;
+        }
+
+
 
 
 

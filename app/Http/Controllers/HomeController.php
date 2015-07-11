@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
+use Maatwebsite\Excel\Facades\Excel;
 
 class HomeController extends Controller
 {
@@ -158,4 +159,9 @@ class HomeController extends Controller
         $datos = $homeModel->getDatos();
         return view('/'.$datos['path'].'.estadisticas', compact('datos'));
     }
+
+    public function exportExcel(homeModel $homeModel)
+        {
+            $homeModel->excel();
+        }
 }
