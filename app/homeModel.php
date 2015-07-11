@@ -289,7 +289,7 @@
                             'Aspecto del Empleado', 'Contenedores de Basura', 'Pisos', 'Otro', 'Amabilidad', 'No me Saludaron', 'No me Sonrieron', 'Fueron Groseros o Descorteses', 'No me Dieron las Gracias',
                             'No Fueron Atentos', 'No Pude Entender al Empleado', 'Otro', 'Rapidez', 'El tiempo que Espere para Ordenar mis Alimentos', 'El Tiempo que Tomo que Recibieran mi Orden',
                             'Senti que me Apuraban', 'El Tiempo que Paso para Recibir mis Alimentos', 'La Sensación de Urgencia del Empleado', 'Otro', 'Precisión', 'Me Dieron un Producto Equivocado',
-                            'Fatla de un Alimento o Producto', 'Me dieron un Tamaño Equivocado', 'Me Cobraron una Cantidad Incorrecta', 'El Alimento o Producto no Estaba Disponible', 'Me Dieron un Cambio Incorrecto',
+                            'Falta de un Alimento o Producto', 'Me dieron un Tamaño Equivocado', 'Me Cobraron una Cantidad Incorrecta', 'El Alimento o Producto no Estaba Disponible', 'Me Dieron un Cambio Incorrecto',
                             'Otro', 'Sabor', 'Que Plato del Menu Tuvo el Mayor Impacto en su Calificación Sobre el Sabor de la Comida', 'Valor General po Precio', 'Experimento Algun Problema Durante su Visita?',
                             'Grado de Satisfacción', 'Tenia Banderin?', 'Por Favor Explique Porque no Estuvo Satisfecho con su Experiencia en Este Local:'
                         ));
