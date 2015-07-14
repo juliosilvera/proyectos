@@ -121,16 +121,8 @@ foreach ($vueltas as $v) {
     }
         break;
     }
-    
-  
-
-
   echo '["'.$v->id.'", "'.$v->ciudad.'", "'.$v->fecha.'", "'.$v->barrio.'", "'.$v->nombre_comercial.'", "'.$v->propietario.'", "'.$v->encargado.'", "'.$v->calle_principal.'", "'.$v->numero.'", "'.$v->calle_secundaria.'", "'.$v->telefono.'", "'.$v->productos1.'", "'.$v->productos2.'", "'.$v->productos3.'", "'.$v->tipo_ferreteria.'", "'.$v->lat.'", "'.$v->lng.'", "'.$v->antes.'", "'.$v->despues.'", "'.$v->clasificacion_distribuidor.'", "'.$pin.'"],';
 }
-
-
-
-
 ?>
   
 ];
