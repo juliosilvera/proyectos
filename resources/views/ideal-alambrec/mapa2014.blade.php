@@ -75,7 +75,7 @@
 var beaches = [
 <?php
 $sel = '';
-$vueltas = DB::table('vuelta2')->where(function($query){
+$vueltas = \App\Vuelta2::where(function($query){
   if (isset($_POST['distribuidores'])) {
 if ($_POST['distribuidores'] != "todos") {
   $query->where('dist', $_POST['distribuidores']);
