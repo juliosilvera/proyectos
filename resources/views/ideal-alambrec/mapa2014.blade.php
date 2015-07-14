@@ -30,7 +30,7 @@
         position: absolute;
         bottom: 5px;
         left: 5px;
-        
+
         z-index: 5;
         background-color: #fff;
         padding: 5px;
@@ -53,7 +53,7 @@
       src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=visualization">
     </script>
     <script type="text/javascript">
-        
+
       function initialize() {
   var mapOptions = {
     zoom: 6,
@@ -64,7 +64,7 @@
                                 mapOptions);
 
   setMarkers(map, beaches);
-        
+
 }
 
 /**
@@ -112,7 +112,7 @@ foreach ($vueltas as $v) {
       case 'DETALLISTA':
         $pin = "http://google.com/mapfiles/ms/micons/ltblu-pushpin.png";
         break;
-      
+
       default:
        if ($suma_ideal > $suma_adelca) {
       $pin = "http://maps.google.com/mapfiles/ms/icons/blue-dot.png";
@@ -124,9 +124,9 @@ foreach ($vueltas as $v) {
   echo '["'.$v->id.'", "'.$v->ciudad.'", "'.$v->fecha.'", "'.$v->barrio.'", "'.$v->nombre_comercial.'", "'.$v->propietario.'", "'.$v->encargado.'", "'.$v->calle_principal.'", "'.$v->numero.'", "'.$v->calle_secundaria.'", "'.$v->telefono.'", "'.$v->productos1.'", "'.$v->productos2.'", "'.$v->productos3.'", "'.$v->tipo_ferreteria.'", "'.$v->lat.'", "'.$v->lng.'", "'.$v->antes.'", "'.$v->despues.'", "'.$v->clasificacion_distribuidor.'", "'.$pin.'"],';
 }
 ?>
-  
+
 ];
-        
+
 function setMarkers(map, locations) {
   for (var i = 0; i < locations.length; i++) {
     var beach = locations[i];
@@ -138,7 +138,7 @@ function setMarkers(map, locations) {
         title: beach[0],
         icon : image
     });
-     setText(marker,beach[0], beach[1], beach[3], beach[4], beach[5], beach[6], beach[7], beach[8], beach[9], beach[10], beach[11], beach[12], beach[13], beach[14], beach[19], beach[17], beach[18]); 
+     setText(marker,beach[0], beach[1], beach[3], beach[4], beach[5], beach[6], beach[7], beach[8], beach[9], beach[10], beach[11], beach[12], beach[13], beach[14], beach[19], beach[17], beach[18]);
   }
 }
 function setText(marker,id, ciudad, barrio, nombre, propietario, encargado, calle_principal, numero, calle_secundaria, telefono, productos1, productos2, productos3, tipo_ferreteria, clasificacion_distribuidor, antes, despues){
@@ -176,7 +176,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
         <button onclick="volver()">Volver al Menu</button>
         <button onclick="calor()">Mapa de Calor</button>
         <button onclick="salir()">Salir</button>
-    </div>   
+    </div>
     <div id="panel2">
         <table>
           <tr>
@@ -212,7 +212,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
             </td>
           </tr>
         </table>
-    </div>   
+    </div>
     <div id="panel3">
         <form method="post">
         <p><b>Provincias</b></p>
@@ -286,11 +286,11 @@ google.maps.event.addDomListener(window, 'load', initialize);
           </select>
           <br><br><input type="submit" value="Filtrar">
         </form>
-        
-    </div>  
-      
+
+    </div>
+
       <div id="logo"><img src="img/logo-ideal.png" style="width:150px;" /> </div>
     <div id="map_canvas" style="width:100%; height:100%"></div>
-   
+
   </body>
 </html>
