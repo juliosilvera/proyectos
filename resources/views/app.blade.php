@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="/resources/demos/style.css">
   <script>
   $(function() {
-    $( ".datepicker" ).datepicker({altFormat: "yy-mm-dd"});
+    $( ".datepicker" ).datepicker({dateFormat: "yy-mm-dd"});
   });
   </script>
 <title>Go Trade</title>
