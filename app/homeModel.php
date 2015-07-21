@@ -282,8 +282,9 @@
 
 
                     // Our first sheet
-                    $excel->sheet('Encuestas', function($sheet) {
-                        $count = 2;
+                    $excel->sheet('Nombre del Local', function($sheet) {
+                        $sheet->row(1, array('Ordinal Cuestionario', 'Proceso', 'pregunta', 'Excelente', 'Bueno', 'Regular', 'Malo', 'Muy Malo', 'Si', 'No', 'Otro Cual', 'Comentario'));
+                        /*$count = 2;
                         $sheet->row(1, array(
                             'Calificación Total', 'Provincia', 'Ciudad', 'Nombre en Gafete', 'Referencia', 'Local', 'Satisfacción General', 'Higiene', 'Mesas o Sillas', 'Algo Roto o Rasgado',
                             'Aspecto del Empleado', 'Contenedores de Basura', 'Pisos', 'Otro', 'Amabilidad', 'No me Saludaron', 'No me Sonrieron', 'Fueron Groseros o Descorteses', 'No me Dieron las Gracias',
@@ -301,9 +302,113 @@
                                 $this->calificacionTotal($t), $t->provincia, $t->ciudad, $t->nombre_gafete, $this->cambioComas($t->referencia), strtoupper($t->local), $this->calificacion($t->general), $this->calificacion($t->higiene), $this->calificacion($t->malo_mesas), $this->calificacion($t->malo_roto), $this->calificacion($t->malo_aspecto), $this->calificacion($t->malo_contenedores), $this->calificacion($t->malo_pisos), $t->limpieza_otro, $this->calificacion($t->amabilidad), $this->calificacion($t->malo_saludo), $this->calificacion($t->malo_sonrisa), $this->calificacion($t->malo_grosero), $this->calificacion($t->malo_gracias), $this->calificacion($t->malo_atentos), $this->calificacion($t->malo_entender), $t->amabilidad_otro, $this->calificacion($t->rapidez), $this->calificacion($t->malo_ordenar), $this->calificacion($t->malo_reciban), $this->calificacion($t->malo_apuro), $this->calificacion($t->malo_recibir), $this->calificacion($t->malo_urgencia), $t->rapidez_otro, $this->calificacion($t->precision), $this->calificacion($t->malo_equivocado), $this->calificacion($t->malo_falta), $this->calificacion($t->malo_tamano), $this->calificacion($t->malo_cantidad), $this->calificacion($t->malo_disponible), $this->calificacion($t->malo_cambio), $t->precision_otro, $this->calificacion($t->sabor), $t->malo_sabor, $this->calificacion($t->valor_general), $t->malo_problema, $this->calificacion($t->malo_eficacia), $t->banderin, $t->detalles
                             ));
 
+                        }*/
+                        for ($i = 2; $i<50; $i++)
+                        {
+                            $sheet->cell('A' . $i, $i - 1);
+                        }
+                        for ($i = 2; $i<50; $i++)
+                        {
+                            if($i == 2)
+                            {
+                                $sheet->cell('B' . $i, "General");
+                            }
+
+                            if($i >= 3 && $i <= 19 )
+                            {
+                                $sheet->cell('B' . $i, "Empleados");
+                            }
+
+                            if($i >= 20 && $i <= 28 )
+                            {
+                                $sheet->cell('B' . $i, "Local");
+                            }
+
+                            if($i >= 29 && $i <= 30 )
+                            {
+                                $sheet->cell('B' . $i, "Precio");
+                            }
+
+                            if($i >= 31 && $i <= 38 )
+                            {
+                                $sheet->cell('B' . $i, "Producto");
+                            }
+
+                            if($i >= 39 && $i <= 48 )
+                            {
+                                $sheet->cell('B' . $i, "Servicio");
+                            }
+
+                            if($i == 49 )
+                            {
+                                $sheet->cell('B' . $i, "General");
+                            }
+
+                            $preguntas = [
+                                'Por favor califique su satisfaccion general respecto a su experiencia en Menestras del Negro',
+                                'nombre en el gafete',
+                                'si…. Cual',
+                                'peinado',
+                                'aseado',
+                                'uniforme completo',
+                                'malla de cabello',
+                                'uniforme limpio',
+                                'La amabilidad de los empleados',
+                                'No me saludaron',
+                                'No me sonrieron',
+                                'Fueron groseros o descorteses',
+                                'No me dieron las gracias',
+                                'No fueron atentos',
+                                'No pude entender al empleado',
+                                'Senti que me apuraban',
+                                'La sensacion de urgencia del empleado',
+                                'otro',
+                                'La higiene del restaurante',
+                                'porque no estuvo satisfecho con la limpieza del restaurant? Mesas o sillas',
+                                'porque no estuvo satisfecho con la limpieza del restaurant? Algo roto o rasgado',
+                                'porque no estuvo satisfecho con la limpieza del restaurant? Aspecto del empleado',
+                                'porque no estuvo satisfecho con la limpieza del restaurant? Contenedores de basura',
+                                'porque no estuvo satisfecho con la limpieza del restaurant? Pisos',
+                                'porque no estuvo satisfecho con la limpieza del restaurant? Estacionamientos / aceras',
+                                'porque no estuvo satisfecho con la limpieza del restaurant? Falta de servilletas, cubiertos o salsas.',
+                                'Otro',
+                                'El valor general que obtuvo por el precio que pago',
+                                'El valor general por el precio que pago.',
+                                'Me dieron un producto equivocado',
+                                'Falta de un alimento o producto',
+                                'Me dieron un tamaño equivocado',
+                                'Me cobraron una cantidad incorrecta',
+                                'El alimento o producto no estaba disponible',
+                                'ofrece plato en lanzamiento',
+                                'ofrece productos adicionales o complemetarios',
+                                'Otro',
+                                'La rapidez del servicio',
+                                'El tiempo que espere para ordenar mis alimentos',
+                                'cuanto tiempo',
+                                'El tiempo que tomo que recibieran mi orden',
+                                'El tiempo que paso para recibir mis alimentos',
+                                'Me dieron un cambio incorrecto',
+                                'Experimentó algun problema durante su visita?',
+                                'si…. Cual',
+                                'Por favor, califique su grado de satisfaccción con respecto a la eficacia con la que se resolvio el problema Si no trato el problema con el personal seleccione N/A.',
+                                'Otro',
+                                'grado de satisfaccion general'
+                            ];
+                            $count = 1;
+                            foreach ($preguntas as $p)
+                            {
+                                $count++;
+                                $sheet->cell('C' . $count, $p);
+                            }
+
+
+
+
                         }
 
                     });
+
+
 
 
                 })->export('xls');
