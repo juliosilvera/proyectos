@@ -8,19 +8,13 @@
 <div class="well">
 
         {!! Form::open(['url' => 'home', 'enctype' => 'multipart/form-data']) !!}
+        {!! Form::hidden('fecha', $datos['fecha']) !!}
         {!! Form::hidden('user', $datos['user']) !!}
         {!! Form::hidden('provincia', $datos['provincia']) !!}
         {!! Form::hidden('ciudad', $datos['ciudad']) !!}
         <h3><label class="label label-info" id="cargada"></label> </h3>
         <h3><label class="label label-default">Datos del Local</label></h3>
       <div class="row">
-      <div class="col-md-4">
-          <!-- Fecha Form Input -->
-          <div class="form-group">
-               {!! Form::label('fecha', 'Fecha:') !!}
-               {!! Form::text('fecha', null, ['class' => 'form-control datepicker']) !!}
-          </div>
-      </div>
         <div class="col-md-4">
             <div class="form-group">
                  {!! Form::label('sector', 'Sector:') !!}
@@ -507,7 +501,7 @@
       <div class="col-md-4">
                   <!-- Submit Button -->
                   <div class="form-group">
-                      {!! Form::submit('Guardar', ['class' => 'btn-primary form-control', 'id' => 'submitBtn']) !!}
+                      {!! Form::submit('Guardar', ['class' => 'btn-primary form-control', 'disabled', 'id' => 'submitBtn']) !!}
                   </div>
               </div>
       </div>
@@ -542,6 +536,7 @@ $(function() {
             $('#lat').val(lat);
             $('#lng').val(lng);
             $('#cargada').html('Coordenadas Cargadas!');
+            $('#submitBtn').prop('disabled', false);
 
 
         }
