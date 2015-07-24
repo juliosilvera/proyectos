@@ -27,15 +27,15 @@
       <file leaf-file-name="manual.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/manual.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31710213" vertical-offset="11003" max-vertical-offset="14789">
-              <caret line="490" column="88" selection-start-line="490" selection-start-column="88" selection-end-line="490" selection-end-column="88" />
+            <state vertical-scroll-proportion="0.39904988" vertical-offset="11026" max-vertical-offset="14789">
+              <caret line="494" column="58" selection-start-line="494" selection-start-column="58" selection-end-line="494" selection-end-column="58" />
               <folding>
-                <marker date="1437604939000" expanded="true" signature="24629:24822" placeholder="..." />
-                <marker date="1437604939000" expanded="true" signature="25142:25332" placeholder="..." />
-                <marker date="1437604939000" expanded="true" signature="25625:25815" placeholder="..." />
-                <marker date="1437604939000" expanded="true" signature="26108:26298" placeholder="..." />
-                <marker date="1437604939000" expanded="true" signature="26608:26819" placeholder="..." />
-                <marker date="1437604939000" expanded="true" signature="27110:27332" placeholder="..." />
+                <marker date="1437752891000" expanded="true" signature="24565:24758" placeholder="..." />
+                <marker date="1437752891000" expanded="true" signature="25078:25268" placeholder="..." />
+                <marker date="1437752891000" expanded="true" signature="25561:25751" placeholder="..." />
+                <marker date="1437752891000" expanded="true" signature="26044:26234" placeholder="..." />
+                <marker date="1437752891000" expanded="true" signature="26544:26755" placeholder="..." />
+                <marker date="1437752891000" expanded="true" signature="27046:27268" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -192,15 +192,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -235,13 +235,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -600,7 +600,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47624704" vertical-offset="6154" max-vertical-offset="10718">
           <caret line="290" column="44" selection-start-line="285" selection-start-column="44" selection-end-line="285" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -608,7 +607,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46437055" vertical-offset="0" max-vertical-offset="14789">
           <caret line="17" column="30" selection-start-line="0" selection-start-column="0" selection-end-line="637" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -616,21 +614,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.24210526" vertical-offset="0" max-vertical-offset="1035">
           <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/manual.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31710213" vertical-offset="11003" max-vertical-offset="14789">
-          <caret line="490" column="88" selection-start-line="490" selection-start-column="88" selection-end-line="490" selection-end-column="88" />
+        <state vertical-scroll-proportion="0.39904988" vertical-offset="11026" max-vertical-offset="14789">
+          <caret line="494" column="58" selection-start-line="494" selection-start-column="58" selection-end-line="494" selection-end-column="58" />
           <folding>
-            <marker date="1437604939000" expanded="true" signature="24629:24822" placeholder="..." />
-            <marker date="1437604939000" expanded="true" signature="25142:25332" placeholder="..." />
-            <marker date="1437604939000" expanded="true" signature="25625:25815" placeholder="..." />
-            <marker date="1437604939000" expanded="true" signature="26108:26298" placeholder="..." />
-            <marker date="1437604939000" expanded="true" signature="26608:26819" placeholder="..." />
-            <marker date="1437604939000" expanded="true" signature="27110:27332" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="24565:24758" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="25078:25268" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="25561:25751" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="26044:26234" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="26544:26755" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="27046:27268" placeholder="..." />
           </folding>
         </state>
       </provider>

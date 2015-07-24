@@ -501,7 +501,7 @@
       <div class="col-md-4">
                   <!-- Submit Button -->
                   <div class="form-group">
-                      {!! Form::submit('Guardar', ['class' => 'btn-primary form-control', 'disabled', 'id' => 'submitBtn']) !!}
+                      {!! Form::submit('Guardar', ['class' => 'btn-primary form-control', 'id' => 'submitBtn']) !!}
                   </div>
               </div>
       </div>
@@ -536,7 +536,7 @@ $(function() {
             $('#lat').val(lat);
             $('#lng').val(lng);
             $('#cargada').html('Coordenadas Cargadas!');
-            $('#submitBtn').prop('disabled', false);
+
 
 
         }
