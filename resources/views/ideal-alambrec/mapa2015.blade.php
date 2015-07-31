@@ -4,9 +4,7 @@ $mapa = \App\EncuestasIdealAlambrec::where(function($query){
 
 if(isset($_POST['provincia']) && $_POST['provincia'] != "")
 {
-    $query->where('provincia', $_POST['provincia']);
-}else{
-    $query->where('provincia', 'Azuay');
+    $query->where('provincia', $_POST['provincia'])->where('lat', '!=', '')->where('lng', '!=', '');
 }
 })->get();
 

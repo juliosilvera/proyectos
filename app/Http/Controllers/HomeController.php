@@ -171,4 +171,17 @@ class HomeController extends Controller
         {
             $homeModel->excel();
         }
+
+    public function pruebas()
+        {
+            $base = \App\EncuestasIdealAlambrec::where('lat', '!=', '')->get();
+
+            foreach($base as $b)
+            {
+                if(!is_numeric($b->lat))
+                {
+                    echo $b->id . " / " .$b->lat . "<br>";
+                }
+            }
+        }
 }
