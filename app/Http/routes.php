@@ -14,6 +14,7 @@
     Route::post('home/save_cliente', 'HomeController@save_cliente');
     Route::post('home/delete_cliente', 'HomeController@delete_cliente');
     Route::post('home/estadisticas', 'HomeController@estadisticas');
+    Route::match(['get', 'post'], 'home/mapa{anio}', 'HomeController@mapas');
     Route::resource('home', 'HomeController');
 
     Route::controllers([

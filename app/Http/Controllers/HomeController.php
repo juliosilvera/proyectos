@@ -78,9 +78,16 @@ class HomeController extends Controller
     public function show($id, homeModel $homeModel)
     {
         $datos = $homeModel->getDatos();
-        $mapa = $homeModel->mapa($datos['path']);
+
         return view('/'.$datos['path'].'.'.$id, compact('datos', 'mapa'));
     }
+
+    public function mapas($id, homeModel $homeModel)
+        {
+            $datos = $homeModel->getDatos();
+            $mapa = $homeModel->mapa($datos['path']);
+            return view('/'.$datos['path'].'.mapa'.$id, compact('datos', 'mapa'));
+        }
 
     /**
      * Show the form for editing the specified resource.

@@ -24,19 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="manual.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/manual.blade.php">
+      <file leaf-file-name="mapa2015.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.39904988" vertical-offset="11026" max-vertical-offset="14789">
-              <caret line="494" column="58" selection-start-line="494" selection-start-column="58" selection-end-line="494" selection-end-column="58" />
-              <folding>
-                <marker date="1437752891000" expanded="true" signature="24565:24758" placeholder="..." />
-                <marker date="1437752891000" expanded="true" signature="25078:25268" placeholder="..." />
-                <marker date="1437752891000" expanded="true" signature="25561:25751" placeholder="..." />
-                <marker date="1437752891000" expanded="true" signature="26044:26234" placeholder="..." />
-                <marker date="1437752891000" expanded="true" signature="26544:26755" placeholder="..." />
-                <marker date="1437752891000" expanded="true" signature="27046:27268" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.54269004" vertical-offset="2733" max-vertical-offset="3841">
+              <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -89,19 +82,19 @@
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2014.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2014_2.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/cliente.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/grupo-kfc/estadisticas.blade.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/resources/views/grupo-kfc/cliente.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Vuelta2.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2014.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/app.blade.php" />
         <option value="$PROJECT_DIR$/app/homeModel.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/carga_manual.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/manual.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php" />
       </list>
     </option>
   </component>
@@ -153,16 +146,6 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="proyectos" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proyectos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="proyectos" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -219,7 +202,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1600" y="-23" width="1600" height="877" extended-state="6" />
+    <frame x="-1600" y="-23" width="1600" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -235,13 +218,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -428,13 +411,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/encuestas.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5736342" vertical-offset="0" max-vertical-offset="10442">
-          <caret line="21" column="30" selection-start-line="21" selection-start-column="30" selection-end-line="21" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/EncuestasIdealAlambrec.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.322807" vertical-offset="0" max-vertical-offset="2208">
@@ -512,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49403343" vertical-offset="1702" max-vertical-offset="3059">
-          <caret line="92" column="41" selection-start-line="92" selection-start-column="41" selection-end-line="92" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.27027026" vertical-offset="0" max-vertical-offset="1357">
@@ -530,20 +499,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.45945945" vertical-offset="3588" max-vertical-offset="4761">
           <caret line="173" column="67" selection-start-line="173" selection-start-column="67" selection-end-line="173" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4864865" vertical-offset="0" max-vertical-offset="851">
-          <caret line="19" column="40" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/cliente.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4054054" vertical-offset="92" max-vertical-offset="1150">
-          <caret line="19" column="33" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -589,20 +544,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7567568" vertical-offset="2898" max-vertical-offset="3749">
-          <caret line="164" column="32" selection-start-line="154" selection-start-column="32" selection-end-line="154" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47624704" vertical-offset="6154" max-vertical-offset="10718">
-          <caret line="290" column="44" selection-start-line="285" selection-start-column="44" selection-end-line="285" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/encuestas.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46437055" vertical-offset="0" max-vertical-offset="14789">
@@ -610,25 +551,155 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/carga_manual.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/manual.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24210526" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.39904988" vertical-offset="9577" max-vertical-offset="14789">
+          <caret line="431" column="32" selection-start-line="431" selection-start-column="32" selection-end-line="431" selection-end-column="32" />
+          <folding>
+            <marker date="1437752891000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1437752891000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/manual.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39904988" vertical-offset="11026" max-vertical-offset="14789">
-          <caret line="494" column="58" selection-start-line="494" selection-start-column="58" selection-end-line="494" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.27315915" vertical-offset="0" max-vertical-offset="10718">
+          <caret line="15" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43040934" vertical-offset="0" max-vertical-offset="855">
+          <caret line="17" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6502924" vertical-offset="1353" max-vertical-offset="3910">
+          <caret line="93" column="6" selection-start-line="83" selection-start-column="6" selection-end-line="83" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/carga_manual.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24210526" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/cliente.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.51111114" vertical-offset="0" max-vertical-offset="1150">
+          <caret line="19" column="33" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/grupo-kfc/encuestas.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5463183" vertical-offset="1702" max-vertical-offset="10442">
+          <caret line="94" column="76" selection-start-line="94" selection-start-column="76" selection-end-line="94" selection-end-column="76" />
           <folding>
-            <marker date="1437752891000" expanded="true" signature="24565:24758" placeholder="..." />
-            <marker date="1437752891000" expanded="true" signature="25078:25268" placeholder="..." />
-            <marker date="1437752891000" expanded="true" signature="25561:25751" placeholder="..." />
-            <marker date="1437752891000" expanded="true" signature="26044:26234" placeholder="..." />
-            <marker date="1437752891000" expanded="true" signature="26544:26755" placeholder="..." />
-            <marker date="1437752891000" expanded="true" signature="27046:27268" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1435306927000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54269004" vertical-offset="2733" max-vertical-offset="3841">
+          <caret line="139" column="0" selection-start-line="139" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

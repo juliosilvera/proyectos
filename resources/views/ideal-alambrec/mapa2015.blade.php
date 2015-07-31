@@ -1,3 +1,24 @@
+<?php
+$provincias = \App\EncuestasIdealAlambrec::where('provincia', '!=', '')->groupBy('provincia')->get();
+$mapa = \App\EncuestasIdealAlambrec::where(function($query){
+
+if(isset($_POST['provincia']) && $_POST['provincia'] != "")
+{
+    $query->where('provincia', $_POST['provincia']);
+}else{
+    $query->where('provincia', 'Azuay');
+}
+})->get();
+
+function fotos($foto){
+    if ($foto == "")
+    {
+        $foto = "http://llamaaldelivery.com/wp-content/uploads/2014/09/sin-foto.jpg";
+    }
+
+    return $foto;
+}
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -79,16 +100,14 @@
  * other.
  */
 var data = [
-['Prueba', -1.567930, -78.460751, '1', ''],
 @foreach($mapa as $data)
-['{{ strtoupper($data->nombre_comercial) }}', {{ $data->lat }}, {{ $data->lng }}, '{{ $data->id }}', '{{ $data->foto }}'],
+['{{ strtoupper($data->nombre_comercial) }}', {{ $data->lat }}, {{ $data->lng }}, '{{ $data->id }}', '{{ fotos($data->foto) }}'],
 @endforeach
 ];
 
 function setMarkers(map, locations) {
   for (var i = 0; i < locations.length; i++) {
     var data = locations[i];
-    var image = new google.maps.MarkerImage(data[4]);
     var myLatLng = new google.maps.LatLng(data[1], data[2]);
     var marker = new google.maps.Marker({
         position: myLatLng,
@@ -99,7 +118,7 @@ function setMarkers(map, locations) {
   }
 }
 function setText(marker, nombre, id, foto){
-   var message = "<table><tr><td><img src='/img/"+foto+"' style='width: 300px'></td><td><p><b>ID:</b> "+id+"</p><p><b>Nombre del Local:</b> Menestras del Negro -  "+nombre+"</p></td></tr></table>";
+   var message = "<table><tr><td><img src='/img/"+foto+"' style='width: 300px'></td><td><p><b>ID:</b> "+id+"</p><p><b>Nombre del Local:</b> "+nombre+"</p></td></tr></table>";
   var infowindow = new google.maps.InfoWindow({
     content: message
   });
@@ -109,12 +128,15 @@ function setText(marker, nombre, id, foto){
   });
 }
 function mas(id){
-    var myWindow = window.open("info?id="+id, "", "width=600, height=600");
+    alert("Funca");
 }
 function salir(){
     window.open("/home", "_self");
 }
+var provincia = $("#provincia").val();
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
 
     </script>
   </head>
@@ -122,6 +144,18 @@ google.maps.event.addDomListener(window, 'load', initialize);
       <div id="panel">
           <button onclick="salir()">Volver al Menu</button>
     </div>
+    <div id="panel3">
+    <form method="post">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+             <select name="provincia">
+                <option value="">TODAS</option>
+                @foreach($provincias as $prov)
+                    <option value="{{ $prov->provincia }}">{{ $prov->provincia }}</option>
+                @endforeach
+             </select>
+             <input type="submit" value="Filtrar">
+             </form>
+        </div>
     <div id="map_canvas" style="width:100%; height:100%"></div>
   </body>
 </html>
