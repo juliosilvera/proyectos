@@ -174,13 +174,17 @@ class HomeController extends Controller
 
     public function pruebas()
         {
-            $base = \App\EncuestasIdealAlambrec::where('lat', '!=', '')->get();
+            $base = \App\EncuestasIdealAlambrec::all();
 
             foreach($base as $b)
             {
                 if(!is_numeric($b->lat))
                 {
                     echo $b->id . " / " .$b->lat . "<br>";
+                }
+                if(!is_numeric($b->lng))
+                {
+                    echo $b->id . " / " .$b->lng . "<br>";
                 }
             }
         }
