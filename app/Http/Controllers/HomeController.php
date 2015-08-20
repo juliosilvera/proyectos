@@ -188,4 +188,26 @@ class HomeController extends Controller
                 }
             }
         }
+
+    public function verDigitaciones(Request $request, homeModel $homeModel)
+        {
+            $datos = $homeModel->getDatos();
+            $model = Cliente::where('nombre', $request->cliente)->first();
+            $table = "App\\" . $model->model;
+            $digitadores = $table::desde($request->desde)->hasta($request->hasta)->groupBy('user')->get();
+            $tablas = [];
+            $count = 0;
+            foreach($digitadores as $d)
+            {
+                $cargas = $table::desde($request->desde)->hasta($request->hasta)->where('user', $d->user)->count();
+                $tablas[$count] =
+                   [ 'user' => $d->user,
+                    'cantidad' => $cargas];
+                $count++;
+            }
+
+            return view('admin/ver_digitaciones', compact('datos', 'tablas'));
+        }
+
+
 }

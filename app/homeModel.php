@@ -86,6 +86,7 @@
                     'Borrar Cliente' => '/home/borrarCliente',
                     'Encuestas' => '',
                     'Cuentas' => '/home/new_user',
+                    'Digitaciones' => '/home/digitaciones',
                     'Salir'  => '/auth/logout'
                 ];
 
@@ -457,6 +458,7 @@
             $v = str_replace(",", "/", $cambio);
             return $v;
         }
+
 
 
 

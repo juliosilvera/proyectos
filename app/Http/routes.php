@@ -11,6 +11,7 @@
     Route::get('home/exportExcel', 'HomeController@exportExcel');
     Route::get('home/pruebas', 'HomeController@pruebas');
     Route::post('home/save_user', 'HomeController@save_user');
+    Route::post('home/verDigitaciones', 'HomeController@verDigitaciones');
     Route::post('home/delete_user', 'HomeController@delete_user');
     Route::post('home/save_cliente', 'HomeController@save_cliente');
     Route::post('home/delete_cliente', 'HomeController@delete_cliente');

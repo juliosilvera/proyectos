@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class EncuestasIdealAlambrec extends Model
 {
@@ -87,4 +88,14 @@ class EncuestasIdealAlambrec extends Model
         'foto',
         'vendido'
     ];
+
+    public function scopeDesde($query, $desde)
+        {
+            return $query->where('fecha', '>=', $desde);
+        }
+
+    public function scopeHasta($query, $hasta)
+        {
+            return $query->where('fecha', '<=', $hasta);
+        }
 }
