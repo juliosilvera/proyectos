@@ -209,5 +209,27 @@ class HomeController extends Controller
             return view('admin/ver_digitaciones', compact('datos', 'tablas'));
         }
 
+    public function save_photos(homeModel $homeModel, Request $request)
+        {
+            $datos = $homeModel->getDatos();
+            $data = $request->all();
+
+
+            if ($request->hasFile('foto'))
+            {
+                $count = EncuestasIdealAlambrec::where('foto', '')->count();
+                $path = "img/";
+                $name = "Foto_Ideal_Nueva_" . $count . ".jpg";
+                $data['foto'] = $name;
+                $request->file('foto')->move($path, $name);
+            }
+            $model = "App\\" . $homeModel->getUserModel($datos['path']);
+            $encuestas = $model::find($request->id);
+            $encuestas->foto = $data['foto'];
+
+            $encuestas->save();
+            return redirect('/home/photos');
+        }
+
 
 }
