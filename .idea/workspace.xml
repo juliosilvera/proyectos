@@ -27,8 +27,8 @@
       <file leaf-file-name="HomeController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36873507" vertical-offset="4935" max-vertical-offset="7176">
-              <caret line="238" column="40" selection-start-line="238" selection-start-column="40" selection-end-line="238" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.47852027" vertical-offset="5073" max-vertical-offset="7176">
+              <caret line="248" column="128" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
               <folding />
             </state>
           </provider>
@@ -617,8 +617,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36873507" vertical-offset="4935" max-vertical-offset="7176">
-          <caret line="238" column="40" selection-start-line="238" selection-start-column="40" selection-end-line="238" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.47852027" vertical-offset="5073" max-vertical-offset="7176">
+          <caret line="248" column="128" selection-start-line="248" selection-start-column="128" selection-end-line="248" selection-end-column="128" />
           <folding />
         </state>
       </provider>
