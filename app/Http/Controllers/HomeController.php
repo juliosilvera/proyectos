@@ -234,9 +234,9 @@ class HomeController extends Controller
     public function excel(Request $request)
         {
             ini_set('memory_limit', -1);
-            Excel::create('Filename', function($excel) use($request){
+            Excel::create('Excel-Ideal', function($excel) use($request){
 
-                $excel->sheet('Sheetname', function($sheet) use($request) {
+                $excel->sheet('Encuestas', function($sheet) use($request) {
 
                     $sheet->row(1, array(
                         'ID', 'PROVINCIA', 'CIUDAD', 'BARRIO', 'SECTOR', 'NOMBRE COMERCIAL', 'PROPIETARIO', 'ENCARGADO', 'CALLE PRINCIPAL', 'NUMERO', 'CALLE SECUNDARIA', 'TELEFONO', 'ACCESO',
