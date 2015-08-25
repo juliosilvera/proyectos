@@ -231,12 +231,12 @@ class HomeController extends Controller
             return redirect('/home/photos');
         }
 
-    public function excel()
+    public function excel(Request $request)
         {
             ini_set('memory_limit', -1);
-            Excel::create('Filename', function($excel) {
+            Excel::create('Filename', function($excel) use($request){
 
-                $excel->sheet('Sheetname', function($sheet) {
+                $excel->sheet('Sheetname', function($sheet) use($request) {
 
                     $sheet->row(1, array(
                         'ID', 'PROVINCIA', 'CIUDAD', 'BARRIO', 'SECTOR', 'NOMBRE COMERCIAL', 'PROPIETARIO', 'ENCARGADO', 'CALLE PRINCIPAL', 'NUMERO', 'CALLE SECUNDARIA', 'TELEFONO', 'ACCESO',
@@ -250,7 +250,7 @@ class HomeController extends Controller
                     ));
 
                     $count = 1;
-                    $encuestas = EncuestasIdealAlambrec::all();
+                    $encuestas = EncuestasIdealAlambrec::whereBetween('id', array($request->desde, $request->hasta))->get();
                     foreach($encuestas as $e)
                     {
                         $tornillos = "";
