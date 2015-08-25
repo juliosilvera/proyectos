@@ -10,6 +10,7 @@
 
     Route::get('home/exportExcel', 'HomeController@exportExcel');
     Route::get('home/pruebas', 'HomeController@pruebas');
+    Route::get('home/excel', 'HomeController@excel');
     Route::post('home/save_user', 'HomeController@save_user');
     Route::post('home/save_photos', 'HomeController@save_photos');
     Route::post('home/verDigitaciones', 'HomeController@verDigitaciones');

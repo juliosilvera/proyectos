@@ -231,5 +231,85 @@ class HomeController extends Controller
             return redirect('/home/photos');
         }
 
+    public function excel()
+        {
+            Excel::create('Filename', function($excel) {
+
+                $excel->sheet('Sheetname', function($sheet) {
+
+                    $sheet->row(1, array(
+                        'ID', 'PROVINCIA', 'CIUDAD', 'BARRIO', 'SECTOR', 'NOMBRE COMERCIAL', 'PROPIETARIO', 'ENCARGADO', 'CALLE PRINCIPAL', 'NUMERO', 'CALLE SECUNDARIA', 'TELEFONO', 'ACCESO',
+                        'DISTRIBUIDOR 1', 'OTRO DISTRIBUIDOR 1', 'DISTRIBUIDOR 2', 'OTRO DISTRIBUIDOR 2', 'DISTRIBUIDOR 3', 'OTRO DISTRIBUIDOR 3', 'TIPO DE FERRETERIA', 'OTRO TIPO', 'CADENA',
+                        'CENSADO / CERRADO', 'CLAVOS IDEAL', 'CLAVOS ADELCA', 'CLAVOS IMPORTADOS', 'ALAMBRES IDEAL', 'ALAMBRES ADELCA', 'ALAMBRES IMPORTADOS', 'ALAMBRES DE PUAS IDEAL',
+                        'ALAMBRES DE PUAS ADELCA', 'ALAMBRES DE PUAS IMPORTADOS', 'MALLAS DE CERRAMIENTO IDEAL', 'MALLAS DE CERRAMIENTO ADELCA', 'MALLAS DE CERRAMIENTO IMPORTADOS',
+                        'MALLAS AGRICOLAS IDEAL', 'MALLAS AGRICOLAS IMPORTADOS', 'BARRAS IDEAL', 'BARRAS ADELCA', 'BARRAS ANDEC', 'BARRAS NOVACERO', 'BARRAS IPAC', 'BARRAS IMPORTADOS',
+                        'ELECTROSOLDADAS IDEAL', 'ELECTROSOLDADAS ADELCA', 'ELECTROSOLDADAS ANDEC', 'ELECTROSOLDADAS NOVACERO', 'ELECTROSOLDADAS IMPORTADOS', 'VIGAS IDEAL', 'VIGAS ADELCA',
+                        'VIGAS ANDEC', 'VIGAS NOVACERO', 'VIGAS IMPORTADOS', 'VENDE ALAMBRE DE SOLDADURA MIG?', 'VENDE TORNILLOS?', 'SABIA USTED QUE IAB VENDE TORNILLOS', 'QUE PRODUCTO LE GUSTARIA AGREGAR A SU PORTAFOLIO?',
+                        'HA COMPRADO LA CAJA DE CLAVOS EN PROMOCION 26KG POR EL PRECIO DE 25KG?', 'QUE LE GUSTARIA RECIBIR COMO PREMIO?', 'POR QUE ELEGIRIA ESTE PREMIO?', 'VENDIO EN ESTE LOCAL?'
+                    ));
+
+                    $count = 1;
+                    $encuestas = EncuestasIdealAlambrec::all();
+                    foreach($encuestas as $e)
+                    {
+                        $tornillos = "";
+                        $premios = "";
+                        if($e->ganchos_j == 1)
+                        {
+                            $tornillos .= "Ganchos J, ";
+                        }
+                        if($e->tirafondo == 1)
+                        {
+                            $tornillos .= "Tirafondo, ";
+                        }
+                        if($e->perno_cab_hexa == 1)
+                        {
+                            $tornillos .= "Perno Cabeza Hexagonal, ";
+                        }
+                        if($e->tornillo_estufa == 1)
+                        {
+                            $tornillos .= "Tornillo Estufa, ";
+                        }
+                        if($e->perno_cab_red == 1)
+                        {
+                            $tornillos .= "Perno Cabeza Redonda, ";
+                        }
+                        if($e->tornillo_madera == 1)
+                        {
+                            $tornillos .= "Tornillo Madera, ";
+                        }
+                        if($e->perno_milimetrico == 1)
+                        {
+                            $tornillos .= "Perno Milimetrico";
+                        }
+                        if($e->premios == 1)
+                        {
+                            $premios .= "Premios, ";
+                        }
+                        if($e->sorteo == 1)
+                        {
+                            $premios .= "Sorteos, ";
+                        }
+                        if($e->acumulacion == 1)
+                        {
+                            $premios .= "Acumulación, ";
+                        }
+                        $count++;
+                        $sheet->row($count, array($e->id, $e->provincia, $e->ciudad, $e->barrio, $e->sector, $e->nombre_comercial, $e->propietario, $e->encargado, $e->calle_principal, $e->numero,
+                                $e->calle_secundaria, $e->telefono, $e->acceso, $e->distribuidor1, $e->otro_dist1, $e->distribuidor2, $e->otro_dist2, $e->distribuidor3, $e->otro_dist3, $e->tipo_ferreteria,
+                                $e->otro_tipo, $e->cadena, $e->cc, $e->clavos_ideal, $e->clavos_adelca, $e->clavos_novacero, $e->clavos_importados, $e->alambres_ideal, $e->alambres_adelca, $e->alambres_importados,
+                                $e->alambres_puas_ideal, $e->alambres_puas_adelca, $e->alambres_puas_importados, $e->mallas_cerramiento_ideal, $e->mallas_cerramiento_adelca, $e->mallas_cerramiento_importados,
+                                $e->mallas_agricolas_ideal, $e->mallas_agricolas_importados, $e->barras_ideal, $e->barras_adelca, $e->barras_andec, $e->barras_novacero, $e->barras_ipac, $e->barras_importados,
+                                $e->electro_ideal, $e->electro_adelca, $e->electro_novacero, $e->electro_importados, $e->vigas_ideal, $e->vigas_adelca, $e->vigas_andec, $e->vigas_novacero, $e->vigas_importados,
+                                $e->mig, $tornillos, $e->sabia, $e->agregar, $e->promo, $e->dist_compro, $premios, $e->xq_premio, $e->vendido)
+                        );
+                    }
+
+                });
+
+
+            })->export('xls');
+        }
+
 
 }
