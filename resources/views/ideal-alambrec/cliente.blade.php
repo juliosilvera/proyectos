@@ -77,7 +77,11 @@
 @section('footer')
 <script>
 <?php
-$contador = \App\EncuestasIdealAlambrec::count();
+$base = \App\EncuestasIdealAlambrec::all();
+foreach($base as $b)
+{
+    $contador = $b->id;
+}
 $valor = 1500;
 $parte = 1;
 $append = "";
