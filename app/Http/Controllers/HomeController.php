@@ -233,6 +233,7 @@ class HomeController extends Controller
 
     public function excel()
         {
+            ini_set('memory_limit', -1);
             Excel::create('Filename', function($excel) {
 
                 $excel->sheet('Sheetname', function($sheet) {
@@ -249,7 +250,7 @@ class HomeController extends Controller
                     ));
 
                     $count = 1;
-                    $encuestas = EncuestasIdealAlambrec::all();
+                    $encuestas = EncuestasIdealAlambrec::whereBetween('id', array(1, 1500))->get();
                     foreach($encuestas as $e)
                     {
                         $tornillos = "";
