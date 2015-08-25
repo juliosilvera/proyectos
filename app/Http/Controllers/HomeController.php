@@ -250,7 +250,7 @@ class HomeController extends Controller
                     ));
 
                     $count = 1;
-                    $encuestas = EncuestasIdealAlambrec::whereBetween('id', array(1, 1500))->get();
+                    $encuestas = EncuestasIdealAlambrec::all();
                     foreach($encuestas as $e)
                     {
                         $tornillos = "";
