@@ -82,7 +82,7 @@ foreach($base as $b)
 {
     $contador = $b->id;
 }
-$valor = 1500;
+$valor = 0;
 $parte = 1;
 $append = "";
 while($valor <= $contador)
