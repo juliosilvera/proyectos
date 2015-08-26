@@ -237,7 +237,7 @@
             {
                 $proyecto = Cliente::where('alias', $alias)->first();
                 $model = "App\\" . $proyecto->model;
-                $data = $model::all();
+                $data = $model::where('lat', '!=', '')->get();
                 return $data;
             }
 

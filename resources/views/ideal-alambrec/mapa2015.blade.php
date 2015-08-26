@@ -22,7 +22,7 @@ function initMap() {
     center: {lat: -1.567930, lng: -78.460751 }
   });
 
-  
+
   var data = [
   @foreach($mapa as $m)
   ["{{ $m->id }}", {{ $m->lat }}, {{ $m->lng }}],
