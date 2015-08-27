@@ -13,6 +13,21 @@
       #map {
         height: 100%;
       }
+      #logo {
+              position: absolute;
+              left: 5px;
+              bottom: 0px;
+              z-index: 5;
+            }
+      #panel {
+              position: absolute;
+              bottom: 50%;
+              left: 5px;
+              z-index: 5;
+              background-color: #fff;
+              padding: 5px;
+              border: 1px solid #999;
+            }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
     <script>
@@ -56,6 +71,25 @@ function attachSecretMessage(marker, secretMessage) {
   </head>
   <body>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&signed_in=true&callback=initMap" async defer></script>
+    <div id="logo"><img src="/img/logo-ideal.png" style="width: 150px"/> </div>
+    <div id="panel">
+    <form method="post">
+    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+    <select name="provincia">
+    <option value="">TODAS</option>
+    @foreach($provincias as $p)
+    <option value="{{ $p->provincia }}" <?php if(isset($_POST['provincia']) && $_POST['provincia'] == $p->provincia){ echo "selected"; } ?>>{{ $p->provincia }}</option>
+    @endforeach
+    </select><br>
+    <select name="ciudad">
+    <option value="">TODAS</option>
+    @foreach($ciudades as $c)
+    <option value="{{ $c->ciudad }}" <?php if(isset($_POST['ciudad']) && $_POST['ciudad'] == $c->ciudad){ echo "selected"; } ?>>{{ $c->ciudad }}</option>
+    @endforeach
+    </select><br>
+    <input type="submit" value="Filtrar">
+    </form>
+    </div>
     <div id="map"></div>
   </body>
 </html>

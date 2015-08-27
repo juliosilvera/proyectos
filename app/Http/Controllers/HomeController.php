@@ -86,7 +86,9 @@ class HomeController extends Controller
         {
             $datos = $homeModel->getDatos();
             $mapa = $homeModel->mapa($datos['path']);
-            return view('/'.$datos['path'].'.mapa'.$id, compact('datos', 'mapa'));
+            $provincias = $homeModel->provincias($datos['path']);
+            $ciudades = $homeModel->ciudades($datos['path']);
+            return view('/'.$datos['path'].'.mapa'.$id, compact('datos', 'mapa', 'provincias', 'ciudades'));
         }
 
     /**

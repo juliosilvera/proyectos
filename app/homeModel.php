@@ -8,6 +8,7 @@
     use Illuminate\Support\Facades\DB;
     use League\Geotools\Coordinate\Coordinate;
     use Maatwebsite\Excel\Facades\Excel;
+    use Symfony\Component\HttpFoundation\Request;
 
     class homeModel extends Model {
 
@@ -237,9 +238,37 @@
             {
                 $proyecto = Cliente::where('alias', $alias)->first();
                 $model = "App\\" . $proyecto->model;
-                $data = $model::where('lat', '!=', '')->get();
+                $data = $model::where('lat', '!=', '')->where(function($query){
+                    if(isset($_POST['provincia']) && $_POST['provincia'] != "")
+                    {
+                        $query->where('provincia', $_POST['provincia']);
+                    }
+                    if(isset($_POST['ciudad']) && $_POST['ciudad'] != "")
+                    {
+                        $query->where('ciudad', $_POST['ciudad']);
+                    }
+                })->get();
+
                 return $data;
             }
+
+        public function provincias($alias)
+        {
+            $proyecto = Cliente::where('alias', $alias)->first();
+            $model = "App\\" . $proyecto->model;
+            $data = $model::where('provincia', '!=', '')->groupBy('provincia')->get();
+
+            return $data;
+        }
+
+        public function ciudades($alias)
+        {
+            $proyecto = Cliente::where('alias', $alias)->first();
+            $model = "App\\" . $proyecto->model;
+            $data = $model::where('ciudad', '!=', '')->groupBy('ciudad')->get();
+
+            return $data;
+        }
 
         function calificacion($valor){
             switch ($valor)
