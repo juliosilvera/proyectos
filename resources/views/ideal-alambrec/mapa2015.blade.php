@@ -3,6 +3,7 @@
   <head>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/all.css">
     <title>Using closures in event listeners</title>
     <style>
       html, body {
@@ -21,8 +22,8 @@
             }
       #panel {
               position: absolute;
-              bottom: 50%;
-              left: 5px;
+              bottom: 5px;
+              left: 50%;
               z-index: 5;
               background-color: #fff;
               padding: 5px;
@@ -75,21 +76,31 @@ function attachSecretMessage(marker, secretMessage) {
     <div id="panel">
     <form method="post">
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
-    <select name="provincia">
+    <div class="row">
+    <div class="col-md-4">
+    <select name="provincia" class="form-control">
     <option value="">TODAS</option>
     @foreach($provincias as $p)
     <option value="{{ $p->provincia }}" <?php if(isset($_POST['provincia']) && $_POST['provincia'] == $p->provincia){ echo "selected"; } ?>>{{ $p->provincia }}</option>
     @endforeach
-    </select><br>
-    <select name="ciudad">
+    </select>
+    </div>
+    <div class="col-md-4">
+    <select name="ciudad" class="form-control">
     <option value="">TODAS</option>
     @foreach($ciudades as $c)
     <option value="{{ $c->ciudad }}" <?php if(isset($_POST['ciudad']) && $_POST['ciudad'] == $c->ciudad){ echo "selected"; } ?>>{{ $c->ciudad }}</option>
     @endforeach
-    </select><br>
-    <input type="submit" value="Filtrar">
+    </select>
+    </div>
+    <div class="col-md-4">
+    <input type="submit" value="Filtrar" class="form-control">
+    </div>
+
+    </div>
     </form>
     </div>
     <div id="map"></div>
+    <script src="/js/all.js"></script>
   </body>
 </html>
