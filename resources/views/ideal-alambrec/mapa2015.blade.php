@@ -23,12 +23,22 @@
       #panel {
               position: absolute;
               bottom: 5px;
-              left: 50%;
+              left: 20%;
               z-index: 5;
               background-color: #fff;
               padding: 5px;
               border: 1px solid #999;
             }
+      #panel2 {
+                    position: absolute;
+                    width: 100px;
+                    top: 5px;
+                    left: 10%;
+                    z-index: 5;
+                    background-color: #fff;
+                    padding: 5px;
+                    border: 1px solid #999;
+                  }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
     <script>
@@ -100,7 +110,20 @@ function attachSecretMessage(marker, secretMessage) {
     </div>
     </form>
     </div>
+    <div id="panel2">
+    <div class="row">
+        <div class="col-md-12">
+                <button id="volver" class="form-control btn-primary">Volver</button>
+            </div>
+    </div>
+    </div>
     <div id="map"></div>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/all.js"></script>
+    <script>
+    $("#volver").click(function(){
+        window.open("/home", "_self");
+    });
+    </script>
   </body>
 </html>
