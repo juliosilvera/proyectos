@@ -77,7 +77,7 @@ function initMap() {
 
   var data = [
   @foreach($mapa as $m)
-  ["{{ $m->id }}", {{ $m->lat }}, {{ $m->lng }}, "{{ pin($m->id) }}", "{{ $m->foto }}"],
+  ["{{ $m->id }}", {{ $m->lat }}, {{ $m->lng }}, "{{ pin($m->id) }}", "{{ $m->foto }}", "{{ $m->nombre_comercial }}", "{{ $m->propietario }}", "{{ $m->distribuidor1 }}", "{{ $m->otro_dist1 }}"],
   @endforeach
   ];
   for (var i = 0; i < data.length; ++i) {
@@ -90,16 +90,16 @@ function initMap() {
       map: map,
       icon: image
     });
-    attachSecretMessage(marker, data[i][0], data[i][4]);
+    attachSecretMessage(marker, data[i][0], data[i][4], data[i][5], data[i][6], data[i][7], data[i][8]);
   }
 }
 
 // Attaches an info window to a marker with the provided message. When the
 // marker is clicked, the info window will open with the secret message.
-function attachSecretMessage(marker, id, foto) {
+function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1, otro_dist1) {
     var texto = "" +
      "<table><tr>" +
-     "<td><img src='../img/"+foto+"' style='width: 200px'></td><td><p>ID: "+id+"</p></td>"+
+     "<td><img src='../img/"+foto+"' style='width: 200px'></td><td><p>ID: "+id+"</p><p>Nombre del Local: "+local+"</p><p>Propietario: "+propietario+"</p><p>Distribuidor "+distribuidor1+" "+otro_dist1+"</p><p></p><p></p><p></p></td>"+
       "</tr></table>";
   var infowindow = new google.maps.InfoWindow({
     content: texto

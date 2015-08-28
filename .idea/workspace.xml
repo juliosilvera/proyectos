@@ -27,10 +27,10 @@
       <file leaf-file-name="mapa2015.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6431981" vertical-offset="1738" max-vertical-offset="4922">
-              <caret line="99" column="20" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.6706444" vertical-offset="1761" max-vertical-offset="4922">
+              <caret line="101" column="199" selection-start-line="101" selection-start-column="199" selection-end-line="101" selection-end-column="199" />
               <folding>
-                <marker date="1440787905000" expanded="true" signature="2983:2995" placeholder="..." />
+                <marker date="1440788343000" expanded="true" signature="3184:3196" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -621,10 +621,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6431981" vertical-offset="1738" max-vertical-offset="4922">
-          <caret line="99" column="20" selection-start-line="99" selection-start-column="20" selection-end-line="99" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.6706444" vertical-offset="1761" max-vertical-offset="4922">
+          <caret line="101" column="199" selection-start-line="101" selection-start-column="199" selection-end-line="101" selection-end-column="199" />
           <folding>
-            <marker date="1440787905000" expanded="true" signature="2983:2995" placeholder="..." />
+            <marker date="1440788343000" expanded="true" signature="3184:3196" placeholder="..." />
           </folding>
         </state>
       </provider>
