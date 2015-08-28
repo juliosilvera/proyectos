@@ -99,7 +99,7 @@ function initMap() {
 function attachSecretMessage(marker, id, foto) {
     var texto = "" +
      "<table><tr>" +
-     "<td<img src='../fotos/"+foto+"' style='width: 200px'></td><td><p>ID: "+id+"</p></td>"+
+     "<td><img src='../img/"+foto+"' style='width: 200px'></td><td><p>ID: "+id+"</p></td>"+
       "</tr></table>";
   var infowindow = new google.maps.InfoWindow({
     content: texto
