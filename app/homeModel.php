@@ -247,6 +247,10 @@
                     {
                         $query->where('ciudad', $_POST['ciudad']);
                     }
+                    if(isset($_POST['producto']) && $_POST['producto'] != "")
+                    {
+                        $query->where($_POST['producto'], '>', 0);
+                    }
                 })->get();
 
                 return $data;

@@ -27,9 +27,11 @@
       <file leaf-file-name="mapa2015.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6486486" vertical-offset="2208" max-vertical-offset="3082">
-              <caret line="120" column="62" selection-start-line="120" selection-start-column="62" selection-end-line="120" selection-end-column="62" />
-              <folding />
+            <state vertical-scroll-proportion="0.6706444" vertical-offset="1738" max-vertical-offset="4922">
+              <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+              <folding>
+                <marker date="1440787586000" expanded="true" signature="2984:2996" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -92,8 +94,8 @@
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/edit_photos.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/cliente.blade.php" />
-        <option value="$PROJECT_DIR$/app/homeModel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/homeModel.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php" />
       </list>
     </option>
@@ -593,10 +595,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6431981" vertical-offset="5464" max-vertical-offset="11431">
-          <caret line="267" column="70" selection-start-line="261" selection-start-column="70" selection-end-line="261" selection-end-column="70" />
+        <state vertical-scroll-proportion="0.1891892" vertical-offset="0" max-vertical-offset="851">
+          <caret line="7" column="60" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="60" />
           <folding />
         </state>
       </provider>
@@ -609,19 +611,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/app.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/homeModel.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1891892" vertical-offset="0" max-vertical-offset="851">
-          <caret line="7" column="60" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="60" />
+        <state vertical-scroll-proportion="6.724344" vertical-offset="0" max-vertical-offset="11523">
+          <caret line="251" column="64" selection-start-line="245" selection-start-column="64" selection-end-line="245" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6486486" vertical-offset="2208" max-vertical-offset="3082">
-          <caret line="120" column="62" selection-start-line="120" selection-start-column="62" selection-end-line="120" selection-end-column="62" />
-          <folding />
+        <state vertical-scroll-proportion="0.6706444" vertical-offset="1738" max-vertical-offset="4922">
+          <caret line="100" column="20" selection-start-line="100" selection-start-column="20" selection-end-line="100" selection-end-column="20" />
+          <folding>
+            <marker date="1440787586000" expanded="true" signature="2984:2996" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
