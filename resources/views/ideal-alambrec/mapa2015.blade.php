@@ -21,57 +21,100 @@ function pin($id)
             case 'Clavos':
             $clavos = [$local->clavos_ideal => 'blue-dot.png', $local->clavos_adelca => 'red-dot.png', $local->clavos_novacero => 'green-dot.png', $local->clavos_importados => 'yellow-dot.png'];
             $clavos1 = [$local->clavos_ideal => 'ideal', $local->clavos_adelca => 'adelca', $local->clavos_novacero => 'novacero', $local->clavos_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $clavos[max( array_keys( $clavos ) )];
-            $GLOBALS[$clavos1[max( array_keys( $clavos1 ) )]]++;
+            if(max( array_keys( $clavos ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $clavos[max( array_keys( $clavos ) )];
+                $GLOBALS[$clavos1[max( array_keys( $clavos1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
+
             break;
 
             case 'Alambres':
             $alambres = [$local->alambres_ideal => 'blue-dot.png', $local->alambres_adelca => 'red-dot.png', $local->alambres_importados => 'yellow-dot.png'];
             $alambres1 = [$local->alambres_ideal => 'ideal', $local->alambres_adelca => 'adelca', $local->alambres_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $alambres[max( array_keys( $alambres ) )];
-            $GLOBALS[$alambres1[max( array_keys( $alambres1 ) )]]++;
+            if(max( array_keys( $alambres ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $alambres[max( array_keys( $alambres ) )];
+                $GLOBALS[$alambres1[max( array_keys( $alambres1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
+
             break;
 
             case 'Alambres Puas':
             $alambres_puas = [$local->alambres_puas_ideal => 'blue-dot.png', $local->alambres_puas_adelca => 'red-dot.png', $local->alambres_puas_importados => 'yellow-dot.png'];
             $alambres_puas1 = [$local->alambres_puas_ideal => 'ideal', $local->alambres_puas_adelca => 'adelca', $local->alambres_puas_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $alambres_puas[max( array_keys( $alambres_puas ) )];
-            $GLOBALS[$alambres_puas1[max( array_keys( $alambres_puas1 ) )]]++;
+            if(max( array_keys( $alambres_puas ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $alambres_puas[max( array_keys( $alambres_puas ) )];
+                $GLOBALS[$alambres_puas1[max( array_keys( $alambres_puas1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
+
             break;
 
             case 'Mallas de Cerramiento':
             $mallas_cerramiento = [$local->mallas_cerramiento_ideal => 'blue-dot.png', $local->mallas_cerramiento_adelca => 'red-dot.png', $local->mallas_cerramiento_importados => 'yellow-dot.png'];
             $mallas_cerramiento1 = [$local->mallas_cerramiento_ideal => 'ideal', $local->mallas_cerramiento_adelca => 'adelca', $local->mallas_cerramiento_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_cerramiento[max( array_keys( $mallas_cerramiento ) )];
-            $GLOBALS[$mallas_cerramiento1[max( array_keys( $mallas_cerramiento1 ) )]]++;
+            if(max( array_keys( $mallas_cerramiento ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_cerramiento[max( array_keys( $mallas_cerramiento ) )];
+                $GLOBALS[$mallas_cerramiento1[max( array_keys( $mallas_cerramiento1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
             break;
 
             case 'Mallas Agricolas':
             $mallas_agricolas = [$local->mallas_agricolas_ideal => 'blue-dot.png', $local->mallas_agricolas_importados => 'yellow-dot.png'];
             $mallas_agricolas1 = [$local->mallas_agricolas_ideal => 'ideal', $local->mallas_agricolas_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_agricolas[max( array_keys( $mallas_agricolas ) )];
-            $GLOBALS[$mallas_agricolas1[max( array_keys( $mallas_agricolas1 ) )]]++;
+            if(max( array_keys( $mallas_agricolas ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_agricolas[max( array_keys( $mallas_agricolas ) )];
+                $GLOBALS[$mallas_agricolas1[max( array_keys( $mallas_agricolas1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
             break;
 
             case 'Barras':
             $mallas_cerramiento = [$local->barras_ideal => 'blue-dot.png', $local->barras_adelca => 'red-dot.png', $local->barras_andec => 'orange-dot.png', $local->barras_novacero => 'green-dot.png', $local->barras_ipac => 'ltblue-dot.png', $local->barras_importados => 'yellow-dot.png'];
             $mallas_cerramiento1 = [$local->barras_ideal => 'ideal', $local->barras_adelca => 'adelca', $local->barras_andec => 'andec', $local->barras_novacero => 'novacero', $local->barras_ipac => 'ipac', $local->barras_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_cerramiento[max( array_keys( $mallas_cerramiento ) )];
-            $GLOBALS[$mallas_cerramiento1[max( array_keys( $mallas_cerramiento1 ) )]]++;
+            if(max( array_keys( $mallas_cerramiento ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_cerramiento[max( array_keys( $mallas_cerramiento ) )];
+                $GLOBALS[$mallas_cerramiento1[max( array_keys( $mallas_cerramiento1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
             break;
 
             case 'Electrosoldadas':
             $electrosoldadas = [$local->electro_ideal => 'blue-dot.png', $local->electro_adelca => 'red-dot.png', $local->electro_andec => 'orange-dot.png', $local->electro_novacero => 'green-dot.png', $local->electro_importados => 'yellow-dot.png'];
             $electrosoldadas1 = [$local->electro_ideal => 'ideal', $local->electro_adelca => 'adelca', $local->electro_andec => 'andec', $local->electro_novacero => 'novacero', $local->electro_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $electrosoldadas[max( array_keys( $electrosoldadas ) )];
-            $GLOBALS[$electrosoldadas1[max( array_keys( $electrosoldadas1 ) )]]++;
+            if(max( array_keys( $electrosoldadas ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $electrosoldadas[max( array_keys( $electrosoldadas ) )];
+                $GLOBALS[$electrosoldadas1[max( array_keys( $electrosoldadas1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
             break;
 
             case 'Vigas':
             $vigas = [$local->vigas_ideal => 'blue-dot.png', $local->vigas_adelca => 'red-dot.png', $local->vigas_andec => 'orange-dot.png', $local->vigas_novacero => 'green-dot.png', $local->vigas_importados => 'yellow-dot.png'];
             $vigas1 = [$local->vigas_ideal => 'ideal', $local->vigas_adelca => 'adelca', $local->vigas_andec => 'andec', $local->vigas_novacero => 'novacero', $local->vigas_importados => 'importados'];
-            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $vigas[max( array_keys( $vigas ) )];
-            $GLOBALS[$vigas1[max( array_keys( $vigas1 ) )]]++;
+            if(max( array_keys( $vigas ) ) > 0)
+            {
+                $pin = "http://maps.google.com/mapfiles/ms/micons/" . $vigas[max( array_keys( $vigas ) )];
+                $GLOBALS[$vigas1[max( array_keys( $vigas1 ) )]]++;
+            }else{
+                $pin = "http://maps.google.com/mapfiles/ms/micons/msmarker.png";
+            }
             break;
         }
     }
