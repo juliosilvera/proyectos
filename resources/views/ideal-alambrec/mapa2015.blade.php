@@ -1,6 +1,7 @@
 <?php
 function pin($id)
 {
+    $GLOBALS['total']++;
     $local = \App\EncuestasIdealAlambrec::where('id', $id)->first();
 
     $suma_ideal = $local->clavos_ideal + $local->alambres_ideal + $local->alambres_puas_ideal + $local->mallas_cerramiento_ideal + $local->barras_ideal + $local->electro_ideal + $local->vigas_ideal;
@@ -8,12 +9,83 @@ function pin($id)
 
     if($suma_ideal > $suma_adelca)
     {
-        return "http://maps.google.com/mapfiles/ms/micons/blue-dot.png";
+        $pin = "http://maps.google.com/mapfiles/ms/micons/blue-dot.png";
     }else{
-        return "http://maps.google.com/mapfiles/ms/micons/red-dot.png";
+        $pin = "http://maps.google.com/mapfiles/ms/micons/red-dot.png";
     }
 
+    if(isset($_POST['categoria']) && $_POST['categoria'] != "")
+    {
+        switch($_POST['categoria'])
+        {
+            case 'Clavos':
+            $clavos = [$local->clavos_ideal => 'blue-dot.png', $local->clavos_adelca => 'red-dot.png', $local->clavos_novacero => 'green-dot.png', $local->clavos_importados => 'yellow-dot.png'];
+            $clavos1 = [$local->clavos_ideal => 'ideal', $local->clavos_adelca => 'adelca', $local->clavos_novacero => 'novacero', $local->clavos_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $clavos[max( array_keys( $clavos ) )];
+            $GLOBALS[$clavos1[max( array_keys( $clavos1 ) )]]++;
+            break;
+
+            case 'Alambres':
+            $alambres = [$local->alambres_ideal => 'blue-dot.png', $local->alambres_adelca => 'red-dot.png', $local->alambres_importados => 'yellow-dot.png'];
+            $alambres1 = [$local->alambres_ideal => 'ideal', $local->alambres_adelca => 'adelca', $local->alambres_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $alambres[max( array_keys( $alambres ) )];
+            $GLOBALS[$alambres1[max( array_keys( $alambres1 ) )]]++;
+            break;
+
+            case 'Alambres Puas':
+            $alambres_puas = [$local->alambres_puas_ideal => 'blue-dot.png', $local->alambres_puas_adelca => 'red-dot.png', $local->alambres_puas_importados => 'yellow-dot.png'];
+            $alambres_puas1 = [$local->alambres_puas_ideal => 'ideal', $local->alambres_puas_adelca => 'adelca', $local->alambres_puas_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $alambres_puas[max( array_keys( $alambres_puas ) )];
+            $GLOBALS[$alambres_puas1[max( array_keys( $alambres_puas1 ) )]]++;
+            break;
+
+            case 'Mallas de Cerramiento':
+            $mallas_cerramiento = [$local->mallas_cerramiento_ideal => 'blue-dot.png', $local->mallas_cerramiento_adelca => 'red-dot.png', $local->mallas_cerramiento_importados => 'yellow-dot.png'];
+            $mallas_cerramiento1 = [$local->mallas_cerramiento_ideal => 'ideal', $local->mallas_cerramiento_adelca => 'adelca', $local->mallas_cerramiento_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_cerramiento[max( array_keys( $mallas_cerramiento ) )];
+            $GLOBALS[$mallas_cerramiento1[max( array_keys( $mallas_cerramiento1 ) )]]++;
+            break;
+
+            case 'Mallas Agricolas':
+            $mallas_agricolas = [$local->mallas_agricolas_ideal => 'blue-dot.png', $local->mallas_agricolas_importados => 'yellow-dot.png'];
+            $mallas_agricolas1 = [$local->mallas_agricolas_ideal => 'ideal', $local->mallas_agricolas_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_agricolas[max( array_keys( $mallas_agricolas ) )];
+            $GLOBALS[$mallas_agricolas1[max( array_keys( $mallas_agricolas1 ) )]]++;
+            break;
+
+            case 'Barras':
+            $mallas_cerramiento = [$local->barras_ideal => 'blue-dot.png', $local->barras_adelca => 'red-dot.png', $local->barras_andec => 'orange-dot.png', $local->barras_novacero => 'green-dot.png', $local->barras_ipac => 'ltblue-dot.png', $local->barras_importados => 'yellow-dot.png'];
+            $mallas_cerramiento1 = [$local->barras_ideal => 'ideal', $local->barras_adelca => 'adelca', $local->barras_andec => 'andec', $local->barras_novacero => 'novacero', $local->barras_ipac => 'ipac', $local->barras_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $mallas_cerramiento[max( array_keys( $mallas_cerramiento ) )];
+            $GLOBALS[$mallas_cerramiento1[max( array_keys( $mallas_cerramiento1 ) )]]++;
+            break;
+
+            case 'Electrosoldadas':
+            $electrosoldadas = [$local->electro_ideal => 'blue-dot.png', $local->electro_adelca => 'red-dot.png', $local->electro_andec => 'orange-dot.png', $local->electro_novacero => 'green-dot.png', $local->electro_importados => 'yellow-dot.png'];
+            $electrosoldadas1 = [$local->electro_ideal => 'ideal', $local->electro_adelca => 'adelca', $local->electro_andec => 'andec', $local->electro_novacero => 'novacero', $local->electro_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $electrosoldadas[max( array_keys( $electrosoldadas ) )];
+            $GLOBALS[$electrosoldadas1[max( array_keys( $electrosoldadas1 ) )]]++;
+            break;
+
+            case 'Vigas':
+            $vigas = [$local->vigas_ideal => 'blue-dot.png', $local->vigas_adelca => 'red-dot.png', $local->vigas_andec => 'orange-dot.png', $local->vigas_novacero => 'green-dot.png', $local->vigas_importados => 'yellow-dot.png'];
+            $vigas1 = [$local->vigas_ideal => 'ideal', $local->vigas_adelca => 'adelca', $local->vigas_andec => 'andec', $local->vigas_novacero => 'novacero', $local->vigas_importados => 'importados'];
+            $pin = "http://maps.google.com/mapfiles/ms/micons/" . $vigas[max( array_keys( $vigas ) )];
+            $GLOBALS[$vigas1[max( array_keys( $vigas1 ) )]]++;
+            break;
+        }
+    }
+
+    return $pin;
+
 }
+$GLOBALS['ideal'] = 0;
+$GLOBALS['adelca'] = 0;
+$GLOBALS['andec'] = 0;
+$GLOBALS['novacero'] = 0;
+$GLOBALS['ipac'] = 0;
+$GLOBALS['importados'] = 0;
+$GLOBALS['total'] = 0;
 ?>
 <!DOCTYPE html>
 <html>
@@ -120,6 +192,7 @@ function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1
     <input type="hidden" name="_token" value="{{ csrf_token() }}">
     <div class="row">
     <div class="col-md-4">
+    <label>Provincias</label>
     <select name="provincia" class="form-control">
     <option value="">TODAS</option>
     @foreach($provincias as $p)
@@ -128,6 +201,7 @@ function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1
     </select>
     </div>
     <div class="col-md-4">
+    <label>Ciudades</label>
     <select name="ciudad" class="form-control">
     <option value="">TODAS</option>
     @foreach($ciudades as $c)
@@ -136,6 +210,7 @@ function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1
     </select>
     </div>
     <div class="col-md-4">
+        <label>Productos</label>
         <select name="producto" class="form-control">
         <option value="">TODOS</option>
         <option value="clavos_ideal" <?php if(isset($_POST['producto']) && $_POST['producto'] == "clavos_ideal"){ echo "selected"; } ?>>Clavos Ideal</option>
@@ -172,6 +247,21 @@ function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1
         </select>
     </div>
     <div class="col-md-4">
+        <label>Categorias</label>
+        <select class="form-control" name="categoria">
+            <option value="">TODAS</option>
+            <option value="Clavos" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Clavos"){ echo "selected"; } ?>>Clavos</option>
+            <option value="Alambres" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Alambres"){ echo "selected"; } ?>>Alambres</option>
+            <option value="Alambres Puas" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Alambres Puas"){ echo "selected"; } ?>>Alambres Puas</option>
+            <option value="Mallas de Cerramiento" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Mallas de Cerramiento"){ echo "selected"; } ?>>Mallas de Cerramiento</option>
+            <option value="Mallas Agricolas" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Mallas Agricolas"){ echo "selected"; } ?>>Mallas Agricolas</option>
+            <option value="Barras" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Barras"){ echo "selected"; } ?>>Barras</option>
+            <option value="Electrosoldadas" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Electrosoldadas"){ echo "selected"; } ?>>Electrosoldadas</option>
+            <option value="Vigas" <?php if(isset($_POST['categoria']) && $_POST['categoria'] == "Vigas"){ echo "selected"; } ?>>Vigas</option>
+        </select>
+    </div>
+    <div class="col-md-4">
+    <label></label>
     <input type="submit" value="Filtrar" class="form-control">
     </div>
 
@@ -186,17 +276,192 @@ function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1
     </div>
     </div>
     <div id="panel3">
+    @if(!isset($_POST['categoria']))
     <table>
-    <tr>
-    <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
-    <td>Mayor presencia Ideal</td>
-    </tr>
-    <tr>
-    <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
-    <td>Mayor presencia Adelca</td>
-    </tr>
-    </table>
+        <tr>
+        <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+        <td>Mayor presencia Ideal</td>
+        </tr>
+        <tr>
+        <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+        <td>Mayor presencia Adelca</td>
+        </tr>
+        </table>
     </div>
+    @endif
+    @if(isset($_POST['categoria']) && $_POST['categoria'] == "")
+        <table>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+            <td>Mayor presencia Ideal</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+            <td>Mayor presencia Adelca</td>
+            </tr>
+            </table>
+        </div>
+        @endif
+     @if(isset($_POST['categoria']) && $_POST['categoria'] == "Clavos")
+        <table>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+            <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+            <td>Presencia Adelca {{ round(($GLOBALS['adelca'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/green-dot.png"></td>
+            <td>Presencia Novacero {{ round(($GLOBALS['novacero'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+            <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            </table>
+        </div>
+    @endif
+    @if(isset($_POST['categoria']) && $_POST['categoria'] == "Alambres")
+            <table>
+                <tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+                <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                <tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+                <td>Presencia Adelca {{ round(($GLOBALS['adelca'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+                <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                </table>
+            </div>
+        @endif
+    @if(isset($_POST['categoria']) && $_POST['categoria'] == "Alambres Puas")
+        <table>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+            <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+            <td>Presencia Adelca {{ round(($GLOBALS['adelca'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+            <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            </table>
+        </div>
+    @endif
+    @if(isset($_POST['categoria']) && $_POST['categoria'] == "Mallas de Cerramiento")
+        <table>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+            <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+            <td>Presencia Adelca {{ round(($GLOBALS['adelca'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+            <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            </table>
+        </div>
+    @endif
+    @if(isset($_POST['categoria']) && $_POST['categoria'] == "Mallas Agricolas")
+        <table>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+            <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+            <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            </table>
+        </div>
+    @endif
+    @if(isset($_POST['categoria']) && $_POST['categoria'] == "Barras")
+        <table>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+            <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+            <td>Presencia Adelca {{ round(($GLOBALS['adelca'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/orange-dot.png"></td>
+            <td>Presencia Andec {{ round(($GLOBALS['andec'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/green-dot.png"></td>
+            <td>Presencia Novacero {{ round(($GLOBALS['novacero'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/ltblue-dot.png"></td>
+            <td>Presencia Ipac {{ round(($GLOBALS['ipac'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            <tr>
+            <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+            <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+            </tr>
+            </table>
+        </div>
+    @endif
+    @if(isset($_POST['categoria']) && $_POST['categoria'] == "Electrosoldadas")
+            <table>
+                <tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+                <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                <tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+                <td>Presencia Adelca {{ round(($GLOBALS['adelca'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                <tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/orange-dot.png"></td>
+                <td>Presencia Andec {{ round(($GLOBALS['andec'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                <tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/green-dot.png"></td>
+                <td>Presencia Novacero {{ round(($GLOBALS['novacero'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                <tr>
+                <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+                <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+                </tr>
+                </table>
+            </div>
+        @endif
+        @if(isset($_POST['categoria']) && $_POST['categoria'] == "Vigas")
+                <table>
+                    <tr>
+                    <td><img src="http://maps.google.com/mapfiles/ms/micons/blue-dot.png"></td>
+                    <td>Presencia Ideal {{ round(($GLOBALS['ideal'] / $GLOBALS['total'])*100, 2) }}%</td>
+                    </tr>
+                    <tr>
+                    <td><img src="http://maps.google.com/mapfiles/ms/micons/red-dot.png"></td>
+                    <td>Presencia Adelca {{ round(($GLOBALS['adelca'] / $GLOBALS['total'])*100, 2) }}%</td>
+                    </tr>
+                    <tr>
+                    <td><img src="http://maps.google.com/mapfiles/ms/micons/orange-dot.png"></td>
+                    <td>Presencia Andec {{ round(($GLOBALS['andec'] / $GLOBALS['total'])*100, 2) }}%</td>
+                    </tr>
+                    <tr>
+                    <td><img src="http://maps.google.com/mapfiles/ms/micons/green-dot.png"></td>
+                    <td>Presencia Novacero {{ round(($GLOBALS['novacero'] / $GLOBALS['total'])*100, 2) }}%</td>
+                    </tr>
+                    <tr>
+                    <td><img src="http://maps.google.com/mapfiles/ms/micons/yellow-dot.png"></td>
+                    <td>Presencia Importados {{ round(($GLOBALS['importados'] / $GLOBALS['total'])*100, 2) }}%</td>
+                    </tr>
+                    </table>
+                </div>
+            @endif
     <div id="map"></div>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
     <script src="/js/all.js"></script>
