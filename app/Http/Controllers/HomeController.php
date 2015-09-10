@@ -169,6 +169,12 @@ class HomeController extends Controller
         return view('/'.$datos['path'].'.estadisticas', compact('datos'));
     }
 
+    public function estadisticas2015(homeModel $homeModel)
+    {
+        $datos = $homeModel->getDatos();
+        return view('/'.$datos['path'].'.estadisticas2015', compact('datos'));
+    }
+
     public function exportExcel(homeModel $homeModel)
         {
             $homeModel->excel();
