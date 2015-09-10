@@ -27,9 +27,18 @@
       <file leaf-file-name="estadisticas2015.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.6662708" vertical-offset="8082" max-vertical-offset="9637">
-              <caret line="327" column="5" selection-start-line="327" selection-start-column="5" selection-end-line="327" selection-end-column="5" />
-              <folding />
+            <state vertical-scroll-proportion="0.34441805" vertical-offset="12705" max-vertical-offset="13547">
+              <caret line="565" column="265" selection-start-line="565" selection-start-column="265" selection-end-line="565" selection-end-column="265" />
+              <folding>
+                <element signature="e#15615#15651#0#HTML" expanded="true" />
+                <element signature="e#15684#15720#0#HTML" expanded="true" />
+                <element signature="e#15753#15789#0#HTML" expanded="true" />
+                <element signature="e#15822#15858#0#HTML" expanded="true" />
+                <element signature="e#15891#15927#0#HTML" expanded="true" />
+                <element signature="e#15960#15996#0#HTML" expanded="true" />
+                <element signature="e#16029#16065#0#HTML" expanded="true" />
+                <element signature="e#16098#16134#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -619,9 +628,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.6662708" vertical-offset="8082" max-vertical-offset="9637">
-          <caret line="327" column="5" selection-start-line="327" selection-start-column="5" selection-end-line="327" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="0.34441805" vertical-offset="12705" max-vertical-offset="13547">
+          <caret line="565" column="265" selection-start-line="565" selection-start-column="265" selection-end-line="565" selection-end-column="265" />
+          <folding>
+            <element signature="e#15615#15651#0#HTML" expanded="true" />
+            <element signature="e#15684#15720#0#HTML" expanded="true" />
+            <element signature="e#15753#15789#0#HTML" expanded="true" />
+            <element signature="e#15822#15858#0#HTML" expanded="true" />
+            <element signature="e#15891#15927#0#HTML" expanded="true" />
+            <element signature="e#15960#15996#0#HTML" expanded="true" />
+            <element signature="e#16029#16065#0#HTML" expanded="true" />
+            <element signature="e#16098#16134#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
