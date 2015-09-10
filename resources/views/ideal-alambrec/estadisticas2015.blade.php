@@ -9,7 +9,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -19,7 +19,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -29,7 +29,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -39,7 +39,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -49,7 +49,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -59,7 +59,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -69,7 +69,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -79,7 +79,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -89,7 +89,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -99,7 +99,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -109,7 +109,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -119,7 +119,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -129,7 +129,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -139,7 +139,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -149,7 +149,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -159,7 +159,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -169,7 +169,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -179,7 +179,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -189,7 +189,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -199,7 +199,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -209,7 +209,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -219,7 +219,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -229,7 +229,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -239,7 +239,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -249,7 +249,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -259,7 +259,7 @@
                    if (isset($_POST['ciudad'])) {
                     $city = $_POST['ciudad'];
                     if ($city != "nacional") {
-                      $query->where('ciudad', $city);
+                      $query->where('provincia', $city);
                     }
 
                    }
@@ -269,7 +269,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -279,7 +279,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -289,7 +289,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -299,7 +299,7 @@
                if (isset($_POST['ciudad'])) {
                 $city = $_POST['ciudad'];
                 if ($city != "nacional") {
-                  $query->where('ciudad', $city);
+                  $query->where('provincia', $city);
                 }
 
                }
@@ -309,7 +309,7 @@
                    if (isset($_POST['ciudad'])) {
                     $city = $_POST['ciudad'];
                     if ($city != "nacional") {
-                      $query->where('ciudad', $city);
+                      $query->where('provincia', $city);
                     }
 
                    }
@@ -369,15 +369,15 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
           <select name="ciudad" class="form-control">
                 <option value="nacional">Nacional</option>
                 <?php
-                $ciudades = DB::table('encuestas_ideal_alambrec')->groupBy('ciudad')->get();
+                $ciudades = DB::table('encuestas_ideal_alambrec')->groupBy('provincia')->get();
                 foreach ($ciudades as $ciudad) {
-                if(isset($_POST['ciudad']) && $_POST['ciudad'] == $ciudad->ciudad)
+                if(isset($_POST['ciudad']) && $_POST['ciudad'] == $ciudad->provincia)
                 {
                     $selected = "selected";
                 }else{
                     $selected = "";
                 }
-                  echo "<option value='".$ciudad->ciudad."' ".$selected.">".$ciudad->ciudad."</option>";
+                  echo "<option value='".$ciudad->provincia."' ".$selected.">".$ciudad->provincia."</option>";
                 }
                 ?>
 

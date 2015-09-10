@@ -27,18 +27,9 @@
       <file leaf-file-name="estadisticas2015.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.34441805" vertical-offset="12705" max-vertical-offset="13547">
-              <caret line="565" column="265" selection-start-line="565" selection-start-column="265" selection-end-line="565" selection-end-column="265" />
-              <folding>
-                <element signature="e#15615#15651#0#HTML" expanded="true" />
-                <element signature="e#15684#15720#0#HTML" expanded="true" />
-                <element signature="e#15753#15789#0#HTML" expanded="true" />
-                <element signature="e#15822#15858#0#HTML" expanded="true" />
-                <element signature="e#15891#15927#0#HTML" expanded="true" />
-                <element signature="e#15960#15996#0#HTML" expanded="true" />
-                <element signature="e#16029#16065#0#HTML" expanded="true" />
-                <element signature="e#16098#16134#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.6038186" vertical-offset="6647" max-vertical-offset="13547">
+              <caret line="311" column="46" selection-start-line="311" selection-start-column="46" selection-end-line="311" selection-end-column="46" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -53,7 +44,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/nav/sidebar.blade.php" />
         <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Auth/RegistersUsers.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
@@ -103,6 +93,7 @@
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
+        <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php" />
       </list>
     </option>
@@ -120,7 +111,7 @@
     <option name="x" value="-1600" />
     <option name="y" value="-23" />
     <option name="width" value="1600" />
-    <option name="height" value="877" />
+    <option name="height" value="873" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -164,6 +155,38 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="proyectos" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Exceptions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -221,7 +244,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1600" y="-23" width="1600" height="877" extended-state="6" />
+    <frame x="-1600" y="-23" width="1600" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -269,13 +292,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/http-kernel/Client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="5037">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/clientes.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17310253" vertical-offset="146" max-vertical-offset="1265">
@@ -626,20 +642,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43243244" vertical-offset="253" max-vertical-offset="1104">
+          <caret line="28" column="34" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34441805" vertical-offset="12705" max-vertical-offset="13547">
-          <caret line="565" column="265" selection-start-line="565" selection-start-column="265" selection-end-line="565" selection-end-column="265" />
-          <folding>
-            <element signature="e#15615#15651#0#HTML" expanded="true" />
-            <element signature="e#15684#15720#0#HTML" expanded="true" />
-            <element signature="e#15753#15789#0#HTML" expanded="true" />
-            <element signature="e#15822#15858#0#HTML" expanded="true" />
-            <element signature="e#15891#15927#0#HTML" expanded="true" />
-            <element signature="e#15960#15996#0#HTML" expanded="true" />
-            <element signature="e#16029#16065#0#HTML" expanded="true" />
-            <element signature="e#16098#16134#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.6038186" vertical-offset="6647" max-vertical-offset="13547">
+          <caret line="311" column="46" selection-start-line="311" selection-start-column="46" selection-end-line="311" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
