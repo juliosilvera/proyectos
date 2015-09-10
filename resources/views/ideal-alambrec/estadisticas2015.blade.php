@@ -321,12 +321,6 @@ $novacero = $clavos_novacero + $barras_novacero + $electrosoldadas_novacero + $v
 $ipac = $barras_ipac;
 $importados = $clavos_importados + $alambres_importados + $puas_importados + $mallas_importados + $agricolas_importados + $barras_importados + $electrosoldadas_importados + $vigas_importados;
 $total = $ideal + $adelca + $andec + $novacero + $ipac + $importados;
-$porcentaje_ideal = round(($ideal / $total) * 100, 2);
-$porcentaje_adelca = round(($adelca / $total) * 100, 2);
-$porcentaje_andec = round(($andec / $total) * 100, 2);
-$porcentaje_novacero = round(($novacero / $total) * 100, 2);
-$porcentaje_ipac = round(($ipac / $total) * 100, 2);
-$porcentaje_importados = round(($importados / $total) * 100, 2);
 $total_clavos = $clavos_ideal + $clavos_adelca + $clavos_importados + $clavos_novacero;
 $total_alambres = $alambres_ideal + $alambres_adelca + $alambres_importados;
 $total_alambres_puas = $puas_ideal + $puas_adelca + $puas_importados;
@@ -336,21 +330,18 @@ $total_barras = $barras_ideal + $barras_adelca + $barras_andec + $barras_novacer
 $total_electrosoldadas = $electrosoldadas_ideal + $electrosoldadas_adelca + $electrosoldadas_andec + $electrosoldadas_novacero + $electrosoldadas_importados;
 $total_vigas = $vigas_ideal + $vigas_adelca + $vigas_andec + $vigas_novacero + $vigas_importados;
 $total_linea = $total_clavos + $total_alambres + $total_mallas + $total_agricolas + $total_alambres_puas + $total_barras + $total_electrosoldadas + $total_vigas;
-$por_clavos = round(($total_clavos / $total_linea) * 100, 2);
-$por_alambres = round(($total_alambres / $total_linea) * 100, 2);
-$por_alambres_puas = round(($total_alambres_puas / $total_linea) * 100, 2);
-$por_mallas = round(($total_mallas / $total_linea) * 100, 2);
-$por_agricolas = round(($total_agricolas / $total_linea) * 100, 2);
-$por_barras = round(($total_barras / $total_linea) * 100, 2);
-$por_electrosoldadas = round(($total_electrosoldadas / $total_linea) * 100, 2);
-$por_vigas = round(($total_vigas / $total_linea) * 100, 2);
-$porcentaje_clavos_ideal = round(($clavos_ideal/$total_clavos)*100,2);
-$porcentaje_clavos_adelca = round(($clavos_adelca/$total_clavos)*100,2);
-$porcentaje_clavos_novacero = round(($clavos_novacero/$total_clavos)*100,2);
-$porcentaje_clavos_importados = round(($clavos_importados/$total_clavos)*100,2);
-$porcentaje_alambres_ideal = round(($alambres_ideal/$total_alambres)*100, 2);
-$porcentaje_alambres_adelca = round(($alambres_adelca/$total_alambres)*100, 2);
-$porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*100, 2);
+function porcentaje($producto, $total)
+{
+    if($total > 0)
+    {
+        return round(($producto/$total)*100, 2);
+    }else{
+        return 0;
+    }
+}
+
+
+
 ?>
 @stop
 
@@ -421,8 +412,8 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
       google.setOnLoadCallback(drawChart10);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Porcentaje', 'IAB {{ $porcentaje_ideal }}%', 'Adelca {{ $porcentaje_adelca }}%', 'Andec {{ $porcentaje_andec }}%', 'Novacero {{ $porcentaje_novacero }}%', 'Ipac {{ $porcentaje_ipac }}%', 'Importados  {{ $porcentaje_importados }}%'],
-          <?php echo "['Porcentaje'," . $porcentaje_ideal . ", " . $porcentaje_adelca . ", " . $porcentaje_andec . ", " . $porcentaje_novacero . ", " . $porcentaje_ipac . ", " . $porcentaje_importados . "]";?>
+          ['Porcentaje', 'IAB {{ porcentaje($ideal, $total) }}%', 'Adelca {{ porcentaje($adelca, $total) }}%', 'Andec {{ porcentaje($andec, $total) }}%', 'Novacero {{ $novacero, $total }}%', 'Ipac {{ porcentaje($ipac, $total) }}%', 'Importados  {{ porcentaje($importados, $total) }}%'],
+          <?php echo "['Porcentaje'," . porcentaje($ideal, $total) . ", " . porcentaje($adelca, $total) . ", " . porcentaje($andec, $total) . ", " . porcentaje($novacero, $total) . ", " . porcentaje($ipac, $total) . ", " . porcentaje($importados, $total) . "]";?>
         ]);
 
         var options = {
@@ -436,7 +427,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
             function drawChart2() {
         var data = google.visualization.arrayToDataTable([
           ['Porcentaje', 'Clavos', 'Alambres', 'Alambres de Púas', 'Mallas', 'Mallas Agricolas', 'Barras y Platinas', 'Mallas Electrosoldadas', 'Vigas y Columnas'],
-          <?php echo "['Linea'," . $por_clavos . ", " . $por_alambres . ", " . $por_alambres_puas . ", " . $por_mallas . ", " . $por_agricolas . ", " . $por_barras . ", " . $por_electrosoldadas . ", " . $por_vigas . "]";?>
+          <?php echo "['Linea'," . porcentaje($total_clavos, $total_linea) . ", " . porcentaje($total_alambres, $total_linea) . ", " . porcentaje($total_alambres_puas, $total_linea) . ", " . porcentaje($total_mallas, $total_linea) . ", " . porcentaje($total_agricolas, $total_linea) . ", " . porcentaje($total_barras, $total_linea) . ", " . porcentaje($total_electrosoldadas, $total_linea) . ", " . porcentaje($total_vigas, $total_linea) . "]";?>
 
         ]);
 
@@ -452,7 +443,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
       function drawChart3() {
           var data = google.visualization.arrayToDataTable([
             ['Porcentaje', 'IAB', 'Adelca', 'Novacero', 'Importados'],
-            <?php echo "['Clavos'," . $porcentaje_clavos_ideal . ", " . $porcentaje_clavos_adelca . ", " . $porcentaje_clavos_novacero . ", " . $porcentaje_clavos_importados . "]";?>
+            <?php echo "['Clavos'," . porcentaje($clavos_ideal, $total_clavos) . ", " . porcentaje($clavos_adelca, $total_clavos) . ", " . porcentaje($clavos_novacero, $total_clavos) . ", " . porcentaje($clavos_importados, $total_clavos) . "]";?>
 
           ]);
 
@@ -468,7 +459,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
     function drawChart4() {
       var data = google.visualization.arrayToDataTable([
         ['Porcentaje', 'IAB', 'Adelca', 'Importados'],
-        <?php echo "['Alambres'," . $porcentaje_alambres_ideal . ", " . $porcentaje_alambres_adelca . ", " . $porcentaje_alambres_importados . "]";?>
+        <?php echo "['Alambres'," . porcentaje($alambres_ideal, $total_alambres) . ", " . porcentaje($alambres_adelca, $total_alambres) . ", " . porcentaje($alambres_importados, $total_alambres) . "]";?>
 
       ]);
 
@@ -483,7 +474,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
     function drawChart5() {
       var data = google.visualization.arrayToDataTable([
         ['Porcentaje', 'IAB', 'Adelca', 'Importados'],
-        <?php echo "['Alambres de Púas'," . round(($puas_ideal/$total_alambres_puas)*100, 2) . ", " . round(($puas_adelca/$total_alambres_puas)*100, 2) . ", " . round(($puas_importados/$total_alambres_puas)*100, 2) . "]";?>
+        <?php echo "['Alambres de Púas'," . porcentaje($puas_ideal, $total_alambres_puas) . ", " . porcentaje($puas_adelca, $total_alambres_puas) . ", " . porcentaje($puas_importados, $total_alambres_puas) . "]";?>
 
       ]);
 
@@ -499,7 +490,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
     function drawChart6() {
       var data = google.visualization.arrayToDataTable([
         ['Porcentaje', 'IAB', 'Adelca', 'Importados'],
-        <?php echo "['Mallas de Cerramiento'," . round(($mallas_ideal/$total_mallas)*100, 2) . ", " . round(($mallas_adelca/$total_mallas)*100, 2) . ", " . round(($mallas_importados/$total_mallas)*100, 2) . "]";?>
+        <?php echo "['Mallas de Cerramiento'," . porcentaje($mallas_ideal, $total_mallas) . ", " . porcentaje($mallas_adelca, $total_mallas) . ", " . porcentaje($mallas_importados, $total_mallas) . "]";?>
 
       ]);
 
@@ -515,7 +506,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
     function drawChart7() {
       var data = google.visualization.arrayToDataTable([
         ['Porcentaje', 'IAB', 'Importados'],
-        <?php echo "['Mallas Agricolas'," . round(($agricolas_ideal/$total_agricolas)*100, 2) . ", " . round(($agricolas_importados/$total_agricolas)*100, 2) . "]";?>
+        <?php echo "['Mallas Agricolas'," . porcentaje($agricolas_ideal, $total_agricolas) . ", " . porcentaje($agricolas_importados, $total_agricolas) . "]";?>
 
       ]);
 
@@ -531,7 +522,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
     function drawChart8() {
       var data = google.visualization.arrayToDataTable([
         ['Porcentaje', 'IAB', 'Adelca', 'Andec', 'Novacero', 'Ipac', 'Importados'],
-        <?php echo "['Barras'," . round(($barras_ideal/$total_barras)*100, 2) . ", " . round(($barras_adelca/$total_barras)*100, 2) . ", " . round(($barras_andec/$total_barras)*100, 2) . ", " . round(($barras_novacero/$total_barras)*100, 2) . ", " . round(($barras_ipac/$total_barras)*100, 2) . ", " . round(($barras_importados/$total_barras)*100, 2) . "]";?>
+        <?php echo "['Barras'," . porcentaje($barras_ideal, $total_barras) . ", " . porcentaje($barras_adelca, $total_barras) . ", " . porcentaje($barras_andec, $total_barras) . ", " . porcentaje($barras_novacero, $total_barras) . ", " . porcentaje($barras_ipac, $total_barras) . ", " . porcentaje($barras_importados, $total_barras) . "]";?>
 
       ]);
 
@@ -547,7 +538,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
     function drawChart9() {
       var data = google.visualization.arrayToDataTable([
         ['Porcentaje', 'IAB', 'Adelca', 'Andec', 'Novacero', 'Importados'],
-        <?php echo "['Mallas Electrosoldadas'," . round(($electrosoldadas_ideal/$total_electrosoldadas)*100, 2) . ", " . round(($electrosoldadas_adelca/$total_electrosoldadas)*100, 2) . ", " . round(($electrosoldadas_andec/$total_electrosoldadas)*100, 2) . ", " . round(($electrosoldadas_novacero/$total_electrosoldadas)*100, 2) . ", " . round(($electrosoldadas_importados/$total_electrosoldadas)*100, 2) . "]";?>
+        <?php echo "['Mallas Electrosoldadas'," . porcentaje($electrosoldadas_ideal, $total_electrosoldadas) . ", " . porcentaje($electrosoldadas_adelca, $total_electrosoldadas) . ", " . porcentaje($electrosoldadas_andec, $total_electrosoldadas) . ", " . porcentaje($electrosoldadas_novacero, $total_electrosoldadas) . ", " . porcentaje($electrosoldadas_importados, $total_electrosoldadas) . "]";?>
 
       ]);
 
@@ -563,7 +554,7 @@ $porcentaje_alambres_importados = round(($alambres_importados/$total_alambres)*1
     function drawChart10() {
       var data = google.visualization.arrayToDataTable([
         ['Porcentaje', 'IAB', 'Adelca', 'Andec', 'Novacero', 'Importados'],
-        <?php echo "['Vigas'," . round(($vigas_ideal/$total_vigas)*100, 2) . ", " . round(($vigas_adelca/$total_vigas)*100, 2) . ", " . round(($vigas_andec/$total_vigas)*100, 2) . ", " . round(($vigas_novacero/$total_vigas)*100, 2) . ", " . round(($vigas_importados/$total_vigas)*100, 2) . "]";?>
+        <?php echo "['Vigas'," . porcentaje($vigas_ideal, $total_vigas) . ", " . porcentaje($vigas_adelca, $total_vigas) . ", " . porcentaje($vigas_andec, $total_vigas) . ", " . porcentaje($vigas_novacero, $total_vigas) . ", " . porcentaje($vigas_importados, $total_vigas) . "]";?>
 
       ]);
 
