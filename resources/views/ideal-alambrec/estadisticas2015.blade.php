@@ -314,12 +314,12 @@
 
                    }
                 })->sum('vigas_importados');
-$ideal = $clavos_ideal + $alambres_ideal + $puas_ideal + $mallas_ideal + $agricolas_ideal + $barras_ideal + $electrosoldadas_ideal + $vigas_ideal;
-$adelca = $clavos_adelca + $alambres_adelca + $puas_adelca + $mallas_adelca + $barras_adelca + $electrosoldadas_adelca + $vigas_adelca;
-$andec = $barras_andec + $electrosoldadas_andec + $vigas_andec;
-$novacero = $clavos_novacero + $barras_novacero + $electrosoldadas_novacero + $vigas_novacero;
-$ipac = $barras_ipac;
-$importados = $clavos_importados + $alambres_importados + $puas_importados + $mallas_importados + $agricolas_importados + $barras_importados + $electrosoldadas_importados + $vigas_importados;
+$ideal = countProductos('clavos_ideal') + countProductos('alambres_ideal') + countProductos('alambres_puas_ideal') + countProductos('mallas_cerramiento_ideal') + countProductos('mallas_agricolas_ideal') + countProductos('barras_ideal') + countProductos('electro_ideal') + countProductos('vigas_ideal');
+$adelca = countProductos('clavos_adelca') + countProductos('alambres_adelca') + countProductos('alambres_puas_adelca') + countProductos('mallas_cerramiento_adelca') + countProductos('barras_adelca') + countProductos('electro_adelca') + countProductos('vigas_adelca');
+$andec = countProductos('barras_andec') + countProductos('electro_andec') + countProductos('vigas_andec');
+$novacero = countProductos('clavos_novacero') + countProductos('barras_novacero') + countProductos('electro_novacero') + countProductos('vigas_novacero');
+$ipac = countProductos('barras_ipac');
+$importados = countProductos('clavos_importados') + countProductos('alambres_importados') + countProductos('alambres_puas_importados') + countProductos('mallas_cerramiento_importados') + countProductos('mallas_agricolas_importados') + countProductos('barras_importados') + countProductos('electro_importados') + countProductos('vigas_importados');
 $total = $ideal + $adelca + $andec + $novacero + $ipac + $importados;
 $total_clavos = $clavos_ideal + $clavos_adelca + $clavos_importados + $clavos_novacero;
 $total_alambres = $alambres_ideal + $alambres_adelca + $alambres_importados;
@@ -338,6 +338,20 @@ function porcentaje($producto, $total)
     }else{
         return 0;
     }
+}
+
+function countProductos($producto){
+    $count = DB::table('encuestas_ideal_alambrec')->where($producto, '>', 0)->Where(function($query)
+                    {
+                       if (isset($_POST['ciudad'])) {
+                        $city = $_POST['ciudad'];
+                        if ($city != "nacional") {
+                          $query->where('provincia', $city);
+                        }
+
+                       }
+                    })->count();
+    return $count;
 }
 
 
@@ -382,15 +396,25 @@ function porcentaje($producto, $total)
 </div>
 <div class="col-md-12" >
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
+    <div id="table_div"></div>
     <div id="chart_div2" style="width: 900px; height: 500px;"></div>
+    <div id="table_div2"></div>
     <div id="chart_div3" style="width: 900px; height: 500px;"></div>
+    <div id="table_div3"></div>
     <div id="chart_div4" style="width: 900px; height: 500px;"></div>
+    <div id="table_div4"></div>
     <div id="chart_div5" style="width: 900px; height: 500px;"></div>
+    <div id="table_div5"></div>
     <div id="chart_div6" style="width: 900px; height: 500px;"></div>
+    <div id="table_div6"></div>
     <div id="chart_div7" style="width: 900px; height: 500px;"></div>
+    <div id="table_div7"></div>
     <div id="chart_div8" style="width: 900px; height: 500px;"></div>
+    <div id="table_div8"></div>
     <div id="chart_div9" style="width: 900px; height: 500px;"></div>
+    <div id="table_div9"></div>
     <div id="chart_div10" style="width: 900px; height: 500px;"></div>
+    <div id="table_div10"></div>
 </div>
 
 @stop
@@ -398,11 +422,15 @@ function porcentaje($producto, $total)
 @section('footer')
 @include('nav.footer2')
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['table']}]}"></script>
     <script type="text/javascript">
       google.load("visualization", "1", {packages:["corechart"]});
       google.setOnLoadCallback(drawChart);
+      google.setOnLoadCallback(drawTable);
       google.setOnLoadCallback(drawChart2);
+      google.setOnLoadCallback(drawTable2);
       google.setOnLoadCallback(drawChart3);
+      google.setOnLoadCallback(drawTable3);
       google.setOnLoadCallback(drawChart4);
       google.setOnLoadCallback(drawChart5);
       google.setOnLoadCallback(drawChart6);
@@ -424,6 +452,34 @@ function porcentaje($producto, $total)
         var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
+
+      function drawTable() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'EMPRESA');
+              data.addColumn('string', 'CLAVOS');
+              data.addColumn('string', 'ALAMBRES');
+              data.addColumn('string', 'ALAMBRES DE PUAS');
+              data.addColumn('string', 'MALLAS DE CERRAMIENTO');
+              data.addColumn('string', 'MALLAS AGRICOLAS');
+              data.addColumn('string', 'BARRAS Y PLATINAS');
+              data.addColumn('string', 'MALLAS ELECTROSOLDADAS');
+              data.addColumn('string', 'VIGAS Y COLUMNAS');
+              data.addColumn('string', 'TOTAL');
+              data.addRows([
+                ['IAB',  "{{ countProductos('clavos_ideal') }}", "{{ countProductos('alambres_ideal') }}", "{{ countProductos('alambres_puas_ideal') }}", "{{ countProductos('mallas_cerramiento_ideal') }}", "{{ countProductos('mallas_agricolas_ideal') }}", "{{ countProductos('barras_ideal') }}", "{{ countProductos('electro_ideal') }}", "{{ countProductos('vigas_ideal') }}", "{{ $ideal }}"],
+                ['ADELCA',  "{{ countProductos('clavos_adelca') }}", "{{ countProductos('alambres_adelca') }}", "{{ countProductos('alambres_puas_adelca') }}", "{{ countProductos('mallas_cerramiento_adelca') }}", "0", "{{ countProductos('barras_adelca') }}", "{{ countProductos('electro_adelca') }}", "{{ countProductos('vigas_adelca') }}", "{{ $adelca }}"],
+                ['ANDEC',  "0", "0", "0", "0", "0", "{{ countProductos('barras_andec') }}", "{{ countProductos('electro_andec') }}", "{{ countProductos('vigas_andec') }}", "{{ $andec }}"],
+                ['NOVACERO',  "{{ countProductos('clavos_novacero') }}", "0", "0", "0", "0", "{{ countProductos('barras_novacero') }}", "{{ countProductos('electro_novacero') }}", "{{ countProductos('vigas_novacero') }}", "{{ $novacero }}"],
+                ['IPAC',  "0", "0", "0", "0", "0", "{{ countProductos('barras_ipac') }}", "0", "0", "{{ $ipac }}"],
+                ['IMPORTADOS',  "{{ countProductos('clavos_importados') }}", "{{ countProductos('alambres_importados') }}", "{{ countProductos('alambres_puas_importados') }}", "{{ countProductos('mallas_cerramiento_importados') }}", "{{ countProductos('mallas_agricolas_importados') }}", "{{ countProductos('barras_importados') }}", "{{ countProductos('electro_importados') }}", "{{ countProductos('vigas_importados') }}", "{{ $importados }}"],
+                ['TOTAL', "", "", "", "", "", "", "", "", "{{ $total }}"]
+              ]);
+
+              var table = new google.visualization.Table(document.getElementById('table_div'));
+
+              table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+            }
+
             function drawChart2() {
         var data = google.visualization.arrayToDataTable([
           ['Porcentaje', 'Clavos', 'Alambres', 'Alambres de Púas', 'Mallas', 'Mallas Agricolas', 'Barras y Platinas', 'Mallas Electrosoldadas', 'Vigas y Columnas'],
@@ -440,6 +496,28 @@ function porcentaje($producto, $total)
         chart.draw(data, options);
       }
 
+      function drawTable2() {
+              var data = new google.visualization.DataTable();
+              data.addColumn('string', 'PORCENTAJES');
+              data.addColumn('string', 'CLAVOS');
+              data.addColumn('string', 'ALAMBRES');
+              data.addColumn('string', 'ALAMBRES DE PUAS');
+              data.addColumn('string', 'MALLAS DE CERRAMIENTO');
+              data.addColumn('string', 'MALLAS AGRICOLAS');
+              data.addColumn('string', 'BARRAS Y PLATINAS');
+              data.addColumn('string', 'MALLAS ELECTROSOLDADAS');
+              data.addColumn('string', 'VIGAS Y COLUMNAS');
+              data.addColumn('string', 'TOTAL');
+              data.addRows([
+                ['PORCENTAJES',  "{{ $total_clavos }}", "{{ $total_alambres }}", "{{ $total_alambres_puas }}", "{{ $total_mallas }}", "{{ $total_agricolas }}", "{{ $total_barras }}", "{{ $total_electrosoldadas }}", "{{ $total_vigas }}", "{{ $total_linea }}"],
+
+              ]);
+
+              var table = new google.visualization.Table(document.getElementById('table_div2'));
+
+              table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+            }
+
       function drawChart3() {
           var data = google.visualization.arrayToDataTable([
             ['Porcentaje', 'IAB', 'Adelca', 'Novacero', 'Importados'],
@@ -454,6 +532,33 @@ function porcentaje($producto, $total)
 
           var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
           chart.draw(data, options);
+        }
+
+        function drawTable3() {
+          var data = new google.visualization.DataTable();
+          data.addColumn('string', 'PORCENTAJES');
+          data.addColumn('string', 'IAB');
+          data.addColumn('string', 'ADELCA');
+          data.addColumn('string', 'ANDEC');
+          data.addColumn('string', 'NOVACERO');
+          data.addColumn('string', 'IPAC');
+          data.addColumn('string', 'IMPORTADOS');
+          data.addColumn('string', 'TOTAL');
+          data.addRows([
+            ['CLAVOS',  "{{ $clavos_ideal }}", "{{ $clavos_adelca }}", "0", "{{ $clavos_novacero }}", "0", "{{ $clavos_importados }}", "{{ $total_clavos }}"],
+            ['ALAMBRES',  "{{ $alambres_ideal }}", "{{ $alambres_adelca }}", "0", "0", "0", "{{ $alambres_importados }}", "{{ $total_alambres }}"],
+            ['ALAMBRES DE PUAS',  "{{ $puas_ideal }}", "{{ $puas_adelca }}", "0", "0", "0", "{{ $puas_importados }}", "{{ $total_alambres_puas }}"],
+            ['MALLAS DE CERRAMIENTO',  "{{ $mallas_ideal }}", "{{ $mallas_adelca }}", "0", "0", "0", "{{ $mallas_importados }}", "{{ $total_mallas }}"],
+            ['MALLAS AGRICOLAS',  "{{ $agricolas_ideal }}", "0", "0", "0", "0", "{{ $agricolas_importados }}", "{{ $total_agricolas }}"],
+            ['BARRAS',  "{{ $barras_ideal }}", "{{ $barras_adelca }}", "{{ $barras_andec }}", "{{ $barras_novacero }}", "{{ $barras_ipac }}", "{{ $barras_importados }}", "{{ $total_barras }}"],
+            ['MALLAS ELECTROSOLDADAS',  "{{ $electrosoldadas_ideal }}", "{{ $electrosoldadas_adelca }}", "{{ $electrosoldadas_andec }}", "{{ $electrosoldadas_novacero }}", "0", "{{ $electrosoldadas_importados }}", "{{ $total_electrosoldadas }}"],
+            ['VIGAS',  "{{ $vigas_ideal }}", "{{ $vigas_adelca }}", "{{ $vigas_andec }}", "{{ $vigas_novacero }}", "0", "{{ $vigas_importados }}", "{{ $total_vigas }}"]
+
+          ]);
+
+          var table = new google.visualization.Table(document.getElementById('table_div10'));
+
+          table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
         }
 
     function drawChart4() {
