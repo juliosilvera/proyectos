@@ -27,9 +27,12 @@
       <file leaf-file-name="estadisticas2015.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.68289787" vertical-offset="10465" max-vertical-offset="16606">
-              <caret line="480" column="77" selection-start-line="480" selection-start-column="77" selection-end-line="480" selection-end-column="77" />
-              <folding />
+            <state vertical-scroll-proportion="0.6448931" vertical-offset="11854" max-vertical-offset="17250">
+              <caret line="539" column="777" selection-start-line="539" selection-start-column="777" selection-end-line="539" selection-end-column="777" />
+              <folding>
+                <element signature="e#19481#19517#0#HTML" expanded="true" />
+                <element signature="e#19581#19603#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -646,9 +649,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.68289787" vertical-offset="10465" max-vertical-offset="16606">
-          <caret line="480" column="77" selection-start-line="480" selection-start-column="77" selection-end-line="480" selection-end-column="77" />
-          <folding />
+        <state vertical-scroll-proportion="0.6448931" vertical-offset="11854" max-vertical-offset="17250">
+          <caret line="539" column="777" selection-start-line="539" selection-start-column="777" selection-end-line="539" selection-end-column="777" />
+          <folding>
+            <element signature="e#19481#19517#0#HTML" expanded="true" />
+            <element signature="e#19581#19603#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

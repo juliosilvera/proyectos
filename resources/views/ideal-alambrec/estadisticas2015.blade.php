@@ -428,6 +428,7 @@ function countProductos1($producto){
 <div class="col-md-12" >
     <div id="chart_div" style="width: 900px; height: 500px;"></div>
     <div id="table_div"></div>
+    <div id="table_div4" style="magin-top:50px"></div>
     <div id="chart_div2" style="width: 900px; height: 500px;"></div>
     <div id="table_div2"></div>
     <div id="chart_div3" style="width: 900px; height: 500px;"></div>
@@ -463,6 +464,7 @@ function countProductos1($producto){
       google.setOnLoadCallback(drawTable2);
       google.setOnLoadCallback(drawChart3);
       google.setOnLoadCallback(drawTable3);
+      google.setOnLoadCallback(drawTable4);
       google.setOnLoadCallback(drawChart4);
       google.setOnLoadCallback(drawChart5);
       google.setOnLoadCallback(drawChart6);
@@ -472,13 +474,13 @@ function countProductos1($producto){
       google.setOnLoadCallback(drawChart10);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Porcentaje', 'Nacional', 'Filtro <?php if (isset($_POST["ciudad"])) {echo $_POST["ciudad"];}; ?>'],
-          ['IAB', {{ porcentaje($ideal3, $total_puntos_visitados2) }}, {{ porcentaje($ideal, $total_puntos_visitados) }}],
-          ['Adelca', {{ porcentaje($adelca3, $total_puntos_visitados2) }}, {{ porcentaje($adelca, $total_puntos_visitados) }}],
-          ['Andec', {{ porcentaje($andec3, $total_puntos_visitados2) }}, {{ porcentaje($andec, $total_puntos_visitados) }}],
-          ['Novacero', {{ porcentaje($novacero3, $total_puntos_visitados2) }}, {{ porcentaje($novacero, $total_puntos_visitados) }}],
-          ['Ipac', {{ porcentaje($ipac3, $total_puntos_visitados2) }}, {{ porcentaje($ipac, $total_puntos_visitados) }}],
-          ['Importados', {{ porcentaje($importados3, $total_puntos_visitados2) }}, {{ porcentaje($importados, $total_puntos_visitados) }}]
+          ['Porcentaje', 'Nacional', 'Filtro <?php if (isset($_POST["ciudad"])) {echo $_POST["ciudad"];}; ?>', { role: 'style' }],
+          ['IAB', {{ porcentaje($ideal3, $total_puntos_visitados2) }}, {{ porcentaje($ideal, $total_puntos_visitados) }}, 'green'],
+          ['Adelca', {{ porcentaje($adelca3, $total_puntos_visitados2) }}, {{ porcentaje($adelca, $total_puntos_visitados) }}, 'green'],
+          ['Andec', {{ porcentaje($andec3, $total_puntos_visitados2) }}, {{ porcentaje($andec, $total_puntos_visitados) }}, 'green'],
+          ['Novacero', {{ porcentaje($novacero3, $total_puntos_visitados2) }}, {{ porcentaje($novacero, $total_puntos_visitados) }}, 'green'],
+          ['Ipac', {{ porcentaje($ipac3, $total_puntos_visitados2) }}, {{ porcentaje($ipac, $total_puntos_visitados) }}, 'green'],
+          ['Importados', {{ porcentaje($importados3, $total_puntos_visitados2) }}, {{ porcentaje($importados, $total_puntos_visitados) }}, 'green']
         ]);
 
         var options = {
@@ -517,6 +519,32 @@ function countProductos1($producto){
               table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
             }
 
+      function drawTable4() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'EMPRESA');
+        data.addColumn('string', 'CLAVOS');
+        data.addColumn('string', 'ALAMBRES');
+        data.addColumn('string', 'ALAMBRES DE PUAS');
+        data.addColumn('string', 'MALLAS DE CERRAMIENTO');
+        data.addColumn('string', 'MALLAS AGRICOLAS');
+        data.addColumn('string', 'BARRAS Y PLATINAS');
+        data.addColumn('string', 'MALLAS ELECTROSOLDADAS');
+        data.addColumn('string', 'VIGAS Y COLUMNAS');
+        data.addColumn('string', 'TOTAL');
+        data.addRows([
+          ['IAB',  "{{ porcentaje(countProductos('clavos_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('alambres_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('alambres_puas_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('mallas_cerramiento_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('mallas_agricolas_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('barras_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('electro_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('vigas_ideal'), $total_puntos_visitados) }}%", "{{ porcentaje($ideal, $total_puntos_visitados) }}%"],
+          ['ADELCA',  "{{ porcentaje(countProductos('clavos_adelca'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('alambres_adelca'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('alambres_puas_adelca'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('mallas_cerramiento_adelca'), $total_puntos_visitados) }}%", "0", "{{ porcentaje(countProductos('barras_adelca'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('electro_adelca'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('vigas_adelca'), $total_puntos_visitados) }}%", "{{ porcentaje($adelca, $total_puntos_visitados) }}%"],
+          ['ANDEC',  "0", "0", "0", "0", "0", "{{ porcentaje(countProductos('barras_andec'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('electro_andec'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('vigas_andec'), $total_puntos_visitados) }}%", "{{ porcentaje($andec, $total_puntos_visitados) }}%"],
+          ['NOVACERO',  "{{ porcentaje(countProductos('clavos_novacero'), $total_puntos_visitados) }}%", "0", "0", "0", "0", "{{ porcentaje(countProductos('barras_novacero'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('electro_novacero'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('vigas_novacero'), $total_puntos_visitados) }}%", "{{ porcentaje($novacero, $total_puntos_visitados) }}%"],
+          ['IPAC',  "0", "0", "0", "0", "0", "{{ porcentaje(countProductos('barras_ipac'), $total_puntos_visitados) }}%", "0", "0", "{{ porcentaje($ipac, $total_puntos_visitados) }}%"],
+          ['IMPORTADOS',  "{{ porcentaje(countProductos('clavos_importados'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('alambres_importados'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('alambres_puas_importados'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('mallas_cerramiento_importados'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('mallas_agricolas_importados'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('barras_importados'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('electro_importados'), $total_puntos_visitados) }}%", "{{ porcentaje(countProductos('vigas_importados'), $total_puntos_visitados) }}%", "{{ porcentaje($importados, $total_puntos_visitados) }}%"],
+          ['TOTAL PUNTOS VISITADOS', "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total }}"]
+        ]);
+
+        var table = new google.visualization.Table(document.getElementById('table_div4'));
+
+        table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
+      }
             function drawChart2() {
         var data = google.visualization.arrayToDataTable([
           ['Porcentaje', 'Clavos', 'Alambres', 'Alambres de Púas', 'Mallas', 'Mallas Agricolas', 'Barras y Platinas', 'Mallas Electrosoldadas', 'Vigas y Columnas'],
