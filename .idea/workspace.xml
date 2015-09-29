@@ -24,14 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="cliente.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/cliente.blade.php">
+      <file leaf-file-name="estadisticas2015.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.1883041" vertical-offset="920" max-vertical-offset="3059">
-              <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
-              <folding>
-                <element signature="e#1322#1341#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.43705463" vertical-offset="10235" max-vertical-offset="16077">
+              <caret line="461" column="21" selection-start-line="461" selection-start-column="21" selection-end-line="461" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,8 +93,8 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
-        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/cliente.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php" />
       </list>
     </option>
   </component>
@@ -630,28 +628,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/cliente.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4701897" vertical-offset="7611" max-vertical-offset="15755">
-          <caret line="346" column="49" selection-start-line="346" selection-start-column="49" selection-end-line="346" selection-end-column="49" />
+        <state vertical-scroll-proportion="1.0222223" vertical-offset="483" max-vertical-offset="3059">
+          <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.2066507" vertical-offset="161" max-vertical-offset="12006">
-          <caret line="161" column="37" selection-start-line="161" selection-start-column="37" selection-end-line="161" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.49168646" vertical-offset="161" max-vertical-offset="12006">
+          <caret line="25" column="107" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="107" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/cliente.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1883041" vertical-offset="920" max-vertical-offset="3059">
-          <caret line="47" column="72" selection-start-line="47" selection-start-column="72" selection-end-line="47" selection-end-column="72" />
-          <folding>
-            <element signature="e#1322#1341#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.43705463" vertical-offset="10235" max-vertical-offset="16077">
+          <caret line="461" column="21" selection-start-line="461" selection-start-column="21" selection-end-line="461" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

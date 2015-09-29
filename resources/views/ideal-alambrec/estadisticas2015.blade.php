@@ -3,7 +3,16 @@
 @section('header')
 @include('nav.cliente')
 <?php
+    $total_puntos_visitados = DB::table('encuestas_ideal_alambrec')->Where(function($query)
+          {
+             if (isset($_POST['ciudad'])) {
+              $city = $_POST['ciudad'];
+              if ($city != "nacional") {
+                $query->where('provincia', $city);
+              }
 
+             }
+          })->count();
     $clavos_ideal = DB::table('encuestas_ideal_alambrec')->Where(function($query)
             {
                if (isset($_POST['ciudad'])) {
@@ -314,12 +323,17 @@
 
                    }
                 })->sum('vigas_importados');
-$ideal = countProductos('clavos_ideal') + countProductos('alambres_ideal') + countProductos('alambres_puas_ideal') + countProductos('mallas_cerramiento_ideal') + countProductos('mallas_agricolas_ideal') + countProductos('barras_ideal') + countProductos('electro_ideal') + countProductos('vigas_ideal');
-$adelca = countProductos('clavos_adelca') + countProductos('alambres_adelca') + countProductos('alambres_puas_adelca') + countProductos('mallas_cerramiento_adelca') + countProductos('barras_adelca') + countProductos('electro_adelca') + countProductos('vigas_adelca');
-$andec = countProductos('barras_andec') + countProductos('electro_andec') + countProductos('vigas_andec');
-$novacero = countProductos('clavos_novacero') + countProductos('barras_novacero') + countProductos('electro_novacero') + countProductos('vigas_novacero');
+$ideal1 = [countProductos('clavos_ideal') => countProductos('clavos_ideal'), countProductos('alambres_ideal') => countProductos('alambres_ideal'), countProductos('alambres_puas_ideal') => countProductos('alambres_puas_ideal'), countProductos('mallas_cerramiento_ideal') => countProductos('mallas_cerramiento_ideal'), countProductos('mallas_agricolas_ideal') => countProductos('mallas_agricolas_ideal'), countProductos('barras_ideal') => countProductos('barras_ideal'), countProductos('electro_ideal') => countProductos('electro_ideal'), countProductos('vigas_ideal') => countProductos('vigas_ideal')];
+$ideal = $ideal1[max( array_keys( $ideal1 ) )];
+$adelca1 = [countProductos('clavos_adelca') => countProductos('clavos_adelca'), countProductos('alambres_adelca') => countProductos('alambres_adelca'), countProductos('alambres_puas_adelca') => countProductos('alambres_puas_adelca'), countProductos('mallas_cerramiento_adelca') => countProductos('mallas_cerramiento_adelca'), countProductos('barras_adelca') => countProductos('barras_adelca'), countProductos('electro_adelca') => countProductos('electro_adelca'), countProductos('vigas_adelca') => countProductos('vigas_adelca')];
+$adelca = $adelca1[max( array_keys( $adelca1 ) )];
+$andec1 = [countProductos('barras_andec') => countProductos('barras_andec'), countProductos('electro_andec') => countProductos('electro_andec'), countProductos('vigas_andec') => countProductos('vigas_andec')];
+$andec = $andec1[max( array_keys( $andec1 ) )];
+$novacero1 = [countProductos('clavos_novacero') => countProductos('clavos_novacero'), countProductos('barras_novacero') => countProductos('barras_novacero'), countProductos('electro_novacero') => countProductos('electro_novacero'), countProductos('vigas_novacero') => countProductos('vigas_novacero')];
+$novacero = $novacero1[max( array_keys( $novacero1 ) )];
 $ipac = countProductos('barras_ipac');
-$importados = countProductos('clavos_importados') + countProductos('alambres_importados') + countProductos('alambres_puas_importados') + countProductos('mallas_cerramiento_importados') + countProductos('mallas_agricolas_importados') + countProductos('barras_importados') + countProductos('electro_importados') + countProductos('vigas_importados');
+$importados1 = [countProductos('clavos_importados'), countProductos('alambres_importados'), countProductos('alambres_puas_importados'), countProductos('mallas_cerramiento_importados'), countProductos('mallas_agricolas_importados'), countProductos('barras_importados'), countProductos('electro_importados'), countProductos('vigas_importados')];
+$importados = $importados1[max( array_keys( $importados1 ) )];
 $total = $ideal + $adelca + $andec + $novacero + $ipac + $importados;
 $total_clavos = $clavos_ideal + $clavos_adelca + $clavos_importados + $clavos_novacero;
 $total_alambres = $alambres_ideal + $alambres_adelca + $alambres_importados;
@@ -440,12 +454,12 @@ function countProductos($producto){
       google.setOnLoadCallback(drawChart10);
       function drawChart() {
         var data = google.visualization.arrayToDataTable([
-          ['Porcentaje', 'IAB {{ porcentaje($ideal, $total) }}%', 'Adelca {{ porcentaje($adelca, $total) }}%', 'Andec {{ porcentaje($andec, $total) }}%', 'Novacero {{ $novacero, $total }}%', 'Ipac {{ porcentaje($ipac, $total) }}%', 'Importados  {{ porcentaje($importados, $total) }}%'],
-          <?php echo "['Porcentaje'," . porcentaje($ideal, $total) . ", " . porcentaje($adelca, $total) . ", " . porcentaje($andec, $total) . ", " . porcentaje($novacero, $total) . ", " . porcentaje($ipac, $total) . ", " . porcentaje($importados, $total) . "]";?>
+          ['Porcentaje', 'IAB {{ porcentaje($ideal, $total_puntos_visitados) }}%', 'Adelca {{ porcentaje($adelca, $total_puntos_visitados) }}%', 'Andec {{ porcentaje($andec, $total_puntos_visitados) }}%', 'Novacero {{ $novacero, $total_puntos_visitados }}%', 'Ipac {{ porcentaje($ipac, $total_puntos_visitados) }}%', 'Importados  {{ porcentaje($importados, $total_puntos_visitados) }}%'],
+          <?php echo "['Porcentaje'," . porcentaje($ideal, $total_puntos_visitados) . ", " . porcentaje($adelca, $total_puntos_visitados) . ", " . porcentaje($andec, $total_puntos_visitados) . ", " . porcentaje($novacero, $total_puntos_visitados) . ", " . porcentaje($ipac, $total_puntos_visitados) . ", " . porcentaje($importados, $total_puntos_visitados) . "]";?>
         ]);
 
         var options = {
-          title: 'General <?php if (isset($_POST["ciudad"])) {echo $_POST["ciudad"];}; ?>',
+          title: 'Penetración <?php if (isset($_POST["ciudad"])) {echo $_POST["ciudad"];}; ?>',
           vAxis: {title: 'Total General 100%',  titleTextStyle: {color: 'red'}}
         };
 
@@ -472,7 +486,7 @@ function countProductos($producto){
                 ['NOVACERO',  "{{ countProductos('clavos_novacero') }}", "0", "0", "0", "0", "{{ countProductos('barras_novacero') }}", "{{ countProductos('electro_novacero') }}", "{{ countProductos('vigas_novacero') }}", "{{ $novacero }}"],
                 ['IPAC',  "0", "0", "0", "0", "0", "{{ countProductos('barras_ipac') }}", "0", "0", "{{ $ipac }}"],
                 ['IMPORTADOS',  "{{ countProductos('clavos_importados') }}", "{{ countProductos('alambres_importados') }}", "{{ countProductos('alambres_puas_importados') }}", "{{ countProductos('mallas_cerramiento_importados') }}", "{{ countProductos('mallas_agricolas_importados') }}", "{{ countProductos('barras_importados') }}", "{{ countProductos('electro_importados') }}", "{{ countProductos('vigas_importados') }}", "{{ $importados }}"],
-                ['TOTAL', "", "", "", "", "", "", "", "", "{{ $total }}"]
+                ['TOTAL PUNTOS VISITADOS', "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total_puntos_visitados }}", "{{ $total }}"]
               ]);
 
               var table = new google.visualization.Table(document.getElementById('table_div'));
