@@ -42,19 +42,13 @@
        <div class="row">
        <h4>2015</h4>
               <div class="col-md-4">
-              Reportes Exportables
-              <br>
-              <br>
-              <form action="/home/excel" method="post">
-              <input type="hidden" name="_token" value="{{ csrf_token() }}">
-              <input type="hidden" name="desde" id="desde">
-              <input type="hidden" name="hasta" id="hasta">
-              <select class="form-control" id="excel">
-                <option></option>
-              </select>
-              <input type="submit" value="Descargar" class="form-control">
-              </form>
-              </div>
+                     Reportes Exportables
+                     <br>
+                     <br>
+                     <a href="http://gotrade.com.ec/Excel-Ideal-2015.xls">
+                     <img src="/img/excel.png" style="width: 70px">
+                     </a>
+                     </div>
               <div class="col-md-4">
               Reportes Estadísticos
               <br>
