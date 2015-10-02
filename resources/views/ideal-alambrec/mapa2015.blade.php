@@ -129,6 +129,33 @@ $GLOBALS['novacero'] = 0;
 $GLOBALS['ipac'] = 0;
 $GLOBALS['importados'] = 0;
 $GLOBALS['total'] = 0;
+$total_puntos_visitados2 = DB::table('encuestas_ideal_alambrec')->count();
+$ideal2 = [countProductos1('clavos_ideal') => countProductos1('clavos_ideal'), countProductos1('alambres_ideal') => countProductos1('alambres_ideal'), countProductos1('alambres_puas_ideal') => countProductos1('alambres_puas_ideal'), countProductos1('mallas_cerramiento_ideal') => countProductos1('mallas_cerramiento_ideal'), countProductos1('mallas_agricolas_ideal') => countProductos1('mallas_agricolas_ideal'), countProductos1('barras_ideal') => countProductos1('barras_ideal'), countProductos1('electro_ideal') => countProductos1('electro_ideal'), countProductos1('vigas_ideal') => countProductos1('vigas_ideal')];
+$ideal3 = $ideal2[max( array_keys( $ideal2 ) )];
+$adelca2 = [countProductos1('clavos_adelca') => countProductos1('clavos_adelca'), countProductos1('alambres_adelca') => countProductos1('alambres_adelca'), countProductos1('alambres_puas_adelca') => countProductos1('alambres_puas_adelca'), countProductos1('mallas_cerramiento_adelca') => countProductos1('mallas_cerramiento_adelca'), countProductos1('barras_adelca') => countProductos1('barras_adelca'), countProductos1('electro_adelca') => countProductos1('electro_adelca'), countProductos1('vigas_adelca') => countProductos1('vigas_adelca')];
+$adelca3 = $adelca2[max( array_keys( $adelca2 ) )];
+$andec2 = [countProductos1('barras_andec') => countProductos1('barras_andec'), countProductos1('electro_andec') => countProductos1('electro_andec'), countProductos1('vigas_andec') => countProductos1('vigas_andec')];
+$andec3 = $andec2[max( array_keys( $andec2 ) )];
+$novacero2 = [countProductos1('clavos_novacero') => countProductos1('clavos_novacero'), countProductos1('barras_novacero') => countProductos1('barras_novacero'), countProductos1('electro_novacero') => countProductos1('electro_novacero'), countProductos1('vigas_novacero') => countProductos1('vigas_novacero')];
+$novacero3 = $novacero2[max( array_keys( $novacero2 ) )];
+$ipac3 = countProductos1('barras_ipac');
+$importados2 = [countProductos1('clavos_importados'), countProductos1('alambres_importados'), countProductos1('alambres_puas_importados'), countProductos1('mallas_cerramiento_importados'), countProductos1('mallas_agricolas_importados'), countProductos1('barras_importados'), countProductos1('electro_importados'), countProductos1('vigas_importados')];
+$importados3 = $importados2[max( array_keys( $importados2 ) )];
+
+function porcentaje($producto, $total)
+{
+    if($total > 0)
+    {
+        return round(($producto/$total)*100, 2);
+    }else{
+        return 0;
+    }
+}
+
+function countProductos1($producto){
+    $count = DB::table('encuestas_ideal_alambrec')->where($producto, '>', 0)->count();
+    return $count;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -173,13 +200,22 @@ $GLOBALS['total'] = 0;
               }
       #panel3 {
               position: absolute;
-              top: 50%;
+              top: 60%;
               left: 5px;
               z-index: 5;
               background-color: #fff;
               padding: 5px;
               border: 1px solid #999;
             }
+      #panel4 {
+            position: absolute;
+            top: 10%;
+            left: 5px;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+          }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?signed_in=true"></script>
     <script>
@@ -317,6 +353,46 @@ function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1
                 <button id="volver" class="form-control btn-primary">Volver</button>
             </div>
     </div>
+    </div>
+    <div id="panel4">
+        <div class="row">
+            <div class="col-md-6">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th>Marca</th>
+                    <th>Porcentaje de penetracion</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>IAB</td>
+                    <td>{{ porcentaje($ideal3, $total_puntos_visitados2) }}%</td>
+                  </tr>
+                  <tr>
+                    <td>Adelca</td>
+                    <td>{{ porcentaje($adelca3, $total_puntos_visitados2) }}%</td>
+                  </tr>
+                  <tr>
+                    <td>Andec</td>
+                    <td>{{ porcentaje($andec3, $total_puntos_visitados2) }}%</td>
+                  </tr>
+                  <tr>
+                    <td>Novacero</td>
+                    <td>{{ porcentaje($novacero3, $total_puntos_visitados2) }}%</td>
+                  </tr>
+                  <tr>
+                    <td>Ipac</td>
+                    <td>{{ porcentaje($ipac3, $total_puntos_visitados2) }}%</td>
+                  </tr>
+                  <tr>
+                      <td>Importados</td>
+                      <td>{{ porcentaje($importados3, $total_puntos_visitados2) }}%</td>
+                    </tr>
+                </tbody>
+              </table>
+            </div>
+        </div>
     </div>
     <div id="panel3">
     @if(!isset($_POST['categoria']))

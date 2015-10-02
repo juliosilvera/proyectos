@@ -24,15 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="estadisticas2015.blade.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
+      <file leaf-file-name="mapa2015.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.22921616" vertical-offset="11877" max-vertical-offset="17250">
-              <caret line="508" column="214" selection-start-line="508" selection-start-column="214" selection-end-line="508" selection-end-column="214" />
-              <folding>
-                <element signature="e#19481#19517#0#HTML" expanded="true" />
-                <element signature="e#19581#19603#0#HTML" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.7814727" vertical-offset="8289" max-vertical-offset="13754">
+              <caret line="389" column="52" selection-start-line="389" selection-start-column="52" selection-end-line="389" selection-end-column="52" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -92,12 +89,12 @@
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/photos.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/edit_photos.blade.php" />
         <option value="$PROJECT_DIR$/app/homeModel.php" />
-        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
         <option value="$PROJECT_DIR$/app/Exceptions/Handler.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/cliente.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php" />
       </list>
     </option>
   </component>
@@ -220,15 +217,15 @@
       <BehatRunner />
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-      <method />
-    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
       <tasks />
       <pass-parent-env-vars>false</pass-parent-env-vars>
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
     <list size="0" />
@@ -263,13 +260,13 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -617,13 +614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5617577" vertical-offset="2549" max-vertical-offset="7360">
-          <caret line="178" column="9" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Exceptions/Handler.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.43243244" vertical-offset="253" max-vertical-offset="1104">
@@ -635,26 +625,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0222223" vertical-offset="483" max-vertical-offset="3059">
           <caret line="59" column="36" selection-start-line="59" selection-start-column="36" selection-end-line="59" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49168646" vertical-offset="161" max-vertical-offset="12006">
-          <caret line="25" column="107" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="107" />
+        <state vertical-scroll-proportion="0.30522564" vertical-offset="1445" max-vertical-offset="7360">
+          <caret line="84" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.22921616" vertical-offset="11877" max-vertical-offset="17250">
-          <caret line="508" column="214" selection-start-line="508" selection-start-column="214" selection-end-line="508" selection-end-column="214" />
-          <folding>
-            <element signature="e#19481#19517#0#HTML" expanded="true" />
-            <element signature="e#19581#19603#0#HTML" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.40973872" vertical-offset="0" max-vertical-offset="17250">
+          <caret line="15" column="78" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7814727" vertical-offset="8289" max-vertical-offset="13754">
+          <caret line="389" column="52" selection-start-line="389" selection-start-column="52" selection-end-line="389" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
