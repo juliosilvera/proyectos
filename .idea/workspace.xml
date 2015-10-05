@@ -27,8 +27,8 @@
       <file leaf-file-name="mapa2015.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7814727" vertical-offset="8289" max-vertical-offset="13754">
-              <caret line="389" column="52" selection-start-line="389" selection-start-column="52" selection-end-line="389" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.6448931" vertical-offset="5161" max-vertical-offset="14789">
+              <caret line="248" column="20" selection-start-line="248" selection-start-column="20" selection-end-line="248" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -632,22 +632,21 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30522564" vertical-offset="1445" max-vertical-offset="7360">
           <caret line="84" column="20" selection-start-line="74" selection-start-column="20" selection-end-line="74" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/estadisticas2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40973872" vertical-offset="0" max-vertical-offset="17250">
-          <caret line="15" column="78" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="78" />
+        <state vertical-scroll-proportion="0.3551069" vertical-offset="0" max-vertical-offset="17250">
+          <caret line="13" column="14" selection-start-line="7" selection-start-column="13" selection-end-line="13" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/ideal-alambrec/mapa2015.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7814727" vertical-offset="8289" max-vertical-offset="13754">
-          <caret line="389" column="52" selection-start-line="389" selection-start-column="52" selection-end-line="389" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.6448931" vertical-offset="5161" max-vertical-offset="14789">
+          <caret line="248" column="20" selection-start-line="248" selection-start-column="20" selection-end-line="248" selection-end-column="20" />
           <folding />
         </state>
       </provider>

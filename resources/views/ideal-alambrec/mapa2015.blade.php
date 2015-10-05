@@ -129,17 +129,39 @@ $GLOBALS['novacero'] = 0;
 $GLOBALS['ipac'] = 0;
 $GLOBALS['importados'] = 0;
 $GLOBALS['total'] = 0;
+$total_puntos_visitados = DB::table('encuestas_ideal_alambrec')->Where(function($query)
+          {
+             if(isset($_POST['ciudad']) && $_POST['ciudad'] != "")
+             {
+                $query->where('ciudad', $_POST['ciudad']);
+             }
+             if(isset($_POST['provincia']) && $_POST['provincia'] != "")
+             {
+                $query->where('provincia', $_POST['provincia']);
+             }
+          })->count();
 $total_puntos_visitados2 = DB::table('encuestas_ideal_alambrec')->count();
+$ideal1 = [countProductos('clavos_ideal') => countProductos('clavos_ideal'), countProductos('alambres_ideal') => countProductos('alambres_ideal'), countProductos('alambres_puas_ideal') => countProductos('alambres_puas_ideal'), countProductos('mallas_cerramiento_ideal') => countProductos('mallas_cerramiento_ideal'), countProductos('mallas_agricolas_ideal') => countProductos('mallas_agricolas_ideal'), countProductos('barras_ideal') => countProductos('barras_ideal'), countProductos('electro_ideal') => countProductos('electro_ideal'), countProductos('vigas_ideal') => countProductos('vigas_ideal')];
 $ideal2 = [countProductos1('clavos_ideal') => countProductos1('clavos_ideal'), countProductos1('alambres_ideal') => countProductos1('alambres_ideal'), countProductos1('alambres_puas_ideal') => countProductos1('alambres_puas_ideal'), countProductos1('mallas_cerramiento_ideal') => countProductos1('mallas_cerramiento_ideal'), countProductos1('mallas_agricolas_ideal') => countProductos1('mallas_agricolas_ideal'), countProductos1('barras_ideal') => countProductos1('barras_ideal'), countProductos1('electro_ideal') => countProductos1('electro_ideal'), countProductos1('vigas_ideal') => countProductos1('vigas_ideal')];
+$ideal = $ideal1[max( array_keys( $ideal1 ) )];
 $ideal3 = $ideal2[max( array_keys( $ideal2 ) )];
+$adelca1 = [countProductos('clavos_adelca') => countProductos('clavos_adelca'), countProductos('alambres_adelca') => countProductos('alambres_adelca'), countProductos('alambres_puas_adelca') => countProductos('alambres_puas_adelca'), countProductos('mallas_cerramiento_adelca') => countProductos('mallas_cerramiento_adelca'), countProductos('barras_adelca') => countProductos('barras_adelca'), countProductos('electro_adelca') => countProductos('electro_adelca'), countProductos('vigas_adelca') => countProductos('vigas_adelca')];
 $adelca2 = [countProductos1('clavos_adelca') => countProductos1('clavos_adelca'), countProductos1('alambres_adelca') => countProductos1('alambres_adelca'), countProductos1('alambres_puas_adelca') => countProductos1('alambres_puas_adelca'), countProductos1('mallas_cerramiento_adelca') => countProductos1('mallas_cerramiento_adelca'), countProductos1('barras_adelca') => countProductos1('barras_adelca'), countProductos1('electro_adelca') => countProductos1('electro_adelca'), countProductos1('vigas_adelca') => countProductos1('vigas_adelca')];
+$adelca = $adelca1[max( array_keys( $adelca1 ) )];
 $adelca3 = $adelca2[max( array_keys( $adelca2 ) )];
+$andec1 = [countProductos('barras_andec') => countProductos('barras_andec'), countProductos('electro_andec') => countProductos('electro_andec'), countProductos('vigas_andec') => countProductos('vigas_andec')];
 $andec2 = [countProductos1('barras_andec') => countProductos1('barras_andec'), countProductos1('electro_andec') => countProductos1('electro_andec'), countProductos1('vigas_andec') => countProductos1('vigas_andec')];
+$andec = $andec1[max( array_keys( $andec1 ) )];
 $andec3 = $andec2[max( array_keys( $andec2 ) )];
+$novacero1 = [countProductos('clavos_novacero') => countProductos('clavos_novacero'), countProductos('barras_novacero') => countProductos('barras_novacero'), countProductos('electro_novacero') => countProductos('electro_novacero'), countProductos('vigas_novacero') => countProductos('vigas_novacero')];
 $novacero2 = [countProductos1('clavos_novacero') => countProductos1('clavos_novacero'), countProductos1('barras_novacero') => countProductos1('barras_novacero'), countProductos1('electro_novacero') => countProductos1('electro_novacero'), countProductos1('vigas_novacero') => countProductos1('vigas_novacero')];
+$novacero = $novacero1[max( array_keys( $novacero1 ) )];
 $novacero3 = $novacero2[max( array_keys( $novacero2 ) )];
+$ipac = countProductos('barras_ipac');
 $ipac3 = countProductos1('barras_ipac');
+$importados1 = [countProductos('clavos_importados'), countProductos('alambres_importados'), countProductos('alambres_puas_importados'), countProductos('mallas_cerramiento_importados'), countProductos('mallas_agricolas_importados'), countProductos('barras_importados'), countProductos('electro_importados'), countProductos('vigas_importados')];
 $importados2 = [countProductos1('clavos_importados'), countProductos1('alambres_importados'), countProductos1('alambres_puas_importados'), countProductos1('mallas_cerramiento_importados'), countProductos1('mallas_agricolas_importados'), countProductos1('barras_importados'), countProductos1('electro_importados'), countProductos1('vigas_importados')];
+$importados = $importados1[max( array_keys( $importados1 ) )];
 $importados3 = $importados2[max( array_keys( $importados2 ) )];
 
 function porcentaje($producto, $total)
@@ -150,6 +172,21 @@ function porcentaje($producto, $total)
     }else{
         return 0;
     }
+}
+
+function countProductos($producto){
+    $count = DB::table('encuestas_ideal_alambrec')->where($producto, '>', 0)->Where(function($query)
+                    {
+                        if(isset($_POST['ciudad']) && $_POST['ciudad'] != "")
+                         {
+                            $query->where('ciudad', $_POST['ciudad']);
+                         }
+                         if(isset($_POST['provincia']) && $_POST['provincia'] != "")
+                         {
+                            $query->where('provincia', $_POST['provincia']);
+                         }
+                    })->count();
+    return $count;
 }
 
 function countProductos1($producto){
@@ -209,6 +246,7 @@ function countProductos1($producto){
             }
       #panel4 {
             position: absolute;
+            width: 300px;
             top: 10%;
             left: 5px;
             z-index: 5;
@@ -362,32 +400,39 @@ function attachSecretMessage(marker, id, foto, local, propietario, distribuidor1
                   <tr>
                     <th>Marca</th>
                     <th>Porcentaje de penetracion</th>
+                    <th>Porcentaje de penetracion Filtro</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>IAB</td>
                     <td>{{ porcentaje($ideal3, $total_puntos_visitados2) }}%</td>
+                    <td>{{ porcentaje($ideal, $total_puntos_visitados) }}%</td>
                   </tr>
                   <tr>
                     <td>Adelca</td>
                     <td>{{ porcentaje($adelca3, $total_puntos_visitados2) }}%</td>
+                    <td>{{ porcentaje($adelca, $total_puntos_visitados) }}%</td>
                   </tr>
                   <tr>
                     <td>Andec</td>
                     <td>{{ porcentaje($andec3, $total_puntos_visitados2) }}%</td>
+                    <td>{{ porcentaje($andec, $total_puntos_visitados) }}%</td>
                   </tr>
                   <tr>
                     <td>Novacero</td>
                     <td>{{ porcentaje($novacero3, $total_puntos_visitados2) }}%</td>
+                    <td>{{ porcentaje($novacero, $total_puntos_visitados) }}%</td>
                   </tr>
                   <tr>
                     <td>Ipac</td>
                     <td>{{ porcentaje($ipac3, $total_puntos_visitados2) }}%</td>
+                    <td>{{ porcentaje($ipac, $total_puntos_visitados) }}%</td>
                   </tr>
                   <tr>
                       <td>Importados</td>
                       <td>{{ porcentaje($importados3, $total_puntos_visitados2) }}%</td>
+                      <td>{{ porcentaje($importados, $total_puntos_visitados) }}%</td>
                     </tr>
                 </tbody>
               </table>
